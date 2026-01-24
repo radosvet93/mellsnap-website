@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PortfolioCard from '../../components/PortfolioCard.astro';
+
+const categories = [
+  { title: 'Family', image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=750&fit=crop', href: '/portfolio/family/' },
+  { title: 'Maternity', image: 'https://images.unsplash.com/photo-1544126592-807ade215a0b?w=600&h=750&fit=crop', href: '/portfolio/maternity/' },
+  { title: 'Love', image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=750&fit=crop', href: '/portfolio/love/' },
+  { title: 'Children', image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=750&fit=crop', href: '/portfolio/children/' },
+  { title: 'Events', image: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&h=750&fit=crop', href: '/portfolio/events/' },
+];
+---
+
+<BaseLayout title="Portfolio" description="Browse MellSnap Photography portfolio. Family, maternity, couples, children and event photography.">
+  <!-- Hero -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="text-center">
+        <p class="label mb-4">Portfolio</p>
+        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+          My Work
+        </h1>
+        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
+          A collection of precious moments captured for wonderful families across London.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {categories.map(cat => (
+          <PortfolioCard
+            title={cat.title}
+            image={cat.image}
+            href={cat.href}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

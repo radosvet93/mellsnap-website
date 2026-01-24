@@ -1,0 +1,53 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  image?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  overlay?: boolean;
+}
+
+const {
+  title,
+  subtitle,
+  image = '/images/hero-placeholder.jpg',
+  ctaText,
+  ctaLink,
+  overlay = true,
+} = Astro.props;
+---
+
+<section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src={image}
+      alt=""
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    {overlay && (
+      <div class="absolute inset-0 bg-black/20"></div>
+    )}
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 py-20 max-w-4xl">
+    <h1 class="font-cormorant text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-tight mb-6">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="font-ephesis text-2xl md:text-3xl text-white/90 mb-10">
+        {subtitle}
+      </p>
+    )}
+    {ctaText && ctaLink && (
+      <Button href={ctaLink} variant="primary">
+        {ctaText}
+      </Button>
+    )}
+  </div>
+</section>

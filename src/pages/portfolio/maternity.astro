@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+
+const images = [
+  'https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop',
+];
+---
+
+<BaseLayout title="Maternity Portfolio" description="Maternity photography portfolio by MellSnap. Beautiful pregnancy photos in London.">
+  <!-- Hero -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="text-center">
+        <p class="label mb-4">Portfolio</p>
+        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+          Maternity
+        </h1>
+        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
+          Celebrating the beautiful journey of motherhood and the anticipation of new life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        {images.map((img, i) => (
+          <div class="img-hover aspect-[4/3]">
+            <img src={img} alt={`Maternity photography ${i + 1}`} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-16">
+        <Button href="/contact/" variant="primary">
+          Book a Maternity Session
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back Link -->
+  <section class="py-10 bg-section-bg">
+    <div class="container text-center">
+      <a href="/portfolio/" class="nav-link hover:text-gold transition-colors">
+        &larr; Back to Portfolio
+      </a>
+    </div>
+  </section>
+</BaseLayout>

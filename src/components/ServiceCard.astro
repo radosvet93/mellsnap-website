@@ -1,0 +1,53 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  title: string;
+  price: string;
+  duration: string;
+  features: string[];
+  ctaText?: string;
+  ctaLink?: string;
+  featured?: boolean;
+}
+
+const {
+  title,
+  price,
+  duration,
+  features,
+  ctaText = 'Book Now',
+  ctaLink = '/contact/',
+  featured = false,
+} = Astro.props;
+---
+
+<div class:list={[
+  'bg-white p-8 md:p-10 text-center',
+  { 'border-2 border-gold': featured }
+]}>
+  <h3 class="font-ephesis text-3xl md:text-4xl text-gold mb-4">
+    {title}
+  </h3>
+  <p class="font-cormorant text-4xl md:text-5xl font-medium text-primary-text mb-2">
+    {price}
+  </p>
+  <p class="font-raleway text-sm text-secondary-text tracking-wide mb-8">
+    {duration}
+  </p>
+
+  <ul class="space-y-4 mb-10">
+    {features.map(feature => (
+      <li class="font-cormorant text-lg text-secondary-text flex items-center justify-center gap-2">
+        <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        {feature}
+      </li>
+    ))}
+  </ul>
+
+  <Button href={ctaLink} variant={featured ? 'primary' : 'secondary'}>
+    {ctaText}
+  </Button>
+</div>

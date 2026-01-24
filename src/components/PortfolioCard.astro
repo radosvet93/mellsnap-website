@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  href: string;
+  category?: string;
+}
+
+const {
+  title,
+  image,
+  href,
+  category,
+} = Astro.props;
+---
+
+<a href={href} class="block group img-hover">
+  <div class="relative aspect-[4/5] overflow-hidden bg-section-bg">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+      <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+        {category && (
+          <p class="label text-white mb-2">{category}</p>
+        )}
+        <h3 class="font-cormorant text-2xl text-white">{title}</h3>
+      </div>
+    </div>
+  </div>
+</a>

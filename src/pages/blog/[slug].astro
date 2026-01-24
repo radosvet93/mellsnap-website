@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.excerpt}>
+  <!-- Hero -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <time class="label">{post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <h1 class="font-cormorant text-3xl md:text-4xl lg:text-5xl text-primary-text mt-4">
+          {post.data.title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto -mt-10">
+        <img src={post.data.image} alt={post.data.title} class="w-full aspect-[2/1] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <article class="max-w-3xl mx-auto prose prose-lg prose-cormorant">
+        <div class="font-cormorant text-xl text-secondary-text leading-relaxed space-y-6 [&_h2]:font-cormorant [&_h2]:text-2xl [&_h2]:text-primary-text [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:font-cormorant [&_h3]:text-xl [&_h3]:text-primary-text [&_h3]:mt-8 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_strong]:text-primary-text [&_a]:text-gold [&_a]:underline">
+          <Content />
+        </div>
+      </article>
+
+      <div class="max-w-3xl mx-auto mt-16 pt-10 border-t border-beige text-center">
+        <p class="font-cormorant text-xl text-secondary-text mb-6">
+          Ready to book your own session?
+        </p>
+        <Button href="/contact/" variant="primary">
+          Get in Touch
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back Link -->
+  <section class="py-10 bg-section-bg">
+    <div class="container text-center">
+      <a href="/blog/" class="nav-link hover:text-gold transition-colors">
+        &larr; Back to Blog
+      </a>
+    </div>
+  </section>
+</BaseLayout>

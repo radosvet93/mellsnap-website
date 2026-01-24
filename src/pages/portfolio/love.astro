@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+
+const images = [
+  'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&h=600&fit=crop',
+];
+---
+
+<BaseLayout title="Couples Portfolio" description="Couples photography portfolio by MellSnap. Romantic engagement and couples photos in London.">
+  <!-- Hero -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="text-center">
+        <p class="label mb-4">Portfolio</p>
+        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+          Love
+        </h1>
+        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
+          Capturing the beautiful connection between couples in love.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        {images.map((img, i) => (
+          <div class="img-hover aspect-[4/3]">
+            <img src={img} alt={`Couples photography ${i + 1}`} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-16">
+        <Button href="/contact/" variant="primary">
+          Book a Couples Session
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back Link -->
+  <section class="py-10 bg-section-bg">
+    <div class="container text-center">
+      <a href="/portfolio/" class="nav-link hover:text-gold transition-colors">
+        &larr; Back to Portfolio
+      </a>
+    </div>
+  </section>
+</BaseLayout>
