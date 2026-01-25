@@ -5,6 +5,7 @@
 @theme {
   /* Colors */
   --color-beige: #e9e1d9;
+  --color-light-pink: #cfa5b8;
   --color-pink: #995d7c;
   --color-primary-text: #363636;
   --color-secondary-text: #5b5b5b;
@@ -74,13 +75,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background-color: var(--color-beige);
-  color: var(--color-primary-text);
+  background-color: var(--color-pink);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-pink);
-  color: var(--color-white);
+  background-color: var(--color-light-pink);
 }
 
 .btn-secondary {
