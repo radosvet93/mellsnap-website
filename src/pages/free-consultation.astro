@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ContactForm from "../components/ContactForm.astro";
+
+import { Image } from "astro:assets";
+import consultationImage from "../images/consultation.webp";
 ---
 
 <BaseLayout
@@ -28,103 +30,99 @@ import ContactForm from "../components/ContactForm.astro";
   </section>
 
   <!-- Content -->
-  <section class="py-20 md:py-28 bg-white">
+  <section class="pb-20 bg-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-          <!-- Info -->
+      <div class="mx-auto">
+        <!-- Info -->
+        <div class="py-20 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
             <h2 class="font-cormorant text-3xl text-primary-text mb-6">
               What We'll Discuss
             </h2>
-            <ul class="space-y-4 font-cormorant text-lg text-secondary-text">
+
+            <ul class="">
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"></path>
-                </svg>
-                Your vision for the session
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
+                </svg>Your vision for the session
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"></path>
-                </svg>
-                Best package for your needs
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
+                </svg>Best package for your needs
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"></path>
-                </svg>
-                Location recommendations
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
+                </svg>Location recommendations
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"></path>
-                </svg>
-                Styling and outfit guidance
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
+                </svg>Styling and outfit guidance
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"></path>
-                </svg>
-                Any questions you have
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
+                </svg>Any questions you have
               </li>
             </ul>
-
             <p class="font-cormorant text-lg text-secondary-text mt-8">
               Consultations can be done via phone, video call, or in person at a
               convenient location. There's no obligation to book after our chat.
             </p>
           </div>
-
-          <!-- Form -->
-          <div>
-            <ContactForm />
+          <Image
+            src={consultationImage}
+            alt="Free consultation MellSnap Photography"
+            class="shadow-lg w-full"
+          />
+        </div>
+        <!-- Calendly Widget -->
+        <div>
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/mellsnap/free-consultation"
+            style="min-width:320px;height:700px;"
+          >
           </div>
+          <script
+            is:inline
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async></script>
+          <!-- Calendly inline widget end -->
         </div>
       </div>
     </div>
