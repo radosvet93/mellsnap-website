@@ -9,6 +9,9 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+import { Image } from "astro:assets";
+
+import logo from "../images/mellsnap-logo.png";
 ---
 
 <header class="py-8 bg-white">
@@ -16,14 +19,13 @@ const currentPath = Astro.url.pathname;
     <!-- Logo -->
     <div class="text-center mb-8">
       <a href="/" class="inline-block">
-        <h1
-          class="font-cormorant text-4xl md:text-5xl font-medium text-primary-text tracking-wide"
-        >
-          MellSnap
-        </h1>
-        <p class="font-ephesis text-xl md:text-2xl text-pink mt-1">
-          Photography
-        </p>
+        <Image
+          src={logo}
+          height={204}
+          width={885}
+          alt="MellSnap Photography Logo"
+          class="mx-auto w-56"
+        />
       </a>
     </div>
 

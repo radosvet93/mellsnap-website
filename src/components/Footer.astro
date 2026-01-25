@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+
+import logo from "../images/mellsnap-logo.png";
+
 const currentYear = new Date().getFullYear();
 
 const navLinks = [
@@ -34,12 +38,13 @@ const socialLinks = [
     <!-- Logo -->
     <div class="text-center mb-10">
       <a href="/" class="inline-block">
-        <h2
-          class="font-cormorant text-3xl font-medium text-primary-text tracking-wide"
-        >
-          MellSnap
-        </h2>
-        <p class="font-ephesis text-lg text-pink mt-1">Photography</p>
+        <Image
+          src={logo}
+          height={204}
+          width={885}
+          alt="MellSnap Photography Logo"
+          class="mx-auto w-42"
+        />
       </a>
     </div>
 
