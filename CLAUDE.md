@@ -35,7 +35,7 @@ Two collections defined in `src/content.config.ts`:
 
 Defined in `src/styles/global.css` using Tailwind's `@theme`:
 
-**Colors**: `beige` (#e9e1d9), `gold` (#bba085), `primary-text`, `secondary-text`, `section-bg`
+**Colors**: `beige` (#e9e1d9), `pink` (#995d7c), `primary-text`, `secondary-text`, `section-bg`
 
 **Fonts**:
 - `font-cormorant` - body text, headings

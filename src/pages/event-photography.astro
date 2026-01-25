@@ -1,9 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
-<BaseLayout title="Event Photography" description="Capture the fun and joy of indoor and outdoor events, from birthdays to family gatherings, with natural, candid event photography in London.">
+<BaseLayout
+  title="Event Photography"
+  description="Capture the fun and joy of indoor and outdoor events, from birthdays to family gatherings, with natural, candid event photography in London."
+>
   <!-- Hero -->
   <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
@@ -13,50 +16,90 @@ import Button from '../components/Button.astro';
             <img
               src="https://mellsnap.co.uk/wp-content/uploads/2023/10/129-Web-683x1024.jpg"
               alt="Children's birthday party celebration"
-              class="w-full aspect-[3/4] object-cover"
+              class="w-full aspect-3/4 object-cover"
             />
           </div>
           <div class="md:col-span-3">
             <p class="label mb-4">Event Package</p>
-            <h1 class="font-cormorant text-4xl md:text-5xl text-primary-text mb-6">
+            <h1
+              class="font-cormorant text-4xl md:text-5xl text-primary-text mb-6"
+            >
               Event Photography
             </h1>
-            <p class="font-cormorant text-3xl text-gold mb-8">From £200</p>
+            <p class="font-cormorant text-3xl text-pink mb-8">From £200</p>
 
-            <ul class="space-y-3 font-cormorant text-lg text-secondary-text mb-8">
+            <ul
+              class="space-y-3 font-cormorant text-lg text-secondary-text mb-8"
+            >
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 Up to 4 hours per event
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 £200 for the first hour
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 £100 each additional hour
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 80+ professionally edited digital images
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 5-7 days delivery
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/>
+                <svg
+                  class="w-5 h-5 text-pink mt-1 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
+                  ></path>
                 </svg>
                 Secure online gallery
               </li>
@@ -75,11 +118,19 @@ import Button from '../components/Button.astro';
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="max-w-3xl mx-auto">
-        <p class="font-cormorant text-xl text-secondary-text leading-relaxed mb-6">
-          Every event tells a story, and I'm here to make sure it's one you'll never forget. My <strong class="text-primary-text">Event Photography Package</strong> is designed to document your special occasions – from joyful birthday parties to heartfelt engagements and everything in between.
+        <p
+          class="font-cormorant text-xl text-secondary-text leading-relaxed mb-6"
+        >
+          Every event tells a story, and I'm here to make sure it's one you'll
+          never forget. My <strong class="text-primary-text"
+            >Event Photography Package</strong
+          > is designed to document your special occasions – from joyful birthday
+          parties to heartfelt engagements and everything in between.
         </p>
         <p class="font-cormorant text-xl text-secondary-text leading-relaxed">
-          With a focus on candid, natural moments and beautifully composed shots, I'll help you relive your event through the uniquely captured emotional images that you'll cherish forever.
+          With a focus on candid, natural moments and beautifully composed
+          shots, I'll help you relive your event through the uniquely captured
+          emotional images that you'll cherish forever.
         </p>
       </div>
     </div>
@@ -92,7 +143,7 @@ import Button from '../components/Button.astro';
         <img
           src="https://mellsnap.co.uk/wp-content/uploads/2023/10/132-Web-683x1024.jpg"
           alt="Baby boy's first birthday photoshoot with cake smash and balloons"
-          class="w-full max-w-md mx-auto aspect-[2/3] object-cover"
+          class="w-full max-w-md mx-auto aspect-2/3 object-cover"
         />
       </div>
     </div>
@@ -109,11 +160,33 @@ import Button from '../components/Button.astro';
           Here's what's included in this comprehensive package:
         </p>
         <ul class="space-y-4 font-cormorant text-lg text-secondary-text">
-          <li><strong class="text-primary-text">Up to 4 hours capturing your event</strong> – Flexible and adaptable to your event schedule. For additional hours we can discuss further.</li>
-          <li><strong class="text-primary-text">80+ professionally edited digital images</strong> – A complete gallery of high-quality photos to capture the essence of your celebration.</li>
-          <li><strong class="text-primary-text">5–7 day delivery</strong> – You won't have to wait long to enjoy your photos.</li>
-          <li><strong class="text-primary-text">Secure online gallery</strong> – Your photos are delivered in a private gallery for easy viewing, sharing, and downloading, and they are active for up to one month.</li>
-          <li><strong class="text-primary-text">Natural and soft edit</strong> – Each image is carefully cropped and framed, with gentle, natural edits of the colours, lighting and white balance, there are no harsh filters or heavy retouching.</li>
+          <li>
+            <strong class="text-primary-text"
+              >Up to 4 hours capturing your event</strong
+            > – Flexible and adaptable to your event schedule. For additional hours
+            we can discuss further.
+          </li>
+          <li>
+            <strong class="text-primary-text"
+              >80+ professionally edited digital images</strong
+            > – A complete gallery of high-quality photos to capture the essence of
+            your celebration.
+          </li>
+          <li>
+            <strong class="text-primary-text">5–7 day delivery</strong> – You won't
+            have to wait long to enjoy your photos.
+          </li>
+          <li>
+            <strong class="text-primary-text">Secure online gallery</strong> – Your
+            photos are delivered in a private gallery for easy viewing, sharing, and
+            downloading, and they are active for up to one month.
+          </li>
+          <li>
+            <strong class="text-primary-text">Natural and soft edit</strong> – Each
+            image is carefully cropped and framed, with gentle, natural edits of the
+            colours, lighting and white balance, there are no harsh filters or heavy
+            retouching.
+          </li>
         </ul>
       </div>
     </div>
@@ -127,35 +200,55 @@ import Button from '../components/Button.astro';
           Why Choose My Event Photography Package?
         </h2>
         <p class="font-cormorant text-xl text-secondary-text mb-10">
-          Planning an event takes time and effort, so let me take one thing off your plate: capturing the memories. This package is perfect for those who want a professional yet relaxed photography experience tailored to their celebration.
+          Planning an event takes time and effort, so let me take one thing off
+          your plate: capturing the memories. This package is perfect for those
+          who want a professional yet relaxed photography experience tailored to
+          their celebration.
         </p>
 
         <div class="space-y-8">
           <div>
-            <h3 class="font-cormorant text-2xl text-primary-text mb-3">1. Moments That Matter</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-3">
+              1. Moments That Matter
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              I specialise in capturing the in-between moments – the laughter, the hugs, the spontaneous joy – as well as the must-have shots like group photos and key event highlights, we can discuss before the session for any special request or moments that are essential.
+              I specialise in capturing the in-between moments – the laughter,
+              the hugs, the spontaneous joy – as well as the must-have shots
+              like group photos and key event highlights, we can discuss before
+              the session for any special request or moments that are essential.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-2xl text-primary-text mb-3">2. Personalised to Your Event</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-3">
+              2. Personalised to Your Event
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              Every event is unique, and I tailor my approach to suit yours. Whether it's an intimate gathering at home, a lively birthday party in the park, or a romantic engagement dinner, I'll blend into the background and document your day as it naturally unfolds.
+              Every event is unique, and I tailor my approach to suit yours.
+              Whether it's an intimate gathering at home, a lively birthday
+              party in the park, or a romantic engagement dinner, I'll blend
+              into the background and document your day as it naturally unfolds.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-2xl text-primary-text mb-3">3. Flexible Coverage</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-3">
+              3. Flexible Coverage
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              With up to 4 hours of photography included, I'm there for the moments that matter most – whether that's the whole party or just the key highlights.
+              With up to 4 hours of photography included, I'm there for the
+              moments that matter most – whether that's the whole party or just
+              the key highlights.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-2xl text-primary-text mb-3">4. Beautiful, Natural Results</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-3">
+              4. Beautiful, Natural Results
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              My editing style keeps your photos looking genuine and timeless, so you can treasure them for years to come.
+              My editing style keeps your photos looking genuine and timeless,
+              so you can treasure them for years to come.
             </p>
           </div>
         </div>
@@ -171,11 +264,31 @@ import Button from '../components/Button.astro';
           Special Events I Love to Photograph
         </h2>
         <ul class="space-y-4 font-cormorant text-lg text-secondary-text">
-          <li><strong class="text-primary-text">Birthday Parties</strong> – Whether it's a child's birthday or a milestone celebration, I'll capture all the fun and excitement, from cake-cutting to party games.</li>
-          <li><strong class="text-primary-text">Anniversaries</strong> – Celebrate your love story with beautiful images that showcase the connection between you and your partner, as well as the joy of those celebrating alongside you.</li>
-          <li><strong class="text-primary-text">Family Gatherings</strong> – Every family has its own story, and I aim to tell yours through candid shots that capture the warmth and connections among family members.</li>
-          <li><strong class="text-primary-text">Engagements</strong> – Capture the excitement and joy of this special milestone with natural, romantic photos.</li>
-          <li><strong class="text-primary-text">Baby Showers & Christenings</strong> – Document these precious celebrations with beautiful, heartfelt images.</li>
+          <li>
+            <strong class="text-primary-text">Birthday Parties</strong> – Whether
+            it's a child's birthday or a milestone celebration, I'll capture all the
+            fun and excitement, from cake-cutting to party games.
+          </li>
+          <li>
+            <strong class="text-primary-text">Anniversaries</strong> – Celebrate your
+            love story with beautiful images that showcase the connection between
+            you and your partner, as well as the joy of those celebrating alongside
+            you.
+          </li>
+          <li>
+            <strong class="text-primary-text">Family Gatherings</strong> – Every family
+            has its own story, and I aim to tell yours through candid shots that capture
+            the warmth and connections among family members.
+          </li>
+          <li>
+            <strong class="text-primary-text">Engagements</strong> – Capture the excitement
+            and joy of this special milestone with natural, romantic photos.
+          </li>
+          <li>
+            <strong class="text-primary-text"
+              >Baby Showers & Christenings</strong
+            > – Document these precious celebrations with beautiful, heartfelt images.
+          </li>
         </ul>
       </div>
     </div>
@@ -189,7 +302,8 @@ import Button from '../components/Button.astro';
           Ready to Capture Your Event?
         </h2>
         <p class="font-cormorant text-xl text-secondary-text mb-10">
-          Let's document your special occasion with beautiful, natural photography.
+          Let's document your special occasion with beautiful, natural
+          photography.
         </p>
         <Button href="/free-consultation/" variant="primary">
           Book a Free Consultation

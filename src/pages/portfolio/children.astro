@@ -1,27 +1,34 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Button from '../../components/Button.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
 
 const images = [
-  'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1519308290483-f6cad9ff6a11?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1471342051497-a3037b32a03c?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1516627145497-ae6968895b40?w=800&h=600&fit=crop',
+  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1519308290483-f6cad9ff6a11?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1471342051497-a3037b32a03c?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1516627145497-ae6968895b40?w=800&h=600&fit=crop",
 ];
 ---
 
-<BaseLayout title="Children Portfolio" description="Children photography portfolio by MellSnap. Natural and playful photos of children in London.">
+<BaseLayout
+  title="Children Portfolio"
+  description="Children photography portfolio by MellSnap. Natural and playful photos of children in London."
+>
   <!-- Hero -->
   <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
-        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+        <h1
+          class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text"
+        >
           Children
         </h1>
-        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
+        <p
+          class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto"
+        >
           Capturing the wonder, joy, and playful spirit of childhood.
         </p>
       </div>
@@ -32,11 +39,18 @@ const images = [
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {images.map((img, i) => (
-          <div class="img-hover aspect-[4/3]">
-            <img src={img} alt={`Children photography ${i + 1}`} class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        ))}
+        {
+          images.map((img, i) => (
+            <div class="img-hover aspect-[4/3]">
+              <img
+                src={img}
+                alt={`Children photography ${i + 1}`}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
       </div>
 
       <div class="text-center mt-16">
@@ -50,7 +64,7 @@ const images = [
   <!-- Back Link -->
   <section class="py-10 bg-section-bg">
     <div class="container text-center">
-      <a href="/portfolio/" class="nav-link hover:text-gold transition-colors">
+      <a href="/portfolio/" class="nav-link hover:text-pink transition-colors">
         &larr; Back to Portfolio
       </a>
     </div>

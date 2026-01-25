@@ -1,28 +1,36 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Button from '../../components/Button.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
 
 const images = [
-  'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1496843916299-590492c751f4?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop',
+  "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1496843916299-590492c751f4?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
 ];
 ---
 
-<BaseLayout title="Events Portfolio" description="Event photography portfolio by MellSnap. Birthday parties, celebrations and special events in London.">
+<BaseLayout
+  title="Events Portfolio"
+  description="Event photography portfolio by MellSnap. Birthday parties, celebrations and special events in London."
+>
   <!-- Hero -->
   <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
-        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+        <h1
+          class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text"
+        >
           Events
         </h1>
-        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
-          Documenting birthdays, celebrations, and special moments you'll want to remember.
+        <p
+          class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto"
+        >
+          Documenting birthdays, celebrations, and special moments you'll want
+          to remember.
         </p>
       </div>
     </div>
@@ -32,11 +40,18 @@ const images = [
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {images.map((img, i) => (
-          <div class="img-hover aspect-[4/3]">
-            <img src={img} alt={`Event photography ${i + 1}`} class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        ))}
+        {
+          images.map((img, i) => (
+            <div class="img-hover aspect-[4/3]">
+              <img
+                src={img}
+                alt={`Event photography ${i + 1}`}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
       </div>
 
       <div class="text-center mt-16">
@@ -50,7 +65,7 @@ const images = [
   <!-- Back Link -->
   <section class="py-10 bg-section-bg">
     <div class="container text-center">
-      <a href="/portfolio/" class="nav-link hover:text-gold transition-colors">
+      <a href="/portfolio/" class="nav-link hover:text-pink transition-colors">
         &larr; Back to Portfolio
       </a>
     </div>

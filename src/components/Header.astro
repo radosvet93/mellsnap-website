@@ -1,11 +1,11 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about/', label: 'About' },
-  { href: '/services/', label: 'Services' },
-  { href: '/portfolio/', label: 'Portfolio' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/contact/', label: 'Contact' },
+  { href: "/", label: "Home" },
+  { href: "/about/", label: "About" },
+  { href: "/services/", label: "Services" },
+  { href: "/portfolio/", label: "Portfolio" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -16,10 +16,14 @@ const currentPath = Astro.url.pathname;
     <!-- Logo -->
     <div class="text-center mb-8">
       <a href="/" class="inline-block">
-        <h1 class="font-cormorant text-4xl md:text-5xl font-medium text-primary-text tracking-wide">
+        <h1
+          class="font-cormorant text-4xl md:text-5xl font-medium text-primary-text tracking-wide"
+        >
           MellSnap
         </h1>
-        <p class="font-ephesis text-xl md:text-2xl text-gold mt-1">Photography</p>
+        <p class="font-ephesis text-xl md:text-2xl text-pink mt-1">
+          Photography
+        </p>
       </a>
     </div>
 
@@ -30,39 +34,52 @@ const currentPath = Astro.url.pathname;
       aria-label="Toggle menu"
       aria-expanded="false"
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
 
     <!-- Navigation -->
     <nav id="nav-menu" class="hidden md:block">
-      <ul class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
-        {navLinks.map(link => (
-          <li>
-            <a
-              href={link.href}
-              class:list={[
-                'nav-link hover:text-gold transition-colors',
-                { 'text-gold': currentPath === link.href }
-              ]}
-            >
-              {link.label}
-            </a>
-          </li>
-        ))}
+      <ul
+        class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10"
+      >
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={[
+                  "nav-link hover:text-pink transition-colors",
+                  { "text-pink": currentPath === link.href },
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>
 </header>
 
 <script>
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const navMenu = document.getElementById('nav-menu');
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const navMenu = document.getElementById("nav-menu");
 
-  menuBtn?.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
-    navMenu?.classList.toggle('hidden');
+  menuBtn?.addEventListener("click", () => {
+    const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", (!isExpanded).toString());
+    navMenu?.classList.toggle("hidden");
   });
 </script>

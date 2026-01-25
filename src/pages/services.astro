@@ -1,61 +1,68 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import Button from '../components/Button.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import Button from "../components/Button.astro";
 
 const services = [
   {
-    title: 'Quick Session',
-    price: '£120',
-    duration: '20 minutes',
+    title: "Quick Session",
+    price: "£120",
+    duration: "20 minutes",
     features: [
-      '10 edited digital images',
-      'Private online gallery',
-      'Print-ready high-resolution files',
-      'Perfect for mini updates or gifts',
+      "10 edited digital images",
+      "Private online gallery",
+      "Print-ready high-resolution files",
+      "Perfect for mini updates or gifts",
     ],
   },
   {
-    title: 'Full Session',
-    price: '£200',
-    duration: '1 hour',
+    title: "Full Session",
+    price: "£200",
+    duration: "1 hour",
     features: [
-      '25 edited digital images',
-      'Private online gallery',
-      'Print-ready high-resolution files',
-      'Location of your choice',
-      'Outfit change included',
-      'Most popular option',
+      "25 edited digital images",
+      "Private online gallery",
+      "Print-ready high-resolution files",
+      "Location of your choice",
+      "Outfit change included",
+      "Most popular option",
     ],
     featured: true,
   },
   {
-    title: 'Event Coverage',
-    price: '£200',
-    duration: 'per hour',
+    title: "Event Coverage",
+    price: "£200",
+    duration: "per hour",
     features: [
-      'All edited images',
-      'Private online gallery',
-      'Quick 2-week turnaround',
-      'Flexible duration',
-      'Birthdays, parties & celebrations',
+      "All edited images",
+      "Private online gallery",
+      "Quick 2-week turnaround",
+      "Flexible duration",
+      "Birthdays, parties & celebrations",
     ],
   },
 ];
 ---
 
-<BaseLayout title="Services" description="Photography packages and pricing. Quick sessions, full sessions, and event coverage available.">
+<BaseLayout
+  title="Services"
+  description="Photography packages and pricing. Quick sessions, full sessions, and event coverage available."
+>
   <!-- Hero -->
   <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
       <div class="text-center mb-16">
         <p class="label mb-4">Services</p>
-        <h1 class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text">
+        <h1
+          class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text"
+        >
           Photography Packages
         </h1>
-        <p class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto">
-          Choose the perfect package for your needs. All sessions include professional editing
-          and a private online gallery.
+        <p
+          class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto"
+        >
+          Choose the perfect package for your needs. All sessions include
+          professional editing and a private online gallery.
         </p>
       </div>
     </div>
@@ -65,15 +72,17 @@ const services = [
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {services.map(service => (
-          <ServiceCard
-            title={service.title}
-            price={service.price}
-            duration={service.duration}
-            features={service.features}
-            featured={service.featured}
-          />
-        ))}
+        {
+          services.map((service) => (
+            <ServiceCard
+              title={service.title}
+              price={service.price}
+              duration={service.duration}
+              features={service.features}
+              featured={service.featured}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -91,23 +100,52 @@ const services = [
 
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-8">
-            <h3 class="font-cormorant text-2xl text-primary-text mb-4">Before Your Session</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-4">
+              Before Your Session
+            </h3>
             <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 Pre-session consultation
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 Location & styling guidance
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 What to wear guide
               </li>
@@ -115,23 +153,52 @@ const services = [
           </div>
 
           <div class="bg-white p-8">
-            <h3 class="font-cormorant text-2xl text-primary-text mb-4">After Your Session</h3>
+            <h3 class="font-cormorant text-2xl text-primary-text mb-4">
+              After Your Session
+            </h3>
             <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 Professional colour grading
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 Private online gallery (2 weeks)
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <svg
+                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
                 </svg>
                 High-resolution digital downloads
               </li>
@@ -155,34 +222,45 @@ const services = [
 
         <div class="space-y-8">
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">How do I book a session?</h3>
+            <h3 class="font-cormorant text-xl text-primary-text mb-2">
+              How do I book a session?
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              Simply fill out the contact form or email me directly. I'll get back to you within 24-48 hours
-              to discuss your session and check availability.
+              Simply fill out the contact form or email me directly. I'll get
+              back to you within 24-48 hours to discuss your session and check
+              availability.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">What should we wear?</h3>
+            <h3 class="font-cormorant text-xl text-primary-text mb-2">
+              What should we wear?
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              I provide a detailed style guide after booking. Generally, neutral colours and classic styles
-              photograph beautifully and stand the test of time.
+              I provide a detailed style guide after booking. Generally, neutral
+              colours and classic styles photograph beautifully and stand the
+              test of time.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">When will we receive our photos?</h3>
+            <h3 class="font-cormorant text-xl text-primary-text mb-2">
+              When will we receive our photos?
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              Your gallery will be ready within 2 weeks. Event photography may take slightly longer depending
-              on the size of the event.
+              Your gallery will be ready within 2 weeks. Event photography may
+              take slightly longer depending on the size of the event.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">What if it rains?</h3>
+            <h3 class="font-cormorant text-xl text-primary-text mb-2">
+              What if it rains?
+            </h3>
             <p class="font-cormorant text-lg text-secondary-text">
-              We can either embrace it (umbrellas and wellies make great photos!) or reschedule to another date.
-              I'm flexible and want you to be comfortable.
+              We can either embrace it (umbrellas and wellies make great
+              photos!) or reschedule to another date. I'm flexible and want you
+              to be comfortable.
             </p>
           </div>
         </div>
@@ -200,9 +278,7 @@ const services = [
         <p class="font-cormorant text-xl text-secondary-text mb-10">
           Get in touch to check availability and book your session.
         </p>
-        <Button href="/contact/" variant="primary">
-          Contact Me
-        </Button>
+        <Button href="/contact/" variant="primary"> Contact Me </Button>
       </div>
     </div>
   </section>
