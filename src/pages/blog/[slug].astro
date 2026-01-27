@@ -77,7 +77,16 @@ const { Content } = await render(post);
         [&_a]:text-pink
           [&_a]:underline
           [&_hr]:border-t
-        [&_hr]:border-beige"
+        [&_hr]:border-beige
+          [&_blockquote]:border-l-4
+          [&_blockquote]:border-l-pink
+          [&_blockquote]:pl-6
+          [&_blockquote]:py-4
+          [&_blockquote]:my-6
+          [&_blockquote]:italic
+          [&_blockquote]:bg-section-bg
+
+        "
         >
           <Content />
         </div>
