@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
-
-const images = [
-  "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800&h=600&fit=crop",
-];
 ---
 
 <BaseLayout
@@ -35,22 +26,426 @@ const images = [
     </div>
   </section>
 
-  <!-- Gallery -->
   <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {
-          images.map((img, i) => (
-            <div class="img-hover aspect-[4/3]">
-              <img
-                src={img}
-                alt={`Family photography ${i + 1}`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))
-        }
+    <div class="container w-5xl">
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Why I Love Outdoor Family Photoshoots
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        There's just something special about photographing families outdoors.
+        One of my favourite types of shoots is capturing families being
+        themselves—laughing, playing, and enjoying each other's company. Outdoor
+        family photoshoot in London lets your family's personality shine through
+        in a way that studio shoots sometimes just can't capture.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/125-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/111-Web-2.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/052-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/138-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/122-Web-2.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/133-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        The Beauty of Natural Moments
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        For me, the magic happens in the in-between moments. Sure, we'll take a
+        few posed shots, but I love capturing the candid ones—the moments where
+        everyone feels relaxed, and the unplanned interactions show the real
+        bond you share. Being outdoors, and enjoying yourselves as a family,
+        brings out those genuine smiles and connections that truly shine.
+        Whether you're playing in the park, walking through the woods, or even
+        having a little cuddle, these are the memories that you'll treasure.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/058-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/151-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/025-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/068-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/009-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Perfect for Toddlers and Active Kids
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Outdoor shoots are perfect for toddlers, especially when the idea of a
+        studio session feels like a challenge. Studio shoots can be tough for
+        little ones with short attention spans, but outdoors? That's a whole
+        different story. They can run, play, explore, and be themselves, while I
+        capture their serious faces, cheeky grins, and every little moment in
+        between. The best part is that they'll forget there's a camera around,
+        and that's when we get the most authentic shots.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/040-Web-e1731514657800.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/033-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/069-Web-1-e1731531650668.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/027-Web-e1731532892407.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/035-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/375-Web-e1731532071572.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Choosing the Perfect Location in London
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        I work mainly in South-West and Central London, there are so many spots
+        like beautiful parks, quiet gardens, and hidden gems. I'm always open to
+        new locations. If you have a place in mind, just let me know and we can
+        discuss. Exploring new parks is part of the fun, and I love finding the
+        perfect backdrop for your family.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        If you want to have a look at some amazing spots around London, go check
+        out my blog post on <a
+          href="https://www.mellsnap.co.uk/blog/best-parks-in-london-for-family-photoshoot/"
+          class="text-pink hover:underline"
+          >best parks in London for family photoshoot</a
+        > and let me know which one you like the most.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1045.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0534-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0956.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0807.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1191.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1175.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Don't Worry About the Weather
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        One thing families often worry about is the weather, but I'm here to
+        tell you not to stress about it. Cloudy days are actually amazing for
+        photography! The light is soft and flattering, which makes for beautiful
+        images. We can always reschedule if it's raining heavily, but a few
+        rainy-day shots can still be a lot of fun, especially with some cute
+        umbrellas in hand.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/027-Web-e1731531695812.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/046-Web-e1731532375942.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/073-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/062-Web-2.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/052-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/042-Web-2.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        The Perfect Time for Your Outdoor Family Photo Session
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        While golden hour just before sunset offers that magical, soft orange
+        glow, the best time for your little ones is when they're well-fed and
+        rested, so they're feeling happy and energised. I'm always flexible and
+        will work around your family's routine to make sure everyone is
+        comfortable. Most of my photo sessions are scheduled in the morning or
+        afternoon, avoiding the harsh midday light, so we can get those
+        beautiful, natural shots without any fuss.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6882.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6758.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6916.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8840.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8579.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8464.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Let's Capture Your Family's Unique Story
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Every family is unique, and that's what I love to capture. Your story,
+        your connection, and all the little moments that define you. An outdoor
+        family photoshoot creates lasting memories, that I guarantee you will
+        love.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/082-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/141-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/149-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.webp"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/040-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/073-Web-2.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        A Fun Day Out for the Whole Family
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Ready to book your outdoor family photoshoot in London? Let's make it a
+        fun, laid-back experience that feels like a day out with your loved
+        ones. No matter if it's capturing your toddler's funny grin or getting
+        the whole family together for some gorgeous sunset shots.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/078-Web-e1731531916854.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/063-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/020-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/036-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/039-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/059-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/087-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/116-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/130-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/061-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/070-Web-1.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/089-Web.jpg"
+          alt="Family photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
       </div>
 
       <div class="text-center mt-16">
