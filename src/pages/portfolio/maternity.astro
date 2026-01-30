@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
-
-const images = [
-  "https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop",
-];
 ---
 
 <BaseLayout
@@ -36,23 +27,353 @@ const images = [
     </div>
   </section>
 
-  <!-- Gallery -->
   <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {
-          images.map((img, i) => (
-            <div class="img-hover aspect-[4/3]">
-              <img
-                src={img}
-                alt={`Maternity photography ${i + 1}`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))
-        }
+    <div class="container w-5xl">
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Maternity Photography Celebrating The Most Beautiful Moments
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Your pregnancy is one of the most special times in your life. What
+        better way to celebrate this incredible journey than with a maternity
+        photoshoot? It's a perfect chance to capture those precious moments and
+        show off your beautiful bump. An outdoor maternity photoshoot in
+        London's stunning locations creates lasting memories and reflects the
+        unique connection between you and your baby.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        I didn't have a maternity photoshoot when I was pregnant with my
+        daughter, and I regret it to this day. My husband took a few photos with
+        his phone, but they just don't compare. The preparation, experience, and
+        quality of a professional maternity shoot capture so much more—the
+        excitement, the love, and that indescribable bond I felt. From the first
+        flutter in my tummy to those little kicks, it would have been wonderful
+        to look back on those memories through beautifully crafted images.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        That's why I'm passionate about helping you capture this special time.
+        Years from now, when you look at your maternity photos, I want you to
+        feel that connection all over again.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/063-Web.webp"
+          alt="Maternity photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg"
+          alt="Pregnant woman around flowers at Isabella plantation in Richmond park, maternity photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/018-Web-e1731531552915.jpg"
+          alt="Pregnant woman around flowers at Isabella plantation in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/048-Web-e1731532110866.jpg"
+          alt="Pregnant woman around flowers at Isabella plantation in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/056-Web-e1731531970342.jpg"
+          alt="Pregnant woman around flowers at Isabella plantation in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/034-Web.webp"
+          alt="Maternity photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
       </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Capturing Your Unique Bond
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        A maternity photoshoot is all about celebrating the bond between you,
+        your partner, and the new life growing inside you. Whether it's your
+        first baby or you're adding to your family, this experience is unique. I
+        strive to create a relaxed and personal session that reflects the love
+        and joy you feel.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        During our time together, we'll highlight your gorgeous baby bump and
+        capture the connection between you, your partner, and any older
+        siblings. We'll focus on those tender moments of anticipation, the
+        smiles, and even the quiet reflections.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/059-Web.jpg"
+          alt="Husband and wife kissing, expecting another child, little boy kissing mum's tummy"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/039-Web-1.jpg"
+          alt="Maternity photoshoot for a family, in a park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/036-Web.jpg"
+          alt="Maternity photoshoot for a family, little boy kissing mum's tummy"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        The Perfect Setting: Outdoor Maternity Photoshoots in London
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        All of my maternity photo sessions take place outdoors in beautiful
+        London parks and green spaces. There's something truly magical about
+        blending the natural beauty of a park or garden with your pregnancy
+        glow. London offers a variety of picturesque locations—from the open
+        spaces of Hyde Park to the tranquil paths of Richmond Park, there's a
+        perfect spot waiting for you.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        <a
+          href="/blog/why-parks-are-ideal-for-a-family-photoshoot/"
+          class="text-pink hover:underline"
+          >Outdoor shoots are perfect for catching the natural light, especially
+          during golden hour, just before sunset</a
+        >. But don't worry—if the weather is against us, we can always find a
+        sheltered spot, like some nice café or reschedule for a day when the
+        conditions are better. Cloudy skies often times are better, because the
+        lighting is even and doesn't create unpleasant shadows beneath the eyes.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-13-e1731530967834.jpg"
+          alt="Love couple expecting their first child, doing a maternity photoshoot at Woodland gardens in Bushy park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-47.jpg"
+          alt="Couple expecting their first child, doing a photoshoot at Woodland gardens in Bushy park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-34-e1731513826526.jpg"
+          alt="Pregnant woman and her husband in a park, enjoying warm weather and taking a maternity photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-28-e1731531110962.jpg"
+          alt="Love couple expecting their first child, doing a maternity photoshoot at Woodland gardens in Bushy park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-43.jpg"
+          alt="Couple expecting their first child, doing a photoshoot at Woodland gardens in Bushy park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/01-Web-16.jpg"
+          alt="Couple expecting their first child, doing a photoshoot at Woodland gardens in Bushy park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Timing Your Maternity Photoshoot
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        I recommend scheduling your maternity photoshoot around 32-34 weeks
+        pregnant. At this stage, your bump will be prominent and beautifully
+        rounded, while still being comfortable enough for movement. If you're
+        expecting multiples or have an earlier due date, we can adjust the
+        timing to suit your needs.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        It's a good idea to book your session early, ideally during the early
+        weeks of your second trimester. We'll plan around your schedule and
+        preferences, ensuring a relaxed and enjoyable experience.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/111-Web.jpg"
+          alt="Pregnant woman and man holding hands, walking on a nice path way on a sunny day"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/001-Web-1-e1731531453128.jpg"
+          alt="A couple expecting a baby, doing a maternity photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/047-Web.jpg"
+          alt="Couple expecting their first child, doing a photoshoot at Canbury gardens in Kingston"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/065-Web.jpg"
+          alt="Couple sitting on a bench, the man kissing his lovely wife"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/076-Web-1.jpg"
+          alt="Wife and husband head to head, expecting their first child"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/125-Web.jpg"
+          alt="Couple expecting their first child, doing a photoshoot at Canbury gardens in Kingston"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        What to Expect During Your Maternity Photoshoot
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Every maternity session is tailored to you. Whether you want a candid,
+        natural look or something more styled, I'll guide you through the
+        process. There's no pressure to pose perfectly—just be yourself and let
+        your connection to your baby shine. I'll gently direct you when needed,
+        but the best moments come from unscripted, genuine interactions.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        If you include your partner or children in the session, we'll capture
+        lovely family moments too. These photos become part of your family's
+        story, making the session even more special.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1958.webp"
+          alt="Maternity photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1606-1.webp"
+          alt="Maternity photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1633-1.webp"
+          alt="Maternity photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Don't Worry About the Weather
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        It's natural to worry about the unpredictable London weather, but cloudy
+        days can actually be great for photography! The soft, diffused light is
+        incredibly flattering and adds a gentle, peaceful feel to your photos.
+        And if it does rain, we can adapt by finding a sheltered spot or even
+        heading to a cosy café for some unique and intimate shots. Cloudy days
+        offer beautifully soft light, so we can still capture stunning images,
+        no matter the weather.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/018-Web-1.jpg"
+          alt="Family of three, soon to be four in a park, enjoying time together while taking a photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/024-Web-e1731531739520.jpg"
+          alt="Pregnant woman and her first son in a park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/026-Web-e1731531505156.jpg"
+          alt="Family of three, soon to be four in a park, enjoying time together while taking a photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        All Successful Images Just For You
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        I keep things simple, offering you all the successful images from our
+        session—typically between 80 to 100 photos. This gives you plenty to
+        choose from without the hassle of selecting a limited number. Once the
+        shoot is complete, you'll receive all the softly edited images in a
+        private online gallery, allowing you to download and print them wherever
+        and whenever you like.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        It's all about making sure you have the freedom to enjoy your photos in
+        a way that suits you.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/070-Web.jpg"
+          alt="Maternity photo session in Richmond Terrace Gardens, London, featuring a glowing expectant mother surrounded by lush greenery"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/082-Web-1.jpg"
+          alt="Maternity photo session in Richmond Terrace Gardens, London, featuring a glowing expectant mother surrounded by lush greenery"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/097-Web-1.jpg"
+          alt="Maternity photo session in Richmond Terrace Gardens, London, featuring a glowing expectant mother surrounded by lush greenery"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Let's Create Your Maternity Photoshoot Perfect
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Pregnancy is such a fleeting time, but the memories we capture together
+        will last a lifetime. Whether we're exploring one of London's beautiful
+        parks or finding the perfect outdoor spot, I'll be there to guide you
+        every step of the way and ensure your maternity photoshoot is a relaxed
+        and enjoyable experience.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Ready to book your outdoor maternity photoshoot in London? Get in touch,
+        and we'll start planning your session, tailored just for you and your
+        family.
+      </p>
 
       <div class="text-center mt-16">
         <Button href="/free-consultation/" variant="primary">
