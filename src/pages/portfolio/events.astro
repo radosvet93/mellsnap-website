@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
-
-const images = [
-  "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1496843916299-590492c751f4?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
-];
 ---
 
 <BaseLayout
@@ -36,22 +27,345 @@ const images = [
     </div>
   </section>
 
-  <!-- Gallery -->
   <section class="py-20 md:py-28 bg-white max-w-5xl mx-auto">
     <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {
-          images.map((img, i) => (
-            <div class="img-hover aspect-[4/3]">
-              <img
-                src={img}
-                alt={`Event photography ${i + 1}`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))
-        }
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Whether it's a birthday party, anniversary, or family gathering, event
+        photography is all about capturing the true essence of the
+        celebration. My approach focuses on documenting those real, candid
+        moments, so that every time you look back at your photos, you'll
+        relive the joy and atmosphere of the day all over again.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/002-Web.jpg"
+          alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/021-Web-1-e1731532212897.jpg"
+          alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/022-Web-e1731532159263.jpg"
+          alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/129-Web-1.jpg"
+          alt="Birthday event, celebrating 30th anniversary, couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/162-Web.jpg"
+          alt="Birthday event, celebrating 30th anniversary, couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/209-Web.jpg"
+          alt="Birthday event, celebrating 30th anniversary, couple celebrating birthday together with family"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/035-Web-1.jpg"
+          alt="18th birthday girl, celebrating with family and friends, having fun on the birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/135-Web.jpg"
+          alt="18th birthday celebration, with family and friends, having fun on the birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/181-Web-1.jpg"
+          alt="18th birthday celebration for a girl, with family and friends, having fun on the birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Why Event Photography Matters?
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Event photography is all about documenting the magic of your
+        celebrations. It goes beyond posed group shots to capture the
+        spontaneous interactions, smiles, and candid moments that truly define
+        your event. Whether it's the excitement of a birthday party or the
+        warmth of an anniversary celebration, my goal is to blend into the
+        background and let the day unfold naturally while capturing every
+        joyful moment.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        I've put together a post about <a
+          href="/blog/why-hire-a-children-birthday-party-photographer/"
+          class="text-pink hover:underline"
+          >the importance of an event photographer</a
+        > on special occasions, you can check that out for me details.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF6561.jpg"
+          alt="Birthday photo session, 4 year old boy birthday party, cake, face painting"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0534.jpg"
+          alt="Birthday party, children eating, waiting for the cake, a birthday photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0383.jpg"
+          alt="Birthday party photoshoot, children playing on a birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0457.jpg"
+          alt="Birthday party photoshoot, children playing on a birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF8986.jpg"
+          alt="Party decoration, Birthday event, birthday parties photography, children photoshoot from Mellsnap"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1086.jpg"
+          alt="Party decoration, birthday cake, balloons decoration. Birthday event, birthday parties photography, children photoshoot from Mellsnap"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Perfect for Birthday Parties
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Birthday parties are a time for fun and excitement, especially for
+        children. I thrive on capturing those special moments, from blowing
+        out the candles to the joy of friends playing together. I'll document
+        all the laughter and joy, creating a vibrant narrative of your
+        celebration that you can cherish for years to come.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/001-Web.jpg"
+          alt="Birthday girl decoration for her 5th birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/115-Web.jpg"
+          alt="Birthday cake for a girl who turns 5"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/313-Web.jpg"
+          alt="Little girls giggling on birthday event party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/317-Web.jpg"
+          alt="Young children smiling and enjoying a birthday event"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/375-Web-e1731532071572.jpg"
+          alt="Young children jumping, playing a game on a birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/181-Web.jpg"
+          alt="Children on a birthday party, birthday girl with her friends having fun"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/238-Web.jpg"
+          alt="Children on a birthday party, birthday girl with her friends having fun"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1736.jpg"
+          alt="Children on a birthday event, party for a 4 year old girl, birthday photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/164-Web.jpg"
+          alt="Group of kids dancing on fun music, having a bright light behind them and having a good time on a birthday party"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Special Events I Love to Photograph
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        <strong>Birthday Parties</strong>: Whether it's a child's birthday
+        or a milestone celebration, I'll capture all the fun and excitement,
+        from cake-cutting to party games.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        <strong>Anniversaries</strong>: Celebrate your love story with
+        beautiful images that showcase the connection between you and your
+        partner, as well as the joy of those celebrating alongside you.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        <strong>Family Gatherings</strong>: Every family has its own story,
+        and I aim to tell yours through candid shots that capture the warmth
+        and connections among family members.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0616.jpg"
+          alt="Little boy in a blue costume"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0668.jpg"
+          alt="Little boy in a blue costume"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0837.jpg"
+          alt="Two boys jumping on a trampoline"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1069.jpg"
+          alt="Two little boys running around a balloon"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1070.jpg"
+          alt="Two little boys running around a balloon"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/058-Web-1.jpg"
+          alt="Children on a birthday party, birthday girl with her friends having fun"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Creating Lasting Memories
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        I believe that every event tells a story. My focus is on preserving
+        that story in good photographs that reflect the spirit of the day.
+        From the small details to the big moments, I aim to create a
+        collection of images that bring your memories back to life every time
+        you look at them.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4550.jpg"
+          alt="Two ladies on a event, event photography"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4481.jpg"
+          alt="Two women talking and laughing on a beauty event"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4207.jpg"
+          alt="Three women making a toast"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4698.jpg"
+          alt="Blonde lady looking herself in the mirror"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4092.jpg"
+          alt="Blonde woman in pink dress on a event"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4076.jpg"
+          alt="Two women hugging"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF3174-1-scaled.jpg"
+          alt="Conversation between women, bulgarian woman in business event"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF3877-1-scaled.jpg"
+          alt="Conversation between women, bulgarian woman in business"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF3886-scaled.jpg"
+          alt="Three women listening and watching product presentation, bulgarian woman in business"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4110-scaled.jpg"
+          alt="Conversation between two women, bulgarian woman in business"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF3545-scaled.jpg"
+          alt="Two woman explaining to customers, bulgarian woman in business"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4090-scaled.jpg"
+          alt="Two women smiling on a beauty event"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1961.jpg"
+          alt="Christmas market in Kingston Upon Thames"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1897.jpg"
+          alt="A man who is performing and playing a guitar on a christmas market"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1874.jpg"
+          alt="A man who is performing and playing a guitar on a christmas market"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/20231216-DSCF2754.jpg"
+          alt="A man who is performing and playing a guitar on a christmas market"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF2014.jpg"
+          alt="A man who is performing and playing a guitar on a christmas market"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF2022.jpg"
+          alt="A man who is performing and playing a guitar on a christmas market"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
       </div>
 
       <div class="text-center mt-16">
