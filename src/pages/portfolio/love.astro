@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
-
-const images = [
-  "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&h=600&fit=crop",
-];
 ---
 
 <BaseLayout
@@ -35,22 +26,478 @@ const images = [
     </div>
   </section>
 
-  <!-- Gallery -->
   <section class="py-20 md:py-28 bg-white max-w-5xl mx-auto">
     <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        {
-          images.map((img, i) => (
-            <div class="img-hover aspect-[4/3]">
-              <img
-                src={img}
-                alt={`Couples photography ${i + 1}`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))
-        }
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        When it comes to capturing the special connection between two people,
+        there's something truly magical about a romantic photoshoot for couples.
+        Whether it's engagement photoshoot, celebrating an anniversary, marking
+        a milestone, or simply creating lasting memories with your partner, an
+        outdoor photoshoot in London's most beautiful locations is the perfect
+        way to celebrate your love.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        I absolutely love photographing couples outdoors, where the natural
+        surroundings and changing light help create an intimate and authentic
+        atmosphere. Forget stiff poses and awkward smiles—these sessions are all
+        about capturing your real connection, the laughter, and those
+        spontaneous moments that show your love for each other.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/DSCF2708.jpg"
+          alt="Couple enjoying a romantic moment in Greenwich Park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/39-DSCF2723-2.webp"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/1-DSCF2573.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/18-DSCF2650-2.jpg"
+          alt="Couple enjoying a romantic moment at Greenwich"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/90-DSCF2651.jpg"
+          alt="Couple enjoying a romantic moment at a cafe"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/83-DSCF2604.jpg"
+          alt="Couple enjoying a romantic moment at a cafe"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Why Choose an Outdoor Romantic Photoshoot for Couples?
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Studio shoots have their place, but nothing beats the magic of an
+        outdoor photoshoot. Being outside adds a sense of adventure and freedom
+        to your session. There's room to walk, explore, and simply enjoy the
+        experience together without feeling confined. Plus, nature provides the
+        perfect backdrop for romantic photos, whether it's a lush park, a
+        charming garden, or a scenic riverside.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        For couples, being outdoors often brings out the natural chemistry
+        between you. Rather than focusing on the camera, you can concentrate on
+        each other, making the session feel like a relaxed day out, especially
+        if we choose a location that holds special meaning for you. This allows
+        for authentic, intimate moments to be captured in a way that's difficult
+        to achieve indoors.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/115-DSCF2757.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/68-DSCF2816.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/107-DSCF2709.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Capturing Natural Moments of Love
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        What I love most about couple photoshoots is the chance to document your
+        relationship in its most natural form. The gentle hand-holding, the
+        quiet moments of laughter, and the spontaneous kisses—these are the
+        moments that tell your story. I'm not here to make you pose in a way
+        that feels unnatural or uncomfortable. Instead, I focus on those
+        in-between moments that really show the connection between you.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        We'll take a few posed shots, of course, but I always aim for a relaxed
+        and easygoing vibe. Think of it as a fun outing with your partner, where
+        you get to explore some beautiful spots around London, and I just happen
+        to be there to capture it all.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/015-Web.jpg"
+          alt="Man proposing to his girlfriend at Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/020-Web.jpg"
+          alt="Man holding a ring, proposing to his girlfriend"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/031-Web.jpg"
+          alt="Man proposing to his girlfriend at Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/085-Web.jpg"
+          alt="Proposal photoshoot for a couple in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/054-Web.jpg"
+          alt="Proposal photoshoot for a couple in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/063-Web.jpg"
+          alt="Proposal photoshoot for a couple in quiet park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/060-Web.jpg"
+          alt="Proposal photoshoot for a couple in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/119-Web.jpg"
+          alt="Proposal photoshoot for a couple in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/135-Web.jpg"
+          alt="Proposal photoshoot for a couple in Richmond park"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        The Best Locations for a Romantic Photoshoot for Couples in London
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        London is full of amazing outdoor locations that are perfect for a
+        romantic photoshoot. Whether you prefer grand parks, riverside views, or
+        hidden gardens, the city has something for every couple. Here are a few
+        of my favourite spots:
+      </p>
+
+      <ol
+        class="font-cormorant text-lg text-secondary-text mb-6 ml-6 list-decimal space-y-4"
+      >
+        <li>
+          <strong>Richmond Park</strong> - Richmond Park offers a nice setting with
+          wide open spaces, ancient trees, and beautiful deer roaming freely. It's
+          the ideal spot for couples who love nature and want a peaceful, secluded
+          feel for their photoshoot.
+        </li>
+        <li>
+          <strong>Holland Park</strong> - For a touch of elegance, Holland Park's
+          beautiful gardens, especially the Kyoto Garden, make for a romantic backdrop.
+          The combination of serene ponds, bright flowers, and quiet walkways creates
+          a timeless, romantic atmosphere.
+        </li>
+        <li>
+          <strong>Canbury Gardens</strong> - If you're after a peaceful spot, Canbury
+          Gardens is perfect. Nestled by the River Thames in Kingston, it offers serene
+          riverside views, tree-lined paths, and soft greenery, making it an ideal
+          backdrop for capturing intimate moments. It's the perfect place to reflect
+          your love story in a calm and natural setting.
+        </li>
+        <li>
+          <strong>Bushy Park</strong> - Just like Richmond Park, Bushy Park has wide-open
+          spaces, beautiful pathways, and lots of natural beauty. It's also less crowded,
+          making it perfect for a more private and intimate photoshoot.
+        </li>
+        <li>
+          <strong>Hyde Park</strong> - One of London's most famous parks, Hyde Park,
+          offers a mix of natural beauty and iconic spots like the Serpentine Lake.
+          Whether it's a quiet moment by the water or a stroll through the trees,
+          Hyde Park has endless possibilities for romantic photos.
+        </li>
+      </ol>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        For more ideas, you can also check my top list of <a
+          href="/blog/3-quite-locations-for-beautiful-romantic-photoshoot/"
+          class="text-pink hover:underline">3 quiet locations in London</a
+        > for couples.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-16">
+        Whatever location you choose, I'm always happy to explore new places
+        with you. If there's a spot that's meaningful to you as a couple—maybe
+        where you had your first date or where you got engaged—let's include it
+        in your session. It's all about making your photoshoot personal to your
+        story.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web86.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web95.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web45.jpg"
+          alt="Black and white photo for a couple for a romantic photo session in Kingston Upon Thames, outdoor romantic photoshoot from MellSnap"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/DSCF9849.webp"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web83.jpg"
+          alt="Couple for a romantic photo session in Kingston Upon Thames, outdoor romantic photoshoot from MellSnap"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web32.jpg"
+          alt="Couple posing for a romantic photo session in Kingston Upon Thames, outdoor romantic photoshoot from MellSnap"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        When Is the Best Time for a Romantic Photoshoot?
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        While golden hour (just before sunset) is known for its soft, flattering
+        light, the best time for your romantic photoshoot is whenever you and
+        your partner feel most comfortable. If you're early risers, a morning
+        shoot with the soft, dewy light can be just as magical as an evening
+        one. The key is working around your schedule and choosing a time that
+        suits your vibe.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        That said, we'll avoid the harsh midday light, which can create strong
+        shadows and make you squint. Whether it's a crisp autumn morning or a
+        warm summer evening, we'll find the perfect time to capture those
+        beautiful, glowing images that you'll cherish.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/023-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/044-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/058-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/053-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/076-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/142-Web.jpg"
+          alt="Wedding ceremony at Kingston registry office"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Don't Worry About the Weather
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        We live in London, and we all know the weather can be unpredictable. But
+        don't stress if it's a bit cloudy on the day of your shoot—overcast
+        skies are actually perfect for creating soft, even light that's
+        incredibly flattering. And if it rains? We'll embrace it! Rain can add a
+        touch of romance to your photos, with cosy shots of you and your partner
+        huddled under an umbrella or running through puddles. Plus, if needed,
+        we can always find a nice café or reschedule for another day if the
+        weather really isn't cooperating.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/102-Web.jpg"
+          alt="Wedding photoshoot at York House garden"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/087-Web.jpg"
+          alt="Wedding photoshoot at York House garden"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/091-Web-e1731514361955.jpg"
+          alt="Pre-wedding photoshoot at York House garden, a couple hugging and looking into each other eyes"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/008-Web.jpg"
+          alt="Couple photo"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/033-Web.jpg"
+          alt="A joyful couple shares a kiss in front of an ornate building entrance adorned with colorful flowers"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/066-Web.jpg"
+          alt="A smiling couple in sunglasses stands outdoors"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        What to Wear on a Romantic Photoshoot for Couples
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        When it comes to clothing, the most important thing is that you feel
+        comfortable and confident. I usually recommend avoiding overly busy
+        patterns or logos, as they can distract from the connection between you
+        and your partner. Instead, go for soft, neutral tones or subtle colour
+        coordination. Flowy dresses, cosy jumpers, or even a tailored jacket can
+        add a touch of elegance to your photos without taking away from the
+        natural feel of the shoot.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        If you're unsure about what to wear, don't hesitate to ask me for
+        advice. I'm always happy to help you choose outfits that complement both
+        the location and the mood of the shoot.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/101-Web.jpg"
+          alt="A joyful couple in wedding attire smiles while embracing"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/110-Web.jpg"
+          alt="Bride and groom smiling at each other on a stone bridge"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/006-Web-1.jpg"
+          alt="Black and white photo of a bride and groom"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/006-Web.jpg"
+          alt="Couple photo, man kissing his girlfriend, black and white photography"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/021-Web-1.jpg"
+          alt="Couple walking in park, hugging enjoying time together"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/034-Web.jpg"
+          alt="A couple by the river, holding hands"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+      </div>
+
+      <h2
+        class="font-cormorant text-3xl md:text-4xl text-primary-text font-bold mb-6"
+      >
+        Let's Capture Your Love Story
+      </h2>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-6">
+        Whether you've been together for years or are celebrating a new chapter
+        in your relationship, a romantic photoshoot for couples is a wonderful
+        way to document your love story. It's not just about having beautiful
+        photos to hang on your wall (though that's definitely a bonus!); it's
+        about taking time to celebrate your connection, laugh together, and
+        create lasting memories.
+      </p>
+
+      <p class="font-cormorant text-lg text-secondary-text mb-12">
+        Ready to book your romantic photoshoot for couples in London? Let's make
+        it a day you'll always remember. Get in touch, and we'll start planning
+        a session that perfectly captures your unique love story.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/132-Web.jpg"
+          alt="A couple shares a kiss under a clear umbrella, holding a bouquet of flowers"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/133-Web-1.jpg"
+          alt="Wedding ceremony, capturing a couple getting married, groom holding an umbrella and bride with flowers"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/167-Web.jpg"
+          alt="Wedding ceremony, couple getting married, saying yes to each other"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/204-Web.jpg"
+          alt="Groom and bride kissing, wedding photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/208-Web.jpg"
+          alt="Groom and bride kissing, wedding photoshoot"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
+        <img
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/147-Web.jpg"
+          alt="Red London Bus on groom and bride's wedding day"
+          class="aspect-square img-hover w-full h-auto object-cover"
+        />
       </div>
 
       <div class="text-center mt-16">
