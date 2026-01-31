@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.15"
+    "astro": "^5.16.15",
+    "dotenv": "^17.2.3"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.0",
