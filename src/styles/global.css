@@ -4,9 +4,10 @@
 /* Design Tokens */
 @theme {
   /* Colors */
-  --color-beige: #e9e1d9;
+  --color-beige: #e8f3e9;
   --color-light-pink: #cfa5b8;
   --color-pink: #995d7c;
+  --color-green: #44914b;
   --color-primary-text: #363636;
   --color-secondary-text: #5b5b5b;
   --color-light-bg: #f8f8f8;
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-primary-text);
+  background-color: var(--color-green);
   color: var(--color-white);
 }
 
