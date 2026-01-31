@@ -200,7 +200,12 @@ const testimonials = [
           What Clients Say
         </h2>
         <p class="font-cormorant text-xl text-secondary-text mt-4">
-          5.0 rating from <a class="hover:underline text-pink" href="https://share.google/KYxFW8GJmiGjTPqWG" target="_blank" rel="noopener noreferrer">33 Google reviews</a>
+          5.0 rating from <a
+            class="hover:underline text-pink"
+            href="https://share.google/KYxFW8GJmiGjTPqWG"
+            target="_blank"
+            rel="noopener noreferrer">33 Google reviews</a
+          >
         </p>
       </div>
 
@@ -219,18 +224,23 @@ const testimonials = [
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 md:py-28 bg-beige">
-    <div class="container">
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img
+      src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="container relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="font-cormorant text-4xl md:text-5xl text-primary-text mb-6">
+        <h2 class="font-cormorant text-4xl md:text-5xl text-white mb-6">
           Ready to Capture Your Story?
         </h2>
-        <p class="font-cormorant text-xl text-secondary-text mb-10">
+        <p class="font-cormorant text-xl text-white/90 mb-10">
           Let's create beautiful memories together. Book your session today.
         </p>
-        <Button href="/free-consultation/" variant="secondary">
-          Get in Touch
-        </Button>
+        <a class="btn bg-green text-white hover:bg-green-500" href="/free-consultation/"> Get in Touch </a>
       </div>
     </div>
   </section>
