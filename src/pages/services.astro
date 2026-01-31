@@ -6,7 +6,7 @@ import Button from "../components/Button.astro";
 const services = [
   {
     title: "Quick Session",
-    price: "£120",
+    price: "£180",
     duration: "20 minutes",
     features: [
       "10 edited digital images",
@@ -17,7 +17,7 @@ const services = [
   },
   {
     title: "Full Session",
-    price: "£200",
+    price: "£300",
     duration: "1 hour",
     features: [
       "25 edited digital images",
@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Event Coverage",
-    price: "£200",
+    price: "£300",
     duration: "per hour",
     features: [
       "All edited images",
@@ -106,7 +106,7 @@ const services = [
             <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ const services = [
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -136,7 +136,7 @@ const services = [
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ const services = [
             <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -174,7 +174,7 @@ const services = [
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -189,7 +189,7 @@ const services = [
               </li>
               <li class="flex items-start gap-3">
                 <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
+                  class="w-5 h-5 text-green mt-1 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -278,7 +278,9 @@ const services = [
         <p class="font-cormorant text-xl text-secondary-text mb-10">
           Get in touch to check availability and book your session.
         </p>
-        <Button href="/free-consultation/" variant="primary"> Contact Me </Button>
+        <a class="btn bg-green text-white hover:bg-green-500" href="/free-consultation/">
+          Contact Me
+        </a>
       </div>
     </div>
   </section>
