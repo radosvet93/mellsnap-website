@@ -13,7 +13,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<div class="relative max-w-4xl mx-auto px-12 py-5">
+<div class="relative max-w-6xl mx-auto px-12 py-5">
   <div class="overflow-hidden">
     <div class="carousel-track flex transition-transform duration-500 ease-out">
       {items.map((item) => (
@@ -30,8 +30,8 @@ const { items } = Astro.props;
                 loading="lazy"
               />
             </div>
-            <div class="bg-white py-3">
-              <h3 class="text-lg font-cormorant text-center font-semibold">{item.title}</h3>
+            <div class="bg-white pb-8">
+              <h3 class="text-2xl font-cormorant text-center font-semibold">{item.title}</h3>
             </div>
           </a>
         </div>
@@ -41,7 +41,7 @@ const { items } = Astro.props;
 
   <!-- Chevron Navigation -->
   <button
-    class="carousel-btn carousel-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300"
+    class="carousel-btn carousel-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 cursor-pointer"
     aria-label="Previous slide"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ const { items } = Astro.props;
   </button>
 
   <button
-    class="carousel-btn carousel-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300"
+    class="carousel-btn carousel-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 cursor-pointer"
     aria-label="Next slide"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
