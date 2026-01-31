@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ServiceCard from "../components/ServiceCard.astro";
-import PortfolioCard from "../components/PortfolioCard.astro";
+import PortfolioCarousel from "../components/PortfolioCarousel.astro";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import Button from "../components/Button.astro";
 
@@ -50,22 +50,36 @@ const portfolioItems = [
   {
     title: "Family",
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=750&fit=crop",
+      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg",
     href: "/portfolio/family/",
     category: "Portfolio",
   },
   {
     title: "Maternity",
     image:
-      "https://images.unsplash.com/photo-1544126592-807ade215a0b?w=600&h=750&fit=crop",
+      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg",
     href: "/portfolio/maternity/",
     category: "Portfolio",
   },
   {
-    title: "Love",
+    title: "Couples",
     image:
-      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=750&fit=crop",
+      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/DSCF9849.webp",
     href: "/portfolio/love/",
+    category: "Portfolio",
+  },
+  {
+    title: "Children",
+    image:
+      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/children/082-Web.jpg",
+    href: "/portfolio/children/",
+    category: "Portfolio",
+  },
+  {
+    title: "Events",
+    image:
+      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/115-Web.jpg",
+    href: "/portfolio/events/",
     category: "Portfolio",
   },
 ];
@@ -96,33 +110,22 @@ const testimonials = [
   <!-- Hero Section -->
   <Hero
     title="Natural Outdoor Family Photography"
-    subtitle="Family Photographer in Kingston"
+    subtitle="Family Photographer in Kingston upon Thames & London"
     ctaText="Book Your Session"
-    ctaLink="/contact/"
+    ctaLink="/free-consultation/"
   />
 
   <!-- Portfolio Preview Section -->
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="text-center mb-16">
-        <p class="label mb-4">Portfolio</p>
+        <p class="label mb-4">Explore and experience natural photo sessions</p>
         <h2 class="font-cormorant text-4xl md:text-5xl text-primary-text">
-          Recent Work
+          My Family & Lifestyle Photography Portfolio
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {
-          portfolioItems.map((item) => (
-            <PortfolioCard
-              title={item.title}
-              image={item.image}
-              href={item.href}
-              category={item.category}
-            />
-          ))
-        }
-      </div>
+      <PortfolioCarousel items={portfolioItems} />
 
       <div class="text-center mt-12">
         <Button href="/portfolio/" variant="secondary">
@@ -197,7 +200,7 @@ const testimonials = [
           What Clients Say
         </h2>
         <p class="font-cormorant text-xl text-secondary-text mt-4">
-          5.0 rating from 33 Google reviews
+          5.0 rating from <a class="hover:underline text-pink" href="https://share.google/KYxFW8GJmiGjTPqWG" target="_blank" rel="noopener noreferrer">33 Google reviews</a>
         </p>
       </div>
 
@@ -225,7 +228,9 @@ const testimonials = [
         <p class="font-cormorant text-xl text-secondary-text mb-10">
           Let's create beautiful memories together. Book your session today.
         </p>
-        <Button href="/free-consultation/" variant="secondary"> Get in Touch </Button>
+        <Button href="/free-consultation/" variant="secondary">
+          Get in Touch
+        </Button>
       </div>
     </div>
   </section>
