@@ -7,6 +7,8 @@ import TestimonialCard from "../components/TestimonialCard.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import GabyAndMeliImage from "../images/gaby-meli.png";
+import { getCollection } from "astro:content";
+import { fetchGoogleReviews } from "../data/googleReviews";
 
 const services = [
   {
@@ -86,26 +88,8 @@ const portfolioItems = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Gaby captured our family beautifully. The photos exceeded our expectations and we will treasure them forever.",
-    name: "Sarah M.",
-    rating: 5,
-  },
-  {
-    quote:
-      "Such a lovely experience! Gaby made us feel so comfortable and the results are stunning.",
-    name: "Emma T.",
-    rating: 5,
-  },
-  {
-    quote:
-      "Professional, creative, and so patient with our little ones. Highly recommend MellSnap!",
-    name: "James & Lisa",
-    rating: 5,
-  },
-];
+const reviewStats = await fetchGoogleReviews();
+const testimonials = await getCollection("reviews");
 ---
 
 <BaseLayout title="Home">
@@ -217,11 +201,11 @@ const testimonials = [
           What Clients Say
         </h2>
         <p class="font-cormorant text-xl text-secondary-text mt-4">
-          5.0 rating from <a
+          {reviewStats.averageRating.toFixed(1)} rating from <a
             class="text-pink underline hover:text-light-pink"
             href="https://share.google/KYxFW8GJmiGjTPqWG"
             target="_blank"
-            rel="noopener noreferrer">33 Google reviews</a
+            rel="noopener noreferrer">{reviewStats.totalReviews} Google reviews</a
           >
         </p>
       </div>
@@ -230,9 +214,9 @@ const testimonials = [
         {
           testimonials.map((testimonial) => (
             <TestimonialCard
-              quote={testimonial.quote}
-              name={testimonial.name}
-              rating={testimonial.rating}
+              quote={testimonial.data.quote}
+              name={testimonial.data.name}
+              rating={testimonial.data.rating}
             />
           ))
         }
