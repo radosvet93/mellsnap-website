@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { fetchGoogleReviews } from './data/googleReviews';
 
 const portfolio = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/portfolio' }),
@@ -24,4 +25,19 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { portfolio, blog };
+const reviews = defineCollection({
+  loader: async () => {
+    const data = await fetchGoogleReviews();
+    return data.reviews.map((review, index) => ({
+      id: String(index),
+      ...review,
+    }));
+  },
+  schema: z.object({
+    quote: z.string(),
+    name: z.string(),
+    rating: z.number(),
+  }),
+});
+
+export const collections = { portfolio, blog, reviews };
