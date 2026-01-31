@@ -14,7 +14,7 @@ const { quote, name, rating = 5 } = Astro.props;
     {
       Array.from({ length: 5 }).map((_, i) => (
         <svg
-          class:list={["w-5 h-5", i < rating ? "text-pink" : "text-beige"]}
+          class:list={["w-5 h-5", i < rating ? "text-amber-500" : "text-beige"]}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -32,5 +32,5 @@ const { quote, name, rating = 5 } = Astro.props;
   </blockquote>
 
   <!-- Name -->
-  <p class="font-ephesis text-2xl text-pink">{name}</p>
+  <p class="font-ephesis text-2xl text-green">{name}</p>
 </div>
