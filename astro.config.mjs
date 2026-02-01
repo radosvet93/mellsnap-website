@@ -12,4 +12,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.mellsnap.co.uk',
+      },
+    ],
+  },
 });
