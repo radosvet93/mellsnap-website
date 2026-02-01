@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface PortfolioItem {
   title: string;
   image: string;
@@ -23,9 +25,10 @@ const { items } = Astro.props;
             class="block shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
           >
             <div class="aspect-4/5">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                inferSize
                 class="w-full h-full object-cover p-4"
                 loading="lazy"
               />

@@ -205,7 +205,8 @@ const testimonials = await getCollection("reviews");
             class="text-pink underline hover:text-light-pink"
             href="https://share.google/KYxFW8GJmiGjTPqWG"
             target="_blank"
-            rel="noopener noreferrer">{reviewStats.totalReviews} Google reviews</a
+            rel="noopener noreferrer"
+            >{reviewStats.totalReviews} Google reviews</a
           >
         </p>
       </div>
@@ -226,7 +227,8 @@ const testimonials = await getCollection("reviews");
 
   <!-- CTA Section -->
   <section class="relative py-20 md:py-28 overflow-hidden">
-    <img
+    <Image
+      inferSize
       src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg"
       alt=""
       class="absolute inset-0 w-full h-full object-cover"

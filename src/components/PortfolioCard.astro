@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
@@ -16,9 +17,10 @@ const { title, image, href } = Astro.props;
   class="block shadow-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
 >
   <div class="aspect-4/5">
-    <img
+    <Image
       src={image}
       alt={title}
+      inferSize
       class="w-full h-full object-cover p-6"
       loading="lazy"
     />
