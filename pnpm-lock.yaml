@@ -10,7 +10,7 @@ importers:
     dependencies:
       astro:
         specifier: ^5.16.15
-        version: 5.16.15(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3)
+        version: 5.16.15(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(tsx@4.21.0)(typescript@5.9.3)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -20,13 +20,16 @@ importers:
         version: 3.7.0
       '@tailwindcss/vite':
         specifier: ^4.1.18
-        version: 4.1.18(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))
+        version: 4.1.18(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0))
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
+      tsx:
+        specifier: ^4.19.2
+        version: 4.21.0
       wrangler:
         specifier: ^4.60.0
         version: 4.60.0
@@ -1171,6 +1174,9 @@ packages:
     resolution: {integrity: sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==}
     engines: {node: '>=18'}
 
+  get-tsconfig@4.13.1:
+    resolution: {integrity: sha512-EoY1N2xCn44xU6750Sx7OjOIT59FkmstNc3X6y5xpz7D5cBtZRe/3pSlTkDJgqsOk3WwZPkWfonhhUJfttQo3w==}
+
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
@@ -1627,6 +1633,9 @@ packages:
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
+  resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   retext-latin@4.0.0:
     resolution: {integrity: sha512-hv9woG7Fy0M9IlRQloq/N6atV82NxLGveq+3H2WOi79dtIYWN8OaxogDm77f8YnVXJL2VD3bbqowu5E3EMhBYA==}
 
@@ -1746,6 +1755,11 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  tsx@4.21.0:
+    resolution: {integrity: sha512-5C1sg4USs1lfG0GFb2RLXsdpXqBSEhAaA/0kPL01wxzpMqLILNxIxIOKiILz+cdg/pLnOUxFYOR5yhHU666wbw==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   type-fest@4.41.0:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
@@ -2582,12 +2596,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.18
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.18
 
-  '@tailwindcss/vite@4.1.18(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))':
+  '@tailwindcss/vite@4.1.18(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0))':
     dependencies:
       '@tailwindcss/node': 4.1.18
       '@tailwindcss/oxide': 4.1.18
       tailwindcss: 4.1.18
-      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)
 
   '@types/debug@4.1.12':
     dependencies:
@@ -2644,7 +2658,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@5.16.15(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(typescript@5.9.3):
+  astro@5.16.15(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.56.0)(tsx@4.21.0)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -2701,8 +2715,8 @@ snapshots:
       unist-util-visit: 5.1.0
       unstorage: 1.17.4
       vfile: 6.0.3
-      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)
-      vitefu: 1.1.1(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))
+      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)
+      vitefu: 1.1.1(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -2986,6 +3000,10 @@ snapshots:
     optional: true
 
   get-east-asian-width@1.4.0: {}
+
+  get-tsconfig@4.13.1:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
 
   github-slugger@2.0.0: {}
 
@@ -3688,6 +3706,8 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
       unified: 11.0.5
 
+  resolve-pkg-maps@1.0.0: {}
+
   retext-latin@4.0.0:
     dependencies:
       '@types/nlcst': 2.0.3
@@ -3868,6 +3888,13 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
+  tsx@4.21.0:
+    dependencies:
+      esbuild: 0.27.0
+      get-tsconfig: 4.13.1
+    optionalDependencies:
+      fsevents: 2.3.3
+
   type-fest@4.41.0: {}
 
   typescript@5.9.3: {}
@@ -3968,7 +3995,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2):
+  vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3980,10 +4007,11 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.6.1
       lightningcss: 1.30.2
+      tsx: 4.21.0
 
-  vitefu@1.1.1(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)):
+  vitefu@1.1.1(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)):
     optionalDependencies:
-      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 6.4.1(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)
 
   web-namespaces@2.0.1: {}
 

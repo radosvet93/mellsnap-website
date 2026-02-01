@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "tsx scripts/fetch-reviews.ts",
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "astro build && wrangler deploy",
@@ -18,6 +19,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
+    "tsx": "^4.19.2",
     "wrangler": "^4.60.0"
   }
 }
