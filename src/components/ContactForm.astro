@@ -11,9 +11,6 @@ import Button from "./Button.astro";
   <!-- Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="f44bf584-6276-4cff-bc9f-3338b4e362cb" />
 
-  <!-- Honeypot Spam Protection -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-
   <!-- Success/Error Messages -->
   <div id="form-message" class="hidden"></div>
 
@@ -78,6 +75,9 @@ import Button from "./Button.astro";
       placeholder="Tell me about your session..."></textarea>
   </div>
 
+  <!-- hCaptcha -->
+  <div class="h-captcha" data-captcha="true"></div>
+
   <div class="text-center pt-4">
     <Button type="submit" variant="primary"> Send Message </Button>
   </div>
@@ -129,3 +129,5 @@ import Button from "./Button.astro";
     }
   });
 </script>
+
+<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
