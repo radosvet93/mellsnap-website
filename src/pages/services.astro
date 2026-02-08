@@ -14,6 +14,7 @@ const services = [
       "Print-ready high-resolution files",
       "Perfect for mini updates or gifts",
     ],
+    ctaLink: "/quick-photoshoot/",
   },
   {
     title: "Full Session",
@@ -28,6 +29,7 @@ const services = [
       "Most popular option",
     ],
     featured: true,
+    ctaLink: "/full-photoshoot/",
   },
   {
     title: "Event Coverage",
@@ -40,6 +42,7 @@ const services = [
       "Flexible duration",
       "Birthdays, parties & celebrations",
     ],
+    ctaLink: "/event-photography/",
   },
 ];
 ---
@@ -53,14 +56,8 @@ const services = [
     <div class="container">
       <div class="text-center mb-16">
         <p class="label mb-4">Services</p>
-        <h1
-          class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text"
-        >
-          Photography Packages
-        </h1>
-        <p
-          class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto"
-        >
+        <h1 class="text-primary-text">Photography Packages</h1>
+        <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
           Choose the perfect package for your needs. All sessions include
           professional editing and a private online gallery.
         </p>
@@ -80,6 +77,7 @@ const services = [
               duration={service.duration}
               features={service.features}
               featured={service.featured}
+              ctaLink={service.ctaLink}
             />
           ))
         }
@@ -93,17 +91,13 @@ const services = [
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
           <p class="label mb-4">Details</p>
-          <h2 class="font-cormorant text-4xl md:text-5xl text-primary-text">
-            What's Included
-          </h2>
+          <h2 class="text-primary-text">What's Included</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-8">
-            <h3 class="font-cormorant text-2xl text-primary-text mb-4">
-              Before Your Session
-            </h3>
-            <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
+            <h3 class="text-primary-text mb-4">Before Your Session</h3>
+            <ul class="space-y-3 text-secondary-text">
               <li class="flex items-start gap-3">
                 <svg
                   class="w-5 h-5 text-green mt-1 shrink-0"
@@ -153,10 +147,8 @@ const services = [
           </div>
 
           <div class="bg-white p-8">
-            <h3 class="font-cormorant text-2xl text-primary-text mb-4">
-              After Your Session
-            </h3>
-            <ul class="space-y-3 font-cormorant text-lg text-secondary-text">
+            <h3 class="text-primary-text mb-4">After Your Session</h3>
+            <ul class="space-y-3 text-secondary-text">
               <li class="flex items-start gap-3">
                 <svg
                   class="w-5 h-5 text-green mt-1 shrink-0"
@@ -215,17 +207,13 @@ const services = [
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16">
           <p class="label mb-4">FAQ</p>
-          <h2 class="font-cormorant text-4xl md:text-5xl text-primary-text">
-            Common Questions
-          </h2>
+          <h2 class="text-primary-text">Common Questions</h2>
         </div>
 
         <div class="space-y-8">
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">
-              How do I book a session?
-            </h3>
-            <p class="font-cormorant text-lg text-secondary-text">
+            <h3 class="text-primary-text mb-2">How do I book a session?</h3>
+            <p class="text-secondary-text">
               Simply fill out the contact form or email me directly. I'll get
               back to you within 24-48 hours to discuss your session and check
               availability.
@@ -233,10 +221,8 @@ const services = [
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">
-              What should we wear?
-            </h3>
-            <p class="font-cormorant text-lg text-secondary-text">
+            <h3 class="text-primary-text mb-2">What should we wear?</h3>
+            <p class="text-secondary-text">
               I provide a detailed style guide after booking. Generally, neutral
               colours and classic styles photograph beautifully and stand the
               test of time.
@@ -244,20 +230,18 @@ const services = [
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">
+            <h3 class="text-primary-text mb-2">
               When will we receive our photos?
             </h3>
-            <p class="font-cormorant text-lg text-secondary-text">
+            <p class="text-secondary-text">
               Your gallery will be ready within 2 weeks. Event photography may
               take slightly longer depending on the size of the event.
             </p>
           </div>
 
           <div>
-            <h3 class="font-cormorant text-xl text-primary-text mb-2">
-              What if it rains?
-            </h3>
-            <p class="font-cormorant text-lg text-secondary-text">
+            <h3 class="text-primary-text mb-2">What if it rains?</h3>
+            <p class="text-secondary-text">
               We can either embrace it (umbrellas and wellies make great
               photos!) or reschedule to another date. I'm flexible and want you
               to be comfortable.
@@ -272,13 +256,14 @@ const services = [
   <section class="py-20 md:py-28 bg-beige">
     <div class="container">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="font-cormorant text-4xl md:text-5xl text-primary-text mb-6">
-          Ready to Book?
-        </h2>
-        <p class="font-cormorant text-xl text-secondary-text mb-10">
+        <h2 class="text-primary-text mb-6">Ready to Book?</h2>
+        <p class="text-secondary-text mb-10">
           Get in touch to check availability and book your session.
         </p>
-        <a class="btn bg-green text-white hover:bg-green-500" href="/free-consultation/">
+        <a
+          class="btn bg-green text-white hover:bg-green-500"
+          href="/free-consultation/"
+        >
           Contact Me
         </a>
       </div>

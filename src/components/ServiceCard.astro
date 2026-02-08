@@ -16,7 +16,7 @@ const {
   price,
   duration,
   features,
-  ctaText = "Book Now",
+  ctaText = "Select",
   ctaLink = "/contact/",
   featured = false,
 } = Astro.props;
@@ -28,22 +28,20 @@ const {
     { "border-2 border-pink": featured },
   ]}
 >
-  <h3 class="font-ephesis text-3xl md:text-4xl text-pink mb-4">
+  <h3 class="font-ephesis text-pink mb-4">
     {title}
   </h3>
-  <p
-    class="font-cormorant text-4xl md:text-5xl font-medium text-primary-text mb-2"
-  >
+  <p class="font-medium text-primary-text mb-2">
     {price}
   </p>
-  <p class="font-raleway text-sm text-secondary-text tracking-wide mb-8">
+  <p class="font-raleway text-secondary-text tracking-wide mb-8">
     {duration}
   </p>
 
   <ul class="space-y-4 mb-10">
     {
       features.map((feature) => (
-        <li class="font-cormorant text-lg text-secondary-text flex items-center justify-center gap-2">
+        <li class=" text-secondary-text flex items-center justify-center gap-2">
           <svg
             class="w-5 h-5 text-green shrink-0"
             fill="none"

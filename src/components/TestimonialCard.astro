@@ -25,12 +25,10 @@ const { quote, name, rating = 5 } = Astro.props;
   </div>
 
   <!-- Quote -->
-  <blockquote
-    class="font-cormorant text-primary-text italic leading-relaxed mb-6"
-  >
+  <blockquote class="text-primary-text italic leading-relaxed mb-6">
     "{quote}"
   </blockquote>
 
   <!-- Name -->
-  <p class="font-ephesis text-2xl text-green">{name}</p>
+  <p class="font-ephesis text-green">{name}</p>
 </div>

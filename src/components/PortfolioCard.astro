@@ -26,14 +26,18 @@ const { title, image, href } = Astro.props;
     />
     <div class="flex items-center justify-center">
       <div class="text-center pb-6">
-        <h3 class="text-2xl font-bold">{title}</h3>
+        <h3 class="font-bold">{title}</h3>
       </div>
     </div>
   </div>
-  <Button class="block w-full group "
+  <Button class="block w-full group"
     >Go to {title} gallery
 
-    <svg class="inline w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      class="inline w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"

@@ -21,14 +21,8 @@ const sortedPosts = posts.sort(
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Blog</p>
-        <h1
-          class="font-cormorant text-4xl md:text-5xl lg:text-6xl text-primary-text"
-        >
-          Stories & Tips
-        </h1>
-        <p
-          class="font-cormorant text-xl text-secondary-text mt-6 max-w-2xl mx-auto"
-        >
+        <h1 class="text-primary-text">Stories & Tips</h1>
+        <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
           Photography advice, session inspiration, and behind-the-scenes
           stories.
         </p>
@@ -60,12 +54,10 @@ const sortedPosts = posts.sort(
                     year: "numeric",
                   })}
                 </time>
-                <h2 class="font-cormorant text-2xl text-primary-text mt-2 mb-3 group-hover:text-pink transition-colors">
+                <h2 class="md:text-xl! lg:text-2xl! text-primary-text mt-2 mb-3 group-hover:text-pink transition-colors">
                   {post.data.title}
                 </h2>
-                <p class="font-cormorant text-lg text-secondary-text">
-                  {post.data.excerpt}
-                </p>
+                <p class="text-sm! text-secondary-text">{post.data.excerpt}</p>
               </a>
             </article>
           ))
