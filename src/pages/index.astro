@@ -21,6 +21,7 @@ const services = [
       "Private online gallery",
       "Print-ready files",
     ],
+    ctaLink: "/quick-photoshoot/",
   },
   {
     title: "Full Session",
@@ -34,6 +35,7 @@ const services = [
       "Location of your choice within my coverage area",
     ],
     featured: true,
+    ctaLink: "/full-photoshoot/",
   },
   {
     title: "Event Coverage",
@@ -47,6 +49,7 @@ const services = [
       "Quick turnaround",
       "Flexible duration",
     ],
+    ctaLink: "/event-photography/",
   },
 ];
 
@@ -138,6 +141,7 @@ const testimonials = await getCollection("reviews");
               duration={service.duration}
               features={service.features}
               featured={service.featured}
+              ctaLink={service.ctaLink}
             />
           ))
         }
