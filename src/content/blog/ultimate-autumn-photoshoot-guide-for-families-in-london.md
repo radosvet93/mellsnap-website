@@ -34,7 +34,7 @@ Autumn just feels cozy, doesn't it? The cool air and the rustle of leaves underf
 
 ## Best Locations for Autumn Family Photoshoots in London and Kingston upon Thames
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/ultimate-autumn-photoshoot-guide-for-families-in-london/DSC_0392.jpg" alt="Father and his daughter in the park, during autumn photoshoot"/>
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/ultimate-autumn-photoshoot-guide-for-families-in-london/img1.jpg" alt="Father and his daughter in the park, during autumn photoshoot"/>
 
 London has some of the most picturesque locations for autumn photoshoots, and I've had the pleasure of shooting in some truly spectacular spots, that I truly appreciate as a foreigner. Here are my top picks for autumn family photoshoots in London and Kingston:
 
