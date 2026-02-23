@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
+import { Image } from "astro:assets";
+import serviceImage from "../images/IMG_0511.JPEG";
 
 const services = [
   {
@@ -110,7 +112,7 @@ const services = [
                     stroke-width="2"
                     d="M5 13l4 4L19 7"></path>
                 </svg>
-                Pre-session consultation
+                Free 10 minute consultation
               </li>
               <li class="flex items-start gap-3">
                 <svg
@@ -161,7 +163,7 @@ const services = [
                     stroke-width="2"
                     d="M5 13l4 4L19 7"></path>
                 </svg>
-                Professional colour grading
+                Professionally edited photos
               </li>
               <li class="flex items-start gap-3">
                 <svg
@@ -176,7 +178,7 @@ const services = [
                     stroke-width="2"
                     d="M5 13l4 4L19 7"></path>
                 </svg>
-                Private online gallery (2 weeks)
+                Private online gallery (all images included)
               </li>
               <li class="flex items-start gap-3">
                 <svg
@@ -191,7 +193,8 @@ const services = [
                     stroke-width="2"
                     d="M5 13l4 4L19 7"></path>
                 </svg>
-                High-resolution digital downloads
+                Two formats included: high-res for printing and web-optimised for
+                social media sharing
               </li>
             </ul>
           </div>
@@ -200,70 +203,31 @@ const services = [
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <div class="text-center mb-16">
-          <p class="label mb-4">FAQ</p>
-          <h2 class="text-primary-text">Common Questions</h2>
-        </div>
-
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-primary-text mb-2">How do I book a session?</h3>
-            <p class="text-secondary-text">
-              Simply fill out the contact form or email me directly. I'll get
-              back to you within 24-48 hours to discuss your session and check
-              availability.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-2">What should we wear?</h3>
-            <p class="text-secondary-text">
-              I provide a detailed style guide after booking. Generally, neutral
-              colours and classic styles photograph beautifully and stand the
-              test of time.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-2">
-              When will we receive our photos?
-            </h3>
-            <p class="text-secondary-text">
-              Your gallery will be ready within 2 weeks. Event photography may
-              take slightly longer depending on the size of the event.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-2">What if it rains?</h3>
-            <p class="text-secondary-text">
-              We can either embrace it (umbrellas and wellies make great
-              photos!) or reschedule to another date. I'm flexible and want you
-              to be comfortable.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-20 md:py-28 bg-beige">
-    <div class="container">
+  <!-- CTA Section -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <Image
+      inferSize
+      src={serviceImage}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="container relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-primary-text mb-6">Ready to Book?</h2>
-        <p class="text-secondary-text mb-10">
+        <h2
+          class="font-ephesis! text-3xl md:text-4xl lg:text-5xl text-white mb-6"
+        >
+          Ready to Book?
+        </h2>
+        <p class="text-white/90 mb-10">
           Get in touch to check availability and book your session.
         </p>
         <a
           class="btn bg-green text-white hover:bg-green-500"
           href="/free-consultation/"
         >
-          Contact Me
+          Get in Touch
         </a>
       </div>
     </div>
