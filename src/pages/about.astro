@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
+import aboutImage from "../images/kite.JPEG";
 ---
 
 <BaseLayout
@@ -306,6 +307,35 @@ import { Image } from "astro:assets";
           the golden light of summer evenings, outdoor photography brings a
           unique charm to your family photos.
         </p>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <Image
+      inferSize
+      src={aboutImage}
+      alt="colourful kite on a blue sky"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2
+          class="font-ephesis! text-3xl md:text-4xl lg:text-5xl text-white mb-6"
+        >
+          Ready to Book?
+        </h2>
+        <p class="text-white/90 mb-10">
+          Get in touch to check availability and book your session.
+        </p>
+        <a
+          class="btn bg-green text-white hover:bg-green-500"
+          href="/free-consultation/"
+        >
+          Get in Touch
+        </a>
       </div>
     </div>
   </section>
