@@ -56,7 +56,7 @@ function getFallbackReviews(): ReviewStats {
         "rating": 5
       }
     ],
-    totalReviews: 33,
+    totalReviews: 34,
     averageRating: 5.0,
   };
 }
