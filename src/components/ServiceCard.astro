@@ -9,6 +9,7 @@ interface Props {
   ctaText?: string;
   ctaLink?: string;
   featured?: boolean;
+  isGrey?: boolean;
 }
 
 const {
@@ -19,13 +20,16 @@ const {
   ctaText = "Select",
   ctaLink = "/free-consultation/",
   featured = false,
+  isGrey = false,
 } = Astro.props;
 ---
 
 <div
   class:list={[
-    "bg-white p-8 md:p-10 text-center",
+    "p-8 md:p-10 text-center",
     { "border-2 border-pink": featured },
+    { "bg-section-bg": isGrey },
+    { "bg-white": !isGrey },
   ]}
 >
   <h3 class="font-ephesis text-pink mb-4">
