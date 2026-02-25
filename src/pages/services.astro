@@ -3,49 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import { Image } from "astro:assets";
 import serviceImage from "../images/IMG_0511.JPEG";
-
-const services = [
-  {
-    title: "Quick Session",
-    price: "£180",
-    duration: "20 minutes",
-    features: [
-      "20+ digital images",
-      "Fully edited photos",
-      "Private online gallery",
-      "Print-ready files",
-    ],
-    ctaLink: "/quick-photoshoot/",
-  },
-  {
-    title: "Full Session",
-    price: "£300",
-    duration: "1 hour",
-    features: [
-      "80+ digital images",
-      "Fully edited photos",
-      "Private online gallery",
-      "Print-ready files",
-      "Location of your choice within my coverage area",
-    ],
-    featured: true,
-    ctaLink: "/full-photoshoot/",
-  },
-  {
-    title: "Event Coverage",
-    price: "£300",
-    duration: "per hour",
-    features: [
-      "80+ digital images per hour",
-      "Fully edited photos",
-      "Private online gallery",
-      "Print-ready files",
-      "Quick turnaround",
-      "Flexible duration",
-    ],
-    ctaLink: "/event-photography/",
-  },
-];
+import { services } from "../data/services";
 ---
 
 <BaseLayout
