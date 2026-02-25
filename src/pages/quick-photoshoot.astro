@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import { services } from "../data/services";
+import { Image } from "astro:assets";
+
+const quickService = services.find((service) => service.id === "quick");
 ---
 
 <BaseLayout
@@ -13,7 +17,8 @@ import Button from "../components/Button.astro";
       <div class="max-w-4xl mx-auto">
         <div class="grid md:grid-cols-5 gap-10 items-center">
           <div class="md:col-span-2">
-            <img
+            <Image
+              inferSize
               src="https://mellsnap.co.uk/wp-content/uploads/2024/09/1-1-1024x683.jpg"
               alt="Little blonde girl holding flowers sitting on a picnic blanket with her father"
               class="w-full aspect-[3/4] object-cover"
@@ -22,59 +27,25 @@ import Button from "../components/Button.astro";
           <div class="md:col-span-3">
             <p class="label mb-4">Quick Snap Package</p>
             <h1 class="text-4xl md:text-5xl text-primary-text mb-6">
-              Quick Photoshoot
+              {quickService?.title}
             </h1>
-            <p class="text-pink mb-8">£120</p>
+            <p class="mb-8">{quickService?.price}</p>
 
             <ul class="space-y-3 text-secondary-text mb-8">
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>
-                20 minutes photo session
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>
-                20+ professionally edited digital images
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>
-                2-3 days delivery
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-pink mt-1 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>
-                Secure online gallery
-              </li>
+              {
+                quickService?.features.map((feature) => (
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 text-green mt-1 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))
+              }
             </ul>
 
             <Button href="/free-consultation/" variant="primary">
@@ -111,7 +82,8 @@ import Button from "../components/Button.astro";
   <section class="bg-section-bg">
     <div class="container py-10">
       <div class="max-w-4xl mx-auto">
-        <img
+        <Image
+          inferSize
           src="https://www.mellsnap.co.uk/wp-content/uploads/2024/10/046-Web-1024x683.jpg"
           alt="Toddler covered in autumn leaves during a quick photoshoot"
           class="w-full aspect-[3/2] object-cover"

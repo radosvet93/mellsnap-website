@@ -1,5 +1,6 @@
 export const services = [
   {
+    id: "quick",
     title: "Quick Session",
     price: "£180",
     duration: "20 minutes",
@@ -13,6 +14,7 @@ export const services = [
     ctaLink: "/quick-photoshoot/",
   },
   {
+    id: "full",
     title: "Full Session",
     price: "£300",
     duration: "1 hour",
@@ -27,6 +29,7 @@ export const services = [
     ctaLink: "/full-photoshoot/",
   },
   {
+    id: "event",
     title: "Event Coverage",
     price: "£300",
     duration: "first hour",
