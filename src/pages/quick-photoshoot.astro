@@ -15,7 +15,7 @@ const quickService = services.find((service) => service.id === "quick");
   <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
       <div class="max-w-4xl mx-auto">
-        <div class="grid md:grid-cols-5 gap-10 items-center">
+        <div class="grid md:grid-cols-5 gap-10">
           <div class="md:col-span-2">
             <Image
               inferSize
@@ -29,7 +29,7 @@ const quickService = services.find((service) => service.id === "quick");
             <h1 class="text-4xl md:text-5xl text-primary-text mb-6">
               {quickService?.title}
             </h1>
-            <p class="mb-8">Price {quickService?.price}</p>
+            <p class="mb-8 text-xl font-bold">{quickService?.price}</p>
 
             <ul class="space-y-3 text-secondary-text mb-8">
               {
