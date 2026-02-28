@@ -25,18 +25,17 @@ const { quote, name, rating = 5 } = Astro.props;
   </div>
 
   <!-- Quote -->
-  <blockquote class="text-primary-text italic leading-relaxed mb-3 md:mb-6">
-    <span class="quote-text line-clamp-3 md:line-clamp-none">"{quote}"</span>
+  <blockquote class="text-primary-text italic leading-relaxed mb-3">
+    <span class="quote-text line-clamp-3">"{quote}"</span>
   </blockquote>
 
-  <!-- Read more (mobile only) -->
   <button
-    class="read-more-btn text-pink text-sm underline mb-4 md:hidden"
-    aria-expanded="false"
-  >Read more</button>
+    class="read-more-btn text-pink text-sm underline mb-4 cursor-pointer!"
+    aria-expanded="false">Read more</button
+  >
 
   <!-- Name -->
-  <p class="font-ephesis text-green">{name}</p>
+  <p class="font-raleway italic">{name}</p>
 </div>
 
 <script>
