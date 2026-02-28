@@ -14,23 +14,25 @@ const quickService = services.find((service) => service.id === "quick");
   <!-- Hero -->
   <section class="relative overflow-hidden bg-section-bg">
     <div class="flex flex-col md:flex-row md:min-h-screen">
-
-      <!-- Content card (left, overlaps image on desktop) -->
-      <div class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10">
-        <div class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10">
+      <div
+        class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
+      >
+        <div
+          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+        >
           <p class="font-raleway text-xs uppercase tracking-widest mb-5">
             Photography Package
           </p>
 
-          <h1 class="text-primary-text leading-none mb-6">
-            Quick Photoshoot
-          </h1>
+          <h1 class="text-primary-text leading-none mb-6">Quick Photoshoot</h1>
 
           <p class="font-ephesis text-pink text-4xl mb-8 leading-none">
             in just 20 minutes
           </p>
 
-          <p class="text-secondary-text font-cormorant text-xl italic mb-10 leading-relaxed">
+          <p
+            class="text-secondary-text font-cormorant text-xl italic mb-10 leading-relaxed"
+          >
             For families and individuals looking for a quick, professional
             photoshoot experience.
           </p>
@@ -48,7 +50,9 @@ const quickService = services.find((service) => service.id === "quick");
             }
           </ul>
 
-          <div class="flex flex-wrap items-center justify-between gap-8 pt-2 border-t border-pink/20">
+          <div
+            class="flex flex-wrap items-center justify-between gap-8 pt-2 border-t border-pink/20"
+          >
             <div>
               <p class="label mb-1">Price</p>
               <p class="text-3xl font-cormorant font-bold text-primary-text">
@@ -62,7 +66,6 @@ const quickService = services.find((service) => service.id === "quick");
         </div>
       </div>
 
-      <!-- Image (right, fills remaining space) -->
       <div class="relative flex-1 min-h-[70vw] md:min-h-0">
         <Image
           inferSize
@@ -72,7 +75,6 @@ const quickService = services.find((service) => service.id === "quick");
           class="absolute inset-0 w-full h-full object-cover"
         />
       </div>
-
     </div>
   </section>
 

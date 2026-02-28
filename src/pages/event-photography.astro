@@ -14,23 +14,25 @@ const eventService = services.find((service) => service.id === "event");
   <!-- Hero -->
   <section class="relative overflow-hidden bg-section-bg">
     <div class="flex flex-col md:flex-row md:min-h-screen">
-
-      <!-- Content card (left, overlaps image on desktop) -->
-      <div class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10">
-        <div class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10">
+      <div
+        class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
+      >
+        <div
+          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+        >
           <p class="font-raleway text-xs uppercase tracking-widest mb-5">
             Photography Package
           </p>
 
-          <h1 class="text-primary-text leading-none mb-6">
-            Event Photography
-          </h1>
+          <h1 class="text-primary-text leading-none mb-6">Event Photography</h1>
 
           <p class="font-ephesis text-pink text-4xl mb-8 leading-none">
             every moment, beautifully told
           </p>
 
-          <p class="text-secondary-text font-cormorant text-xl italic mb-10 leading-relaxed">
+          <p
+            class="text-secondary-text font-cormorant text-xl italic mb-10 leading-relaxed"
+          >
             From birthday parties to family gatherings — candid, natural
             coverage of your special occasion.
           </p>
@@ -48,7 +50,9 @@ const eventService = services.find((service) => service.id === "event");
             }
           </ul>
 
-          <div class="flex flex-wrap items-center justify-between gap-8 pt-2 border-t border-pink/20">
+          <div
+            class="flex flex-wrap items-center justify-between gap-8 pt-2 border-t border-pink/20"
+          >
             <div>
               <p class="label mb-1">Price</p>
               <p class="text-3xl font-cormorant font-bold text-primary-text">
@@ -62,15 +66,15 @@ const eventService = services.find((service) => service.id === "event");
         </div>
       </div>
 
-      <!-- Image (right, fills remaining space) -->
       <div class="relative flex-1 min-h-[70vw] md:min-h-0">
-        <img
-          src="https://mellsnap.co.uk/wp-content/uploads/2023/10/129-Web-683x1024.jpg"
-          alt="Children's birthday party celebration"
+        <Image
+          inferSize
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/001-Web.jpg"
+          alt="Birthday girl decoration for her 5th birthday party"
           class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
         />
       </div>
-
     </div>
   </section>
 
@@ -100,9 +104,10 @@ const eventService = services.find((service) => service.id === "event");
       <div class="max-w-4xl mx-auto">
         <Image
           inferSize
-          src="https://mellsnap.co.uk/wp-content/uploads/2023/10/132-Web-683x1024.jpg"
-          alt="Baby boy's first birthday photoshoot with cake smash and balloons"
-          class="w-full max-w-md mx-auto aspect-2/3 object-cover"
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/238-Web.jpg"
+          alt="Children on a birthday party, birthday girl with her friends having fun"
+          class="w-full aspect-[3/2] object-cover"
+          loading="lazy"
         />
       </div>
     </div>
@@ -119,28 +124,28 @@ const eventService = services.find((service) => service.id === "event");
           Here's what's included in this comprehensive package:
         </p>
         <ul class="space-y-4 text-secondary-text">
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text"
               >Up to 4 hours capturing your event</strong
             > – Flexible and adaptable to your event schedule. For additional hours
             we can discuss further.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text"
               >80+ professionally edited digital images</strong
             > – A complete gallery of high-quality photos to capture the essence of
             your celebration.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">5–7 day delivery</strong> – You won't
             have to wait long to enjoy your photos.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Secure online gallery</strong> – Your
             photos are delivered in a private gallery for easy viewing, sharing, and
             downloading, and they are active for up to one month.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Natural and soft edit</strong> – Each
             image is carefully cropped and framed, with gentle, natural edits of the
             colours, lighting and white balance, there are no harsh filters or heavy
@@ -219,30 +224,144 @@ const eventService = services.find((service) => service.id === "event");
           Special Events I Love to Photograph
         </h2>
         <ul class="space-y-4 text-secondary-text">
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Birthday Parties</strong> – Whether
             it's a child's birthday or a milestone celebration, I'll capture all the
             fun and excitement, from cake-cutting to party games.
           </li>
-          <li>
+          <li class="list-disc ml-8">
+            <strong class="text-primary-text">Engagements</strong> – Capture the excitement
+            and joy of this special milestone with natural, romantic photos.
+          </li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Anniversaries</strong> – Celebrate your
             love story with beautiful images that showcase the connection between
             you and your partner, as well as the joy of those celebrating alongside
             you.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Family Gatherings</strong> – Every family
             has its own story, and I aim to tell yours through candid shots that capture
             the warmth and connections among family members.
           </li>
+          <li class="list-disc ml-8">
+            <strong class="text-primary-text"
+              >Baby Showers, Baby Reveals or Christenings</strong
+            > – Document these precious celebrations with beautiful, heartfelt images.
+          </li>
+        </ul>
+        <Image
+          inferSize
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/141-Web.jpg"
+          alt="Couple getting married, wedding photoshoot, capturing wedding ceremony and wedding reception"
+          class="w-full aspect-[3/2] object-cover mt-8"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- What happens on the day -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">
+          What Happens on the Day?
+        </h2>
+        <p class="text-secondary-text mb-8">
+          When you book my Event Photography Package, here's what to expect:
+        </p>
+        <ol class="space-y-4 text-secondary-text mb-8">
+          <li class="list-decimal ml-8">
+            <strong class="text-primary-text">Arrive early</strong> – I'll arrive
+            ahead of time to get familiar with the space, meet key people, and capture
+            any pre-event details.
+          </li>
+          <li class="list-decimal ml-8">
+            <strong class="text-primary-text">Blend in</strong> – I'll quietly move
+            around to capture candid moments without disrupting the flow of your event.
+          </li>
+          <li class="list-decimal ml-8">
+            <strong class="text-primary-text">Essential shots</strong> – I'll make
+            sure to capture the key moments and people – whether it's a cake cutting,
+            a speech, or a special toast.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flexible Locations -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">
+          Flexible Locations Across South-West London
+        </h2>
+        <p class="text-secondary-text mb-8">
+          I cover events across South-West London, including <strong
+            >Kingston</strong
+          >, <strong>Richmond</strong>,
+          <strong>Surbiton</strong>, <strong>Twickenham</strong> and <strong
+            >Central London</strong
+          >. If your event is outside the range I cover, let's chat, there might
+          be an additional travel fee.
+        </p>
+        <p class="text-secondary-text mb-8">
+          Whether you're hosting an intimate gathering at home, a lively
+          birthday party in the park, or a romantic engagement dinner, I'm here
+          to capture your special moments wherever they happen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Photography FAQs -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">
+          Event Photography FAQs
+        </h2>
+        <p class="text-secondary-text mb-8">
+          Here are some common questions about the event photography package:
+        </p>
+        <ul class="space-y-4 text-secondary-text">
           <li>
-            <strong class="text-primary-text">Engagements</strong> – Capture the excitement
-            and joy of this special milestone with natural, romantic photos.
+            <h3 class="text-pink font-bold! text-xl!">
+              Can I book additional time?
+            </h3>
+            Yes! If you need more than 4 hours, we can extend your session to fit
+            your event's schedule. Just let me know your requirements when booking.
           </li>
           <li>
-            <strong class="text-primary-text"
-              >Baby Showers & Christenings</strong
-            > – Document these precious celebrations with beautiful, heartfelt images.
+            <h3 class="text-pink font-bold! text-xl!">
+              Do you capture both posed and candid shots?
+            </h3>
+            Absolutely. I'll blend candid moments with any posed group photos you'd
+            like, so you get a well-rounded gallery.
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              When will I receive my photos?
+            </h3>
+            You'll receive your professionally edited images within 5–7 days, delivered
+            in a secure online gallery for easy sharing and downloading.
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">Do you offer prints?</h3>
+            I don't offer prints, but all images are delivered in two formats: social
+            media-ready (optimised for sharing online) and high-resolution for printing
+            (ideal for framed photos or large canvases). This way, you have the flexibility
+            to use your images however you like!
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              Do you offer video services?
+            </h3>
+            I focus solely on photography, so I don't offer video services. However,
+            my photos are carefully crafted to tell the story of your event, capturing
+            the emotions and key moments just as beautifully as a video would.
           </li>
         </ul>
       </div>
