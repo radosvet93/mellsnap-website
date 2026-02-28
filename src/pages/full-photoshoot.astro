@@ -12,47 +12,67 @@ const fullService = services.find((service) => service.id === "full");
   description="Capture your story with a relaxed 1-hour photoshoot. Includes 80+ edited images, an online gallery, and fast delivery. Perfect for families and couples!"
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <div class="grid md:grid-cols-5 gap-10">
-          <div class="md:col-span-2">
-            <Image
-              inferSize
-              src="https://mellsnap.co.uk/wp-content/uploads/2025/11/038-Web.jpg"
-              alt="Family enjoying outdoor photoshoot together"
-              class="w-full aspect-3/4 object-cover"
-            />
-          </div>
-          <div class="md:col-span-3">
-            <p class="label">Full Story Package</p>
-            <h1 class="text-4xl md:text-5xl text-primary-text mb-6">
-              {fullService?.title}
-            </h1>
-            <p class="mb-8 text-xl font-bold">{fullService?.price}</p>
+  <section class="relative overflow-hidden bg-section-bg">
+    <div class="flex flex-col md:flex-row md:min-h-screen">
+      <div
+        class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
+      >
+        <div
+          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+        >
+          <p class="font-raleway text-xs uppercase tracking-widest mb-5">
+            Photography Package
+          </p>
 
-            <ul class="space-y-3 text-secondary-text mb-8">
-              {
-                fullService?.features.map((feature) => (
-                  <li class="flex items-start gap-3">
-                    <svg
-                      class="w-5 h-5 text-green mt-1 shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 448 512"
-                    >
-                      <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))
-              }
-            </ul>
+          <h1 class="text-primary-text leading-none mb-6">Full Photoshoot</h1>
 
+          <p class="font-ephesis text-pink text-4xl mb-8 leading-none">
+            relaxed and natural, 1 hour just for you.
+          </p>
+
+          <p
+            class="text-secondary-text font-cormorant text-xl italic mb-10 leading-relaxed"
+          >
+            A relaxed session for families and couples who want a complete
+            gallery of beautiful, natural memories.
+          </p>
+
+          <div class="w-10 h-px bg-pink/40 mb-6"></div>
+
+          <ul class="space-y-2.5 mb-8">
+            {
+              fullService?.features.map((feature) => (
+                <li class="flex items-center gap-2.5 text-secondary-text text-sm">
+                  <span class="w-1 h-1 rounded-full bg-pink flex-shrink-0" />
+                  {feature}
+                </li>
+              ))
+            }
+          </ul>
+
+          <div
+            class="flex flex-wrap items-center justify-between gap-8 pt-2 border-t border-pink/20"
+          >
+            <div>
+              <p class="label mb-1">Price</p>
+              <p class="text-3xl font-cormorant font-bold text-primary-text">
+                {fullService?.price}
+              </p>
+            </div>
             <Button href="/free-consultation/" variant="primary">
               Book a Free Consultation
             </Button>
           </div>
         </div>
+      </div>
+
+      <div class="relative flex-1 min-h-[70vw] md:min-h-0">
+        <Image
+          inferSize
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/038-Web.jpeg"
+          alt="Couple sitting on a bench, looking at each other, love couple photoshoot by river Thames in Canbury Gardens"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
     </div>
   </section>
@@ -84,8 +104,8 @@ const fullService = services.find((service) => service.id === "full");
       <div class="max-w-4xl mx-auto">
         <Image
           inferSize
-          src="https://www.mellsnap.co.uk/wp-content/uploads/2023/10/088-Web-1024x683.jpg"
-          alt="Family picnic in a park celebrating baby's first birthday"
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/088-Web.jpeg"
+          alt="Family of three on a picnic in a park, celebrating baby boy's first birthday"
           class="w-full aspect-3/2 object-cover"
         />
       </div>
@@ -103,26 +123,26 @@ const fullService = services.find((service) => service.id === "full");
           Here's what you'll get with this flexible and relaxed session:
         </p>
         <ul class="space-y-4 text-secondary-text">
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">A 1-hour photoshoot</strong> – Enough
             time to settle in, try different ideas, and create a variety of gorgeous
             shots.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text"
               >80+ professionally edited digital images</strong
             > – A full gallery of polished, high-quality photos to treasure forever.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">5–7 day delivery</strong> – You won't
             have to wait long to enjoy your photos.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Secure online gallery</strong> – Your
             photos are delivered in a private gallery for easy viewing, sharing, and
             downloading, and they are active for up to one month.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Natural and soft edit</strong> – Each
             image is carefully cropped and framed, with gentle, natural edits of the
             colours, lighting and white balance, there are no harsh filters or heavy
@@ -202,23 +222,146 @@ const fullService = services.find((service) => service.id === "full");
           time and enjoy a complete photography experience:
         </p>
         <ul class="space-y-4 text-secondary-text">
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Families</strong> – From toddlers playing
             in the park to cosy moments at home, we'll capture the love and joy of
             your family.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Couples</strong> – A romantic hour together,
             filled with laughter, connection, and beautiful portraits.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Celebrations</strong> – Perfect for
             anniversaries, engagements, or maternity sessions.
           </li>
-          <li>
+          <li class="list-disc ml-8">
             <strong class="text-primary-text">Anyone</strong> – If you want a full
             gallery of stunning images to treasure forever, this is the package for
             you.
+          </li>
+        </ul>
+        <Image
+          inferSize
+          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/063-Web.jpeg"
+          alt="Mum with her son, looking at summer flowers, posing for a family photoshoot"
+          class="w-full aspect-[3/2] object-cover mt-8"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Where Can We Shoot? -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">Where Can We Shoot?</h2>
+        <p class="text-secondary-text mb-8">
+          The beauty of this package is that it works wherever you feel most
+          comfortable. Here are some ideas to inspire you:
+        </p>
+        <ul class="space-y-4 text-secondary-text">
+          <li class="list-disc ml-8">
+            <strong class="text-primary-text">Outdoor parks</strong> – Richmond Park,
+            Bushy Park, or Canbury Gardens are fantastic spots for natural, scenic
+            photos.
+          </li>
+          <li class="list-disc ml-8">
+            <strong class="text-primary-text">At home</strong> – Your home can provide
+            a cosy, personal backdrop for relaxed and meaningful images.
+          </li>
+          <li class="list-disc ml-8">
+            <strong class="text-primary-text"
+              >Cityscapes or local landmarks</strong
+            > – We can create beautiful photos in a location that holds special meaning
+            to you.
+          </li>
+        </ul>
+        <p class="mt-8 mb-8">
+          Not sure where to shoot? – Let's chat, and I'll help you choose the
+          perfect location.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens Next? -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">What Happens Next?</h2>
+        <p class="text-secondary-text mb-8">
+          It's easy to book your Full Story photo session:
+        </p>
+
+        <ul class="space-y-4 text-secondary-text">
+          <li class="list-disc ml-8">
+            Pick your date and location – Visit my <a href="/free-consultation/"
+              >free consultation page</a
+            >, or
+            <a href="/contact/">contact me</a> to discuss availability and location
+            preferences.
+          </li>
+          <li class="list-disc ml-8">
+            Prepare for the shoot – I'll provide you with tips and ideas to help
+            you get ready, but remember, the most important thing is to be
+            yourself and have fun!
+          </li>
+          <li class="list-disc ml-8">
+            Enjoy the shoot – You don't need to prepare or stress. Just show up,
+            and I'll take care of the rest.
+          </li>
+        </ul>
+        <p class="text-secondary-text mt-8">
+          After the shoot, I'll carefully edit your photos and deliver them in a
+          secure online gallery within 5–7 days. From there, you can download,
+          share, and enjoy your beautiful images for years to come.
+        </p>
+        <p class="text-secondary-text mt-8">
+          The gallery will be active for up to one month, so be sure to download
+          your photos and keep them in a safe place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-20 md:py-28 bg-section-bg">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="md:text-4xl text-primary-text mb-8">FAQs</h2>
+        <p class="text-secondary-text mb-8">
+          Here are some common questions about the Full Story Photo Package:
+        </p>
+        <ul class="space-y-4 text-secondary-text">
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              Can we bring props or outfit changes?
+            </h3>
+            Of course! With an hour to work with, there's plenty of time for outfit
+            changes or props to personalise your session.
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              What if it rains for an outdoor shoot?
+            </h3>
+            No need to worry – we can either reschedule or move the session to an
+            indoor location like your home or a local café.
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              How will I receive my photos?
+            </h3>
+            Your images will be delivered in a secure online gallery, where you can
+            easily download or share them, they will be stored for up to one month,
+            so be sure to download them and keep them in a safe place.
+          </li>
+          <li>
+            <h3 class="text-pink font-bold! text-xl!">
+              What if we need more time?
+            </h3>
+            If you think an hour might not be enough, let's chat! I can recommend
+            additional options to suit your needs.
           </li>
         </ul>
       </div>

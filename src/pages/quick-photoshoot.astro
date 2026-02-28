@@ -12,15 +12,17 @@ const quickService = services.find((service) => service.id === "quick");
   description="Enjoy 20 minutes of natural, candid photography in one of the best outdoor locations in London and receive 20+ professionally retouched digital images."
 >
   <!-- Hero -->
-  <section class="bg-section-bg overflow-hidden">
-    <div class="grid md:grid-cols-2 min-h-[90vh]">
+  <section class="relative overflow-hidden bg-section-bg">
+    <div class="flex flex-col md:flex-row md:min-h-screen">
 
-      <!-- Left: Content -->
-      <div class="flex items-center py-24 px-8 md:px-14 lg:px-20 xl:px-28 order-2 md:order-1">
-        <div class="max-w-lg w-full">
-          <p class="label mb-5">Photography Package</p>
+      <!-- Content card (left, overlaps image on desktop) -->
+      <div class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10">
+        <div class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10">
+          <p class="font-raleway text-xs uppercase tracking-widest mb-5">
+            Photography Package
+          </p>
 
-          <h1 class="text-primary-text mb-3 leading-none">
+          <h1 class="text-primary-text leading-none mb-6">
             Quick Photoshoot
           </h1>
 
@@ -33,12 +35,14 @@ const quickService = services.find((service) => service.id === "quick");
             photoshoot experience.
           </p>
 
-          <ul class="space-y-3 text-secondary-text mb-10">
+          <div class="w-10 h-px bg-pink/40 mb-6"></div>
+
+          <ul class="space-y-2.5 mb-8">
             {
               quickService?.features.map((feature) => (
-                <li class="flex items-center gap-3">
-                  <span class="w-1.5 h-1.5 rounded-full bg-pink flex-shrink-0" />
-                  <span>{feature}</span>
+                <li class="flex items-center gap-2.5 text-secondary-text text-sm">
+                  <span class="w-1 h-1 rounded-full bg-pink flex-shrink-0" />
+                  {feature}
                 </li>
               ))
             }
@@ -58,48 +62,13 @@ const quickService = services.find((service) => service.id === "quick");
         </div>
       </div>
 
-      <!-- Right: Image collage -->
-      <div class="grid grid-cols-2 grid-rows-3 min-h-[70vw] md:min-h-0 order-1 md:order-2 gap-2 p-2">
-        <!-- Large top-left, spans 2 rows -->
-        <div class="row-span-2 bg-stone-200 overflow-hidden relative">
-          <img
-            src="https://mellsnap.co.uk/wp-content/uploads/2024/11/outdoor-family-photography-in-bushy-park-1730932256.jpg"
-            alt="Family of four sitting on a tree at Bushy Park"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <!-- Top-right -->
-        <div class="bg-stone-300 overflow-hidden relative">
-          <img
-            src="https://mellsnap.co.uk/wp-content/uploads/2025/02/053-Web-1-1024x681.webp"
-            alt="Mum holding her baby boy during a quick photoshoot"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <!-- Middle-right -->
-        <div class="bg-stone-200 overflow-hidden relative">
-          <img
-            src="https://mellsnap.co.uk/wp-content/uploads/2025/04/117-Web-1024x682.jpg"
-            alt="A pregnant couple enjoying a stroll in Richmond Terrace Gardens"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <!-- Bottom-left -->
-        <div class="bg-stone-300 overflow-hidden relative">
-          <img
-            src="https://mellsnap.co.uk/wp-content/uploads/2024/10/046-Web-1920x1280.jpg"
-            alt="Quick photoshoot for a family in a park"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <!-- Bottom-right -->
-        <div class="bg-stone-200 overflow-hidden relative">
-          <img
-            src="https://mellsnap.co.uk/wp-content/uploads/2024/06/064-Web.jpg"
-            alt="Pregnant woman surrounded by nature and purple flowers"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
+      <!-- Image (right, fills remaining space) -->
+      <div class="relative flex-1 min-h-[70vw] md:min-h-0">
+        <img
+          src="https://mellsnap.co.uk/wp-content/uploads/2024/11/outdoor-family-photography-in-bushy-park-1730932256.jpg"
+          alt="Family of four sitting on a tree at Bushy Park"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
 
     </div>
