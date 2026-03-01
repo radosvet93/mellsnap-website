@@ -69,8 +69,10 @@ const { Content } = await render(post);
           [&_ul]:pl-6
           [&_li]:mb-2
         [&_strong]:text-primary-text
-        [&_a]:text-pink
-          [&_a]:underline
+        [&_a]:hover:text-pink 
+          [&_a]:transition-colors 
+          [&_a]:underline 
+          [&_a]:underline-offset-2
           [&_hr]:border-t
         [&_hr]:border-beige
           [&_blockquote]:border-l-4
@@ -108,7 +110,7 @@ const { Content } = await render(post);
   <!-- Back Link -->
   <section class="py-10 bg-section-bg">
     <div class="container text-center">
-      <a href="/blog/" class="nav-link hover:text-pink transition-colors">
+      <a href="/blog/" class="nav-link hover:text-pink transition-colors underline underline-offset-2">
         &larr; Back to Blog
       </a>
     </div>
