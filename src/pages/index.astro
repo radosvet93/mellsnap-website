@@ -14,35 +14,43 @@ import { services } from "../data/services";
 const portfolioItems = [
   {
     title: "Family",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/138-Web.jpg",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/138-Web.jpg",
+      alt: "Two mothers and their children smiling and looking at each other",
+    },
     href: "/portfolio/family/",
-    category: "Portfolio",
   },
   {
     title: "Maternity",
-    image:
-      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg",
+      alt: "Pregnant woman holding her belly and smiling",
+    },
     href: "/portfolio/maternity/",
-    category: "Portfolio",
   },
   {
     title: "Couples",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/1021-Web.jpg",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/1021-Web.jpg",
+      alt: "A couple at a wedding day looking at each other and smiling",
+    },
     href: "/portfolio/love/",
-    category: "Portfolio",
   },
   {
     title: "Children",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/015-Web.jpg",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/015-Web.jpg",
+      alt: "Two sisters looking at each other in-front of the Tower Bridge in London",
+    },
     href: "/portfolio/children/",
-    category: "Portfolio",
   },
   {
     title: "Events",
-    image:
-      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/115-Web.jpg",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/115-Web.jpg",
+      alt: "A pink birthday cake in-front of a let's party banner and balloons",
+    },
     href: "/portfolio/events/",
-    category: "Portfolio",
   },
 ];
 
@@ -60,7 +68,7 @@ const testimonials = await getCollection("reviews");
   />
 
   <!-- Portfolio Preview Section -->
-  <section class="py-20 md:py-28 bg-white">
+  <section class="py-20 md:py-28 bg-section-bg">
     <div class="container">
       <div class="text-center mb-16">
         <p class="label mb-4">Real moments, no posing required</p>
@@ -75,6 +83,63 @@ const testimonials = await getCollection("reviews");
         <Button href="/portfolio/" variant="secondary">
           View Full Portfolio
         </Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-32 bg-white overflow-hidden">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <!-- Text content -->
+        <div
+          class="md:pl-6 lg:pl-10 pt-10 md:pt-0 pb-10 md:pb-0 text-center md:text-left"
+        >
+          <p class="label mb-4">Why Choose MellSnap</p>
+          <h2
+            class="font-cormorant text-4xl md:text-5xl text-primary-text leading-tight mb-6"
+          >
+            No posing.<br />
+            <span class="italic text-pink">Just real moments.</span>
+          </h2>
+
+          <div class="w-12 h-px bg-pink/50 mb-6 mx-auto md:mx-0"></div>
+
+          <p class="text-secondary-text leading-relaxed mb-5">
+            Photography with me feels more like a relaxed walk than a formal
+            photo shoot. I gently guide you when needed, while creating space
+            for natural, beautiful moments to unfold. I try to make the
+            experience as simple and stress-free from start to finish.
+          </p>
+          <p class="text-secondary-text leading-relaxed mb-8">
+            Children can simply be themselves, playful, curious, full of life,
+            and that's exactly what I capture. You receive all successful images
+            in a private online gallery, beautifully edited and included without
+            any extra fees.
+          </p>
+
+          <Button href="/free-consultation/" variant="primary">
+            Book a Free Consultation
+          </Button>
+        </div>
+
+        <!-- Image collage -->
+        <div class="flex justify-center md:justify-end">
+          <div class="relative w-3/4">
+            <!-- Background decorative rectangle -->
+            <div
+              class="absolute -top-4 -left-4 w-full h-full border border-pink/30 rounded-sm"
+            >
+            </div>
+            <!-- Main image -->
+            <Image
+              inferSize
+              src="https://images.mellsnap.co.uk/file/mellsnap-website/075-Web.jpg"
+              alt="A family laughing together outdoors"
+              class="relative w-full h-auto object-fill border-white shadow-lg rounded-sm border-4"
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -130,11 +195,14 @@ const testimonials = await getCollection("reviews");
             </h2>
           </div>
           <p class="text-secondary-text leading-relaxed mb-10">
-            I'm a family and portrait photographer based in Kingston upon
-            Thames, serving South West and Central London. I believe in
-            capturing authentic moments that tell your unique story. Every
-            family is different, and I love creating images that reflect the
-            genuine connections and joy in your lives.
+            I'm a family, lifestyle, and event photographer based in Kingston
+            upon Thames, serving South West and Central London. I believe in
+            capturing authentic moments that tell your unique story. As a mother
+            of two I truly understand how busy family life can be, and how
+            important it is to have beautiful photos that capture the love and
+            connection between you and your family. My goal is to create a
+            relaxed and enjoyable experience for you, so we can capture moments
+            that reflect your family's personality and bond.
           </p>
 
           <Button href="/about/" variant="secondary">
