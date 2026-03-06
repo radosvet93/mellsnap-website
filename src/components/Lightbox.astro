@@ -18,7 +18,7 @@
     <button
       id="lb-prev"
       aria-label="Previous"
-      class="absolute left-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer"
+      class="absolute left-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer touch-manipulation"
       >&#8249;</button
     >
 
@@ -32,7 +32,7 @@
     <button
       id="lb-next"
       aria-label="Next"
-      class="absolute right-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer"
+      class="absolute right-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer touch-manipulation"
       >&#8250;</button
     >
   </div>
@@ -120,6 +120,8 @@
     dialog.addEventListener("close", () => {
       document.body.style.overflow = "";
       document.body.style.paddingRight = "";
+      img.src = "";
+      img.alt = "";
     });
 
     btnClose.addEventListener("click", closeDialog);
