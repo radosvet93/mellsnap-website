@@ -7,7 +7,8 @@
       id="lb-close"
       aria-label="Close"
       class="absolute top-4 right-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors cursor-pointer"
-    >&times;</button>
+      >&times;</button
+    >
 
     <span
       id="lb-counter"
@@ -18,7 +19,8 @@
       id="lb-prev"
       aria-label="Previous"
       class="absolute left-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer"
-    >&#8249;</button>
+      >&#8249;</button
+    >
 
     <img
       id="lb-img"
@@ -31,15 +33,15 @@
       id="lb-next"
       aria-label="Next"
       class="absolute right-4 z-10 text-white text-5xl leading-none w-14 h-14 flex items-center justify-center hover:text-pink transition-colors select-none cursor-pointer"
-    >&#8250;</button>
+      >&#8250;</button
+    >
   </div>
 </dialog>
 
 <style>
   #lightbox {
     backdrop-filter: blur(4px);
-    opacity: 0;
-    transition: opacity 0.3s ease, display 0.3s ease allow-discrete, overlay 0.3s ease allow-discrete;
+    transition: opacity 0.3s ease;
   }
 
   #lightbox[open] {
@@ -48,22 +50,6 @@
 
   @starting-style {
     #lightbox[open] {
-      opacity: 0;
-    }
-  }
-
-  #lightbox::backdrop {
-    background: hsla(0, 0%, 0%, 0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease, display 0.3s ease allow-discrete, overlay 0.3s ease allow-discrete;
-  }
-
-  #lightbox[open]::backdrop {
-    opacity: 1;
-  }
-
-  @starting-style {
-    #lightbox[open]::backdrop {
       opacity: 0;
     }
   }
@@ -84,25 +70,33 @@
     function collectImages() {
       images = Array.from(document.querySelectorAll("img.img-portfolio"));
       images.forEach((el, i) => {
-        el.style.cursor = "pointer";
         el.addEventListener("click", () => open(i));
       });
     }
 
     function updateCounter() {
-      counter.textContent = images.length > 1 ? `${current + 1} / ${images.length}` : "";
+      counter.textContent =
+        images.length > 1 ? `${current + 1} / ${images.length}` : "";
+    }
+
+    function preload(index) {
+      for (let i = index - 3; i <= index + 3; i++) {
+        if (i === index) continue;
+        const src = images[(i + images.length) % images.length]?.src;
+        if (src) new Image().src = src;
+      }
     }
 
     function show(index) {
       current = (index + images.length) % images.length;
-      img.style.opacity = "0";
-      setTimeout(() => {
-        const el = images[current];
-        img.src = el.src;
-        img.alt = el.alt;
-        img.style.opacity = "1";
-        updateCounter();
-      }, 150);
+
+      const el = images[current];
+
+      img.src = el.src;
+      img.alt = el.alt;
+
+      updateCounter();
+      preload(current);
     }
 
     function open(index) {
@@ -110,9 +104,10 @@
       const el = images[current];
       img.src = el.src;
       img.alt = el.alt;
-      img.style.opacity = "1";
       updateCounter();
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      preload(current);
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = "hidden";
       dialog.showModal();
@@ -143,13 +138,21 @@
     });
 
     let touchStartX = 0;
-    dialog.addEventListener("touchstart", (e) => {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    dialog.addEventListener("touchend", (e) => {
-      const delta = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(delta) > 50) show(current + (delta < 0 ? 1 : -1));
-    }, { passive: true });
+    dialog.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+      },
+      { passive: true },
+    );
+    dialog.addEventListener(
+      "touchend",
+      (e) => {
+        const delta = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 50) show(current + (delta < 0 ? 1 : -1));
+      },
+      { passive: true },
+    );
 
     collectImages();
   });
