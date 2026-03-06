@@ -8,12 +8,18 @@ import Lightbox from "../components/Lightbox.astro";
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
 const {
   title,
   description = "MellSnap Photography - Family & Portrait Photography in Kingston upon Thames and Central London",
+  ogImage = "/og-default.svg",
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, "https://mellsnap.co.uk").href;
+const ogImageUrl = new URL(ogImage, "https://mellsnap.co.uk").href;
+const fullTitle = `${title} | MellSnap Photography`;
 ---
 
 <!doctype html>
@@ -24,13 +30,25 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <title>{title} | MellSnap Photography</title>
+    <title>{fullTitle}</title>
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
-    <meta property="og:title" content={`${title} | MellSnap Photography`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="MellSnap Photography" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
