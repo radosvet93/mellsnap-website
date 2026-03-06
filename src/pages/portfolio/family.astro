@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
+import Lightbox from "../../components/Lightbox.astro";
 ---
 
 <BaseLayout
@@ -41,21 +42,24 @@ import { Image } from "astro:assets";
           alt="Family photo"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/111-Web-2.jpg"
           alt="Family photo"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/052-Web.jpg"
           alt="Family photo"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/138-Web.jpg"
@@ -602,4 +606,6 @@ import { Image } from "astro:assets";
       </a>
     </div>
   </section>
+
+  <Lightbox />
 </BaseLayout>

@@ -56,9 +56,109 @@ const portfolioItems = [
 
 const reviewStats = await fetchGoogleReviews();
 const testimonials = await getCollection("reviews");
+
+const faqs = [
+  {
+    question: "Which photo package is for me?",
+    answer:
+      "You can book a 10-minute free consultation and we will discuss the best package, as well as all the questions that you might have.",
+    answerHtml: `You can book a <a href="/free-consultation/" class="hover:text-pink transition-colors underline underline-offset-2">10-minute free consultation</a> with me and we are going to discuss the best package, as well as all the questions that you might have.`,
+  },
+  {
+    question: "How long does it take to receive my images?",
+    answer:
+      "I try to retouch and process the images as soon as possible, normally it takes from 3 to 5 days for a mini session and from 5 to 10 days for a full session and events.",
+  },
+  {
+    question: "Do you have a photo studio?",
+    answer:
+      "While I may offer a studio option in the future, right now I specialise in outdoor sessions, where nature provides a beautiful, relaxed backdrop. Photographing families outside allows everyone to feel more comfortable and natural, so I can capture genuine connection, real smiles, and authentic moments that truly reflect your family.",
+  },
+  {
+    question: "What if it is raining?",
+    answer:
+      "We can reschedule for more sunny days, and you won't lose anything—I don't require a booking fee!",
+  },
+  {
+    question: "How will I get my images?",
+    answer:
+      "I'll send you a secure link from where you can download all the digital images whenever they are ready, they will be in two formats. One optimised for social media sharing and one for printing.",
+  },
+  {
+    question: "Will my photos be used for your blog or marketing?",
+    answer:
+      "I might use a few photos from our session on my blog or in marketing to help others discover my work, much like how you found me. Showcasing real photo sessions is key to reaching new clients. Let me know if you'd prefer not to have your photos featured!",
+  },
+  {
+    question: "How to book a photo session?",
+    answer:
+      "Booking a session is very easy, you can either book a free 10-minute consultation with me to discuss everything and reserve a date, alternatively, you can fill in the contact form or just call me.",
+    answerHtml: `Booking a session is very easy, you can either click the button for a <a href="/free-consultation/" class="hover:text-pink transition-colors underline underline-offset-2">free 10-minute consultation</a> with me on which we are going to discuss everything and reserve a date, alternatively, you can fill in the contact form or just call me, check the <a href="/contact/" class="hover:text-pink transition-colors underline underline-offset-2">contact page</a> for more details.`,
+  },
+  {
+    question: "When is payment required?",
+    answer:
+      "I don't have a booking fee and all packages include all digital images. The payment can be done in various stages, on the session or just before you receive your images, whenever suits you best. I accept card and cash payments.",
+  },
+  {
+    question: "Are you doing photo prints?",
+    answer:
+      "No, not at the moment, but I'm able to help with printing information and good companies that do print, just let me know.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://mellsnap.co.uk/#business",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "34",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mellsnap.co.uk/#website",
+      name: "MellSnap Photography",
+      url: "https://mellsnap.co.uk",
+      publisher: { "@id": "https://mellsnap.co.uk/#business" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mellsnap.co.uk/#gaby",
+      name: "Gaby",
+      jobTitle: "Family & Lifestyle Photographer",
+      worksFor: { "@id": "https://mellsnap.co.uk/#business" },
+      url: "https://mellsnap.co.uk/about/",
+      sameAs: [
+        "https://instagram.com/mellsnap",
+        "https://facebook.com/mellphotosnap",
+        "https://pinterest.com/mellsnap",
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mellsnap.co.uk/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
+};
 ---
 
 <BaseLayout title="Home">
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd, null, 2)}
+  />
   <!-- Hero Section -->
   <Hero
     title="Natural Outdoor Family Photography"
@@ -255,209 +355,26 @@ const testimonials = await getCollection("reviews");
       </div>
 
       <div class="max-w-3xl mx-auto divide-y divide-grey-200">
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            Which photo package is for me?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            You can book a <a
-              href="/free-consultation/"
-              class="hover:text-pink transition-colors underline underline-offset-2"
-              >10-minute free consultation</a
-            > with me and we are going to discuss the best package, as well as all
-            the questions that you might have.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            How long does it take to receive my images?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            I try to retouch and process the images as soon as possible,
-            normally it takes from 3 to 5 days for a mini session and from 5 to
-            10 days for a full session and events.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            Do you have a photo studio?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            While I may offer a studio option in the future, right now I
-            specialise in outdoor sessions, where nature provides a beautiful,
-            relaxed backdrop. Photographing families outside allows everyone to
-            feel more comfortable and natural, so I can capture genuine
-            connection, real smiles, and authentic moments that truly reflect
-            your family.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            What if it is raining?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            We can reschedule for more sunny days, and you won't lose anything—I
-            don't require a booking fee!
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            How will I get my images?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            I'll send you a secure link from where you can download all the
-            digital images whenever they are ready, they will be in two formats.
-            One optimised for social media sharing and one for printing.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            Will my photos be used for your blog or marketing?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            I might use a few photos from our session on my blog or in marketing
-            to help others discover my work, much like how you found me.
-            Showcasing real photo sessions is key to reaching new clients. Let
-            me know if you'd prefer not to have your photos featured!
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            How to book a photo session?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            Booking a session is very easy, you can either click the button for
-            a <a
-              href="/free-consultation/"
-              class="hover:text-pink transition-colors underline underline-offset-2"
-              >free 10-minute consultation</a
-            > with me on which we are going to discuss everything and reserve a date,
-            alternatively, you can fill in the contact form or just call me, check
-            the <a
-              href="/contact/"
-              class="hover:text-pink transition-colors underline underline-offset-2"
-              >contact page</a
-            > for more details.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            When is payment required?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            I don't have a booking fee and all packages include all digital
-            images. The payment can be done in various stages, on the session or
-            just before you receive your images, whenever suits you best. I
-            accept card and cash payments.
-          </p>
-        </details>
-
-        <details class="group py-4">
-          <summary
-            class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text"
-          >
-            Are you doing photo prints?
-            <svg
-              class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              ><path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-              ></path></svg
-            >
-          </summary>
-          <p class="mt-3 text-secondary-text">
-            No, not at the moment, but I'm able to help with printing
-            information and good companies that do print, just let me know.
-          </p>
-        </details>
+        {
+          faqs.map((faq) => (
+            <details class="group py-4">
+              <summary class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text">
+                {faq.question}
+                <svg
+                  class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
+                </svg>
+              </summary>
+              <p
+                class="mt-3 text-secondary-text"
+                set:html={faq.answerHtml ?? faq.answer}
+              />
+            </details>
+          ))
+        }
       </div>
     </div>
   </section>

@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
+import Lightbox from "../../components/Lightbox.astro";
 ---
 
 <BaseLayout
@@ -38,21 +39,24 @@ import { Image } from "astro:assets";
           alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/021-Web-1-e1731532212897.jpg"
           alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/022-Web-e1731532159263.jpg"
           alt="Birthday event, celebrating 30th anniversary, decoration for the couple celebrating birthday together with family"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/129-Web-1.jpg"
@@ -469,4 +473,6 @@ import { Image } from "astro:assets";
       </a>
     </div>
   </section>
+
+  <Lightbox />
 </BaseLayout>

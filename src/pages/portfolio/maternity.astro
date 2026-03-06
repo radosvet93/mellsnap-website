@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
+import Lightbox from "../../components/Lightbox.astro";
 ---
 
 <BaseLayout
@@ -59,21 +60,24 @@ import { Image } from "astro:assets";
           alt="Maternity photo"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg"
           alt="Pregnant woman around flowers at Isabella plantation in Richmond park, maternity photoshoot"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/018-Web-e1731531552915.jpg"
           alt="Pregnant woman around flowers at Isabella plantation in Richmond park"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/048-Web-e1731532110866.jpg"
@@ -433,4 +437,6 @@ import { Image } from "astro:assets";
       </a>
     </div>
   </section>
+
+  <Lightbox />
 </BaseLayout>

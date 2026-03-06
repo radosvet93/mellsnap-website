@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = "MellSnap Photography - Family & Portrait Photography in Kingston upon Thames and Central London",
+  description = "MellSnap Photography - Family & Event Photography in Kingston upon Thames and Central London",
   ogImage = "/og-default.svg",
 } = Astro.props;
 
@@ -49,6 +49,74 @@ const fullTitle = `${title} | MellSnap Photography`;
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- GLOBAL JSON-LD -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": [
+          "LocalBusiness",
+          "ProfessionalService",
+          "PhotographyBusiness"
+        ],
+        "@id": "https://mellsnap.co.uk/#business",
+        "name": "MellSnap Photography",
+        "url": "https://mellsnap.co.uk",
+        "description": "Family, maternity, children and event photography in Kingston upon Thames and Central London.",
+        "telephone": "+447722050936",
+        "email": "contact@mellsnap.co.uk",
+
+        "image": "https://mellsnap.co.uk/images/mellsnap-logo.png",
+        "logo": "https://mellsnap.co.uk/images/mellsnap-logo.png",
+
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kingston upon Thames",
+          "addressRegion": "London",
+          "addressCountry": "GB"
+        },
+
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.41427,
+          "longitude": -0.304613
+        },
+
+        "hasMap": "https://maps.google.com/?q=51.41427,-0.304613",
+
+        "areaServed": [
+          { "@type": "City", "name": "Kingston upon Thames" },
+          { "@type": "City", "name": "Richmond" },
+          { "@type": "City", "name": "Wimbledon" },
+          { "@type": "City", "name": "Twickenham" },
+          { "@type": "City", "name": "Teddington" },
+          { "@type": "City", "name": "Surbiton" },
+          { "@type": "City", "name": "Chelsea" },
+          { "@type": "City", "name": "Kensington" }
+        ],
+
+        "serviceArea": {
+          "@type": "AdministrativeArea",
+          "name": "London"
+        },
+
+        "sameAs": [
+          "https://instagram.com/mellsnap",
+          "https://facebook.com/mellphotosnap",
+          "https://pinterest.com/mellsnap"
+        ],
+
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+447722050936",
+          "contactType": "customer service"
+        },
+
+        "priceRange": "££"
+      }
+    </script>
+
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
@@ -59,6 +127,5 @@ const fullTitle = `${title} | MellSnap Photography`;
 
     <Footer />
     <ScrollToTop />
-    <Lightbox />
   </body>
 </html>
