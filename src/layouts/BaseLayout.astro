@@ -5,10 +5,8 @@ import Footer from "../components/Footer.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
 
 import loraRegular from "../fonts/lora-v37-latin-regular.woff2";
-import cormorantMedium from "../fonts/cormorant-garamond-v21-latin-500.woff2";
-import cormorantMediumItalic from "../fonts/cormorant-garamond-v21-latin-500italic.woff2";
-import ralewaySemiBold from "../fonts/raleway-v37-latin-600.woff2";
 import ephesisRegular from "../fonts/ephesis-v11-latin-regular.woff2";
+
 
 interface Props {
   title: string;
@@ -39,9 +37,6 @@ const fullTitle = `${title} | MellSnap Photography`;
 
     <!-- Font preloads -->
     <link rel="preload" href={loraRegular} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={cormorantMedium} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={cormorantMediumItalic} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={ralewaySemiBold} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={ephesisRegular} as="font" type="font/woff2" crossorigin />
     <title>{fullTitle}</title>
     <link rel="canonical" href={canonicalUrl} />
