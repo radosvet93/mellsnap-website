@@ -36,7 +36,7 @@ After your mini photoshoot, you can relax at the park's [lovely coffee bar](http
 
 For something a bit more creative, Bushy Park is an absolute gem. Its Woodland Gardens are full of hidden spots, perfect for a *romantic photoshoot* or family portraits. The wooden bridge over the ponds is a standout location, with its scenic backdrop providing a fairytale-like feel.
 
-The park offers an incredible range of scenery, from wide-open spaces to cosy, intimate spots surrounded by trees and greenery. You'll find plenty of opportunities to take some amazing, natural-looking photos. If you or your little ones are fans of ice cream or pizza, you can go to [The Pheasantry Cafe](https://www.colicci.co.uk/locations/bushy-park) which is really nice place to eat or have a drink. There's also a big car park, making it easy to get to and ideal for families who want a no-fuss experience.
+The park offers an incredible range of scenery, from wide-open spaces to cosy, intimate spots surrounded by trees and greenery. You'll find plenty of opportunities to take some amazing, natural-looking photos. If you or your little ones are fans of ice cream or pizza, you can go to [The Pheasantry Cafe](https://www.colicci.co.uk/bushy-park) which is really nice place to eat or have a drink. There's also a big car park, making it easy to get to and ideal for families who want a no-fuss experience.
 
 Bushy Park's *Woodland Gardens* is great for adventurous families who want something unique in their photos. It's also perfect for couples looking for a more private, romantic setting for a *mini photoshoot* in Kingston.
 
