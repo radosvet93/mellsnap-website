@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://mellsnap.co.uk',
   output: 'static',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
