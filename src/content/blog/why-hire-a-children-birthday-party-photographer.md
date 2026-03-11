@@ -1,5 +1,5 @@
 ---
-title: "Why Hire a Children Birthday Party Photographer"
+title: "Why Hire a Children Birthday Photographer"
 date: 2024-08-14
 excerpt: "The benefits of having a professional photographer capture your child's special day and all the precious memories."
 image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/why-hire-a-children-birthday-party-photographer/006-Web.jpg"

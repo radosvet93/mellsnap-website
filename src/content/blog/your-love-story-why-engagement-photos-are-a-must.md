@@ -1,5 +1,5 @@
 ---
-title: "Your Love Story: Why Engagement Photos Are a Must"
+title: "Why Engagement Photos Are a Must"
 date: 2024-09-11
 excerpt: "Discover why engagement photoshoots are more than just nice-to-have – they're an investment in your love story."
 image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/your-love-story-why-engagement-photos-are-a-must/Web85.webp"

@@ -1,5 +1,5 @@
 ---
-title: "Mini Photoshoot Hidden Gems in Kingston You'll Love"
+title: "Mini Photoshoot Hidden Gems in Kingston"
 date: 2024-09-18
 excerpt: "Discover Kingston upon Thames' most photogenic secret spots for your quick mini photoshoot session."
 image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/1-1.jpg"

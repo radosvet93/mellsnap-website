@@ -1,5 +1,5 @@
 ---
-title: "Spring Photoshoot in London: The Most Beautiful Season for Family and Couples Photos"
+title: "Spring Photoshoot in London"
 date: 2026-03-11
 excerpt: "Spring in London is one of the most beautiful times for photography. Discover the best locations for family and couples photos among blossoms, tulips and cherry trees."
 image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-main.jpg"
