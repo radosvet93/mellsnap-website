@@ -2,7 +2,7 @@
 title: "How to Look Good in Photos: Top Tips"
 date: 2024-09-04
 excerpt: "Simple tips and tricks to help you feel confident and look your best during your photo session."
-image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/how-to-look-good-in-photos-top-tips/102-Web.webp"
+image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/how-look-good-main.jpg"
 published: true
 ---
 
@@ -37,7 +37,8 @@ Furthermore, the way you position your body can have a significant impact on how
 
 - **How to do it:** For best results, stand at a slight angle to the camera with one foot in front of the other. This not only slims your profile but also adds depth to the image. Additionally, try turning your torso slightly to define your waistline.
 - **Experiment:** To find what works best, take a few test shots from different angles. Everyone's best angle is different, so don't hesitate to play around until you find yours.
-- **Bonus tip for Women:** If your arms are too close to the body on the side they will look bigger, try to change the positions, play with your hair, or keep them on the hip, anything really, experiment here.
+
+> **Bonus tip for Women:** If your arms are too close to the body on the side they will look bigger, try to change the positions, play with your hair, or keep them on the hip, anything really, experiment here.
 
 ## 5. Discover Your Best Side
 
@@ -65,7 +66,10 @@ Lighting is crucial for great photos. Understanding how to use lighting to your 
 Additionally, the background plays a crucial role in how you look in photos. Selecting the right background is key to ensuring that you always look fantastic in photos. I've gathered a list of one of the [best parks around London for Family photoshoots](/blog/best-parks-in-london-for-family-photoshoot/) if you are interested in that.
 
 - **How to do it:** Opt for simple, uncluttered backgrounds that won't compete for attention. If you're outdoors, consider looking for natural frames like trees or doorways that add interest without overwhelming the shot.
-- **Pro Tip:** Neutral backgrounds such as a plain wall or a soft natural landscape often work well, keeping the focus on you.
+
+> **Pro Tip:** Neutral backgrounds such as a plain wall or a soft natural landscape often work well, keeping the focus on you.
+
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/how-look-good-img-1.jpg" alt="Family of four in front of London bridge" />
 
 ## 9. Be Yourself: Embrace Your Personality
 
