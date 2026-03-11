@@ -2,7 +2,7 @@
 title: "10 Fun and Easy Tips for Photoshoot with Kids"
 date: 2024-08-28
 excerpt: "Practical tips to help your photo session with children run smoothly and capture genuine, joyful moments."
-image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/10-fun-and-easy-tips-for-photoshoot-with-kids/DSC_0021-1.webp"
+image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/10-fun-and-easy-tips-for-photoshoot-with-kids/DSC_0021-1.jpg"
 published: true
 ---
 
