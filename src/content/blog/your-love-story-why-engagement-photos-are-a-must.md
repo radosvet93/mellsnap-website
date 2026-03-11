@@ -34,7 +34,7 @@ Plus, getting to know your photographer in a laid-back setting means you'll feel
 
 <img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/your-love-story-why-engagement-photos-are-a-must/102-Web.webp" alt="Wedding photoshoot at York House garden" />
 
-Your engagement shoot is your chance to get creative and showcase your relationship in a setting that is meaningful to you both. Whether it's the spot where you had your first date, the park where you walk your dog every Sunday, or that epic location you've always wanted to explore together, the options are endless. You can have a look at some [good locations that are quiet and also really romantic on my blog](/blog/3-quite-locations-for-beautiful-romantic-photoshoot/)
+Your engagement shoot is your chance to get creative and showcase your relationship in a setting that is meaningful to you both. Whether it's the spot where you had your first date, the park where you walk your dog every Sunday, or that epic location you've always wanted to explore together, the options are endless. You can have a look at some [good locations that are quiet and also really romantic on my blog](/blog/3-quiet-locations-for-romantic-photoshoot/)
 
 Unlike your wedding day, where time and location might be more restricted, an engagement shoot allows you the freedom to choose a location that speaks to your love story. This is your moment to capture something truly unique.
 

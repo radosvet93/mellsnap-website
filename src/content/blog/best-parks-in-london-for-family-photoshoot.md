@@ -2,7 +2,7 @@
 title: "Best Parks in London for Family Photoshoot"
 date: 2024-07-24
 excerpt: "Discover London's most photogenic parks for your family photos. From Richmond Park to Kew Gardens."
-image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/best-parks-in-london-for-family-photoshoot/DSCF8308.jpg"
+image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/best-parks-main.jpg"
 published: true
 ---
 
