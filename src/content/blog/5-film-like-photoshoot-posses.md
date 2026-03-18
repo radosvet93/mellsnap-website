@@ -22,7 +22,7 @@ Romantic photoshoots capture the essence of love and connection, and adding a to
 
 ## 2. Pose in a Bar or Pub
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/5-film-like-photoshoot-posses/68-DSCF2816.jpg" alt="Love couple possing inside a pub for a romantic photo session" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/5-film-like-photoshoot-posses/68-DSCF2816.jpg" alt="Love couple posing inside a pub for a romantic photo session" />
 
 **Why It Works:** Bars and pubs offer a warm, cosy atmosphere that's perfect for romantic photos. The dim lighting, rustic décor, and bustling background can add a charming, film-like quality to your shots. This pose captures the essence of a casual yet intimate date night.
 

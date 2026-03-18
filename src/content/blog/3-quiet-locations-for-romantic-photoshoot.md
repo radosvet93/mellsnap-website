@@ -29,7 +29,7 @@ Richmond Park is London's largest and most famous park, but it also has numerous
 ### Why Richmond Park?
 
 - **Stunning Natural Beauty**: Richmond Park offers expansive natural beauty, perfect for a romantic photoshoot. The ancient woodlands, open fields, serene ponds, and diverse landscapes create a picturesque backdrop. The Isabella Plantation, with its vibrant spring blooms, adds a splash of colour to your shots.
-- **Secluded Spots for Intimate Moments**: Richmond Park has many quiet areas for privacy and tranquility. The Pen Ponds, two beautiful lakes, provide a serene setting for intimate moments. Pembroke Lodge, with its lovely gardens and views over the Thames Valley, offers a romantic backdrop for your photos.
+- **Secluded Spots for Intimate Moments**: Richmond Park has many quiet areas for privacy and peace. The Pen Ponds, two beautiful lakes, provide a serene setting for intimate moments. Pembroke Lodge, with its lovely gardens and views over the Thames Valley, offers a romantic backdrop for your photos.
 - **Hidden Corners**: The western side of Richmond Park features beautiful gardens and panoramic views over the Thames Valley. Pembroke Lodge, with its historic charm and stunning vistas, provides an elegant backdrop for your photos.
 
 ## 3. York House Gardens

@@ -18,7 +18,7 @@ Nature provides us with a picture-perfect setting that brings photos to life. Th
 
 ### 2. Variety of Backgrounds
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/why-parks-are-ideal-for-a-family-photoshoot/090-Web.webp" alt="mum with her children hugging and smilling, posing for a family photoshoot at Isabella plantation in Richmond park" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/why-parks-are-ideal-for-a-family-photoshoot/090-Web.webp" alt="mum with her children hugging and smiling, posing for a family photoshoot at Isabella plantation in Richmond park" />
 
 Parks offer a diverse range of backgrounds, making it easy to switch up your look without changing locations. Whether you love the romantic ambiance of a rose garden or the adventurous vibe of a rustic picnic spot, parks have it all. You can even change outfits to give the impression of multiple photo sessions in one go, providing a rich variety in your family album.
 
