@@ -34,9 +34,9 @@ Forest trails framed by autumn foliage make for wonderful leading lines that dra
 
 <img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/10-simple-autumn-photography-ideas-for-families/146-Web.jpg" alt="Little baby girl wearing red top and hat, sitting in the middle of a walking path, during autumn time at Bushy park"/>
 
-## 6. Bonfire Evenings
+## 6. Cosy Blanket Moments
 
-As the temperatures dip, cozy up around a bonfire with blankets and hot chocolate. Capture your family in the warm light of the fire as they roast marshmallows or tell stories. The crackling fire creates a magical setting for soft, intimate photos with warm, inviting tones. Bonfire shots work best as the evening light fades for a cozy atmosphere.
+Bring along a warm blanket and capture your family snuggled up together on the ground or a park bench. Whether it's wrapping the kids up, sharing a cuddle, or sitting together with a hot drink, these moments create a strong sense of warmth and connection. The contrast between the crisp autumn air and the cosy setup adds emotional depth and variety to your gallery, making these shots feel intimate and timeless.
 
 ## 7. Foggy Morning Strolls
 
