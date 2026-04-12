@@ -1,0 +1,87 @@
+backend:
+  name: github
+  repo: radosvet93/mellsnap-website
+  branch: main
+  base_url: https://sveltia-cms-auth.it-ad8.workers.dev
+
+site_url: https://mellsnap.co.uk
+display_url: https://mellsnap.co.uk
+
+# Images are hosted on Backblaze CDN - use URL fields, not media upload
+media_folder: ""
+public_folder: ""
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+      - label: Excerpt
+        name: excerpt
+        widget: text
+        hint: "Short summary shown on the blog listing page and in search results"
+      - label: Featured Image URL
+        name: image
+        widget: string
+        hint: "Upload image to Backblaze, copy the URL and paste it here (e.g. https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/my-photo.jpg)"
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        hint: "Uncheck to save as a draft (hidden from the site)"
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: portfolio
+    label: Portfolio
+    folder: src/content/portfolio
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: Family, value: family }
+          - { label: Maternity, value: maternity }
+          - { label: Love / Couples, value: love }
+          - { label: Children, value: children }
+          - { label: Events, value: events }
+      - label: Description
+        name: description
+        widget: text
+      - label: Image URL
+        name: image
+        widget: string
+        hint: "Upload image to Backblaze, copy the URL and paste it here"
+      - label: Featured
+        name: featured
+        widget: boolean
+        default: false
+        hint: "Show on the homepage featured section"
+      - label: Display Order
+        name: order
+        widget: number
+        default: 0
+        hint: "Lower numbers appear first"
