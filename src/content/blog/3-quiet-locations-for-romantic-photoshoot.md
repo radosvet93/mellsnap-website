@@ -1,8 +1,8 @@
 ---
-title: "3 Quiet Locations For Beautiful Romantic Photoshoot"
+title: 3 Quiet Locations For Beautiful Romantic Photoshoot
 date: 2024-08-07
-excerpt: "Finding the perfect location for a romantic photoshoot in London. Explore Greenwich, Richmond Park, and York House Gardens."
-image: "https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/3-quite-locations-for-beautiful-romantic-photoshoot/DSCF0041.webp"
+excerpt: Finding the perfect location for a romantic photoshoot in London. Explore Greenwich, Richmond Park, and York House Gardens.
+image: https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/3-quite-locations-for-beautiful-romantic-photoshoot/DSCF0041.webp
 published: true
 ---
 
@@ -48,6 +48,6 @@ York House Gardens in Twickenham is a hidden gem that offers a peaceful and ench
 
 Choosing the right location for your romantic photoshoot can make all the difference in capturing beautiful and meaningful moments. Greenwich Park, Richmond Park, and York House Gardens each offer unique and quiet settings that are perfect for creating timeless memories. Whether you're looking for panoramic views, diverse landscapes, or sculptural beauty, these locations provide the perfect backdrop for your love story.
 
-For more romantic shots you can have a look at my [love portfolio](/portfolio/love/).
+For more romantic shots, you can have a look at my [love portfolio](/portfolio/love/).
 
 Let me know if you have a favourite place from the list above, I'll be happy to share more photos of it!
