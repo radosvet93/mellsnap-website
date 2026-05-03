@@ -20,7 +20,7 @@ faqs:
 nearbyLocations: ["richmond-park", "isabella-plantation", "terrace-garden"]
 ---
 
-Pembroke Lodge occupies the highest point in Richmond Park, and the views from its terrace are simply breath-taking — a sweeping panorama across the Thames Valley that, on a clear day, reaches all the way to Windsor Castle. The Georgian house, now a popular café and wedding venue, is surrounded by beautifully maintained gardens: a formal rose garden, open lawns, herbaceous borders, and the dramatic elevated terrace overlooking the valley.
+Pembroke Lodge occupies the highest point in Richmond Park, and the views from its terrace are simply breathtaking — a sweeping panorama across the Thames Valley that, on a clear day, reaches all the way to Windsor Castle. The Georgian house, now a popular café and wedding venue, is surrounded by beautifully maintained gardens: a formal rose garden, open lawns, herbaceous borders, and the dramatic elevated terrace overlooking the valley.
 
 For sunset photography, Pembroke Lodge is unrivalled in SW London. In summer especially, the sun drops slowly toward the west and the entire Thames Valley is bathed in warm golden light — families silhouetted against that vast open sky, or a couple on the terrace with the world glowing behind them, create images of genuine emotional power. The rose garden nearby is at its peak in June and July, adding close-up floral beauty to the wider landscape drama.
 
