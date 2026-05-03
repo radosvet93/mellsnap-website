@@ -1,52 +1,65 @@
 ---
-import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Button from '../../components/Button.astro';
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
 
-const SITE_URL = import.meta.env.SITE ?? 'https://mellsnap.co.uk';
+const SITE_URL = import.meta.env.SITE ?? "https://mellsnap.co.uk";
 
 export async function getStaticPaths() {
-  const locations = await getCollection('locations');
+  const locations = await getCollection("locations");
   return locations.map((entry) => ({
     params: { slug: entry.id },
     props: {
       entry,
-      nearby: locations.filter((loc) => entry.data.nearbyLocations.includes(loc.id)),
+      nearby: locations.filter((loc) =>
+        entry.data.nearbyLocations.includes(loc.id),
+      ),
     },
   }));
 }
 
 const { entry, nearby } = Astro.props;
 const { Content } = await render(entry);
-const { name, tagline, heroImage, practicalInfo, galleryImages, faqs } = entry.data;
+const { name, tagline, heroImage, practicalInfo, galleryImages, faqs } =
+  entry.data;
 
 const pageDescription = `${name} is one of SW London's best photoshoot locations. Family, maternity and couples photography with MellSnap — book your free consultation today.`;
 
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
   mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
+    "@type": "Question",
     name: faq.q,
-    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
   })),
 };
 
 const placeSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Place',
+  "@context": "https://schema.org",
+  "@type": "Place",
   name,
   description: pageDescription,
   url: `${SITE_URL}/locations/${entry.id}`,
 };
 
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Location Finder', item: `${SITE_URL}/tools/location-finder` },
-    { '@type': 'ListItem', position: 3, name, item: `${SITE_URL}/locations/${entry.id}` },
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Location Finder",
+      item: `${SITE_URL}/tools/location-finder`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name,
+      item: `${SITE_URL}/locations/${entry.id}`,
+    },
   ],
 };
 ---
@@ -57,12 +70,26 @@ const breadcrumbSchema = {
   ogImage={`/images/locations/${heroImage}`}
 >
   <Fragment slot="head">
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(placeSchema)} />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(faqSchema)}
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(placeSchema)}
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
   </Fragment>
 
-  <section class="relative h-[60vh] min-h-[400px] bg-section-bg overflow-hidden">
+  <section
+    class="relative h-[60vh] min-h-[400px] bg-section-bg overflow-hidden"
+  >
     <img
       src={`/images/locations/${heroImage}`}
       alt={`${name} photoshoot location`}
@@ -70,30 +97,48 @@ const breadcrumbSchema = {
       loading="eager"
     />
     <div class="absolute inset-0 bg-black/40"></div>
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-      <nav aria-label="Breadcrumb" class="text-white/70 text-sm mb-4 font-[family-name:var(--font-raleway)]">
+    <div
+      class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4"
+    >
+      <nav
+        aria-label="Breadcrumb"
+        class="text-white/70 text-sm mb-4 font-[family-name:var(--font-raleway)]"
+      >
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span class="mx-2">/</span>
-        <a href="/tools/location-finder" class="hover:text-white transition-colors">Locations</a>
+        <a
+          href="/tools/location-finder"
+          class="hover:text-white transition-colors">Locations</a
+        >
         <span class="mx-2">/</span>
         <span class="text-white">{name}</span>
       </nav>
-      <h1 class="text-4xl md:text-6xl text-white font-[family-name:var(--font-cormorant)] font-semibold mb-3">
+      <h1
+        class="text-4xl md:text-6xl text-white font-[family-name:var(--font-cormorant)] font-semibold mb-3"
+      >
         {name}
       </h1>
-      <p class="text-white/90 text-lg md:text-xl font-[family-name:var(--font-lora)] italic mb-8 max-w-xl">
+      <p
+        class="text-white/90 text-lg md:text-xl font-[family-name:var(--font-lora)] italic mb-8 max-w-xl"
+      >
         {tagline}
       </p>
-      <Button href="/free-consultation" variant="primary">Book Free Consultation</Button>
+      <Button href="/free-consultation" variant="primary"
+        >Book Free Consultation</Button
+      >
     </div>
   </section>
 
   <section class="py-16 px-4">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
+      <h2
+        class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8"
+      >
         Why {name}?
       </h2>
-      <div class="prose prose-lg max-w-none font-[family-name:var(--font-lora)] text-secondary-text leading-relaxed">
+      <div
+        class="prose prose-lg max-w-none font-[family-name:var(--font-lora)] text-secondary-text leading-relaxed"
+      >
         <Content />
       </div>
     </div>
@@ -101,109 +146,162 @@ const breadcrumbSchema = {
 
   <section class="py-12 px-4 bg-section-bg">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
+      <h2
+        class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8"
+      >
         Practical Information
       </h2>
       <dl class="grid sm:grid-cols-2 gap-6">
         <div>
-          <dt class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1">Parking</dt>
-          <dd class="text-primary-text font-[family-name:var(--font-lora)]">{practicalInfo.parking}</dd>
+          <dt
+            class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1"
+          >
+            Parking
+          </dt>
+          <dd class="text-primary-text font-[family-name:var(--font-lora)]">
+            {practicalInfo.parking}
+          </dd>
         </div>
         <div>
-          <dt class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1">Getting There</dt>
-          <dd class="text-primary-text font-[family-name:var(--font-lora)]">{practicalInfo.transport}</dd>
+          <dt
+            class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1"
+          >
+            Getting There
+          </dt>
+          <dd class="text-primary-text font-[family-name:var(--font-lora)]">
+            {practicalInfo.transport}
+          </dd>
         </div>
         <div>
-          <dt class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1">Best Time to Visit</dt>
-          <dd class="text-primary-text font-[family-name:var(--font-lora)]">{practicalInfo.bestTime}</dd>
+          <dt
+            class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1"
+          >
+            Best Time to Visit
+          </dt>
+          <dd class="text-primary-text font-[family-name:var(--font-lora)]">
+            {practicalInfo.bestTime}
+          </dd>
         </div>
-        {practicalInfo.permits && (
-          <div>
-            <dt class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1">Permits</dt>
-            <dd class="text-primary-text font-[family-name:var(--font-lora)]">{practicalInfo.permits}</dd>
-          </div>
-        )}
+        {
+          practicalInfo.permits && (
+            <div>
+              <dt class="text-xs uppercase tracking-widest text-pink font-[family-name:var(--font-raleway)] font-semibold mb-1">
+                Permits
+              </dt>
+              <dd class="text-primary-text font-[family-name:var(--font-lora)]">
+                {practicalInfo.permits}
+              </dd>
+            </div>
+          )
+        }
       </dl>
     </div>
   </section>
 
-  {galleryImages.length > 0 && (
-    <section class="py-16 px-4">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
-          Gallery
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {galleryImages.map((img) => (
-            <div class="aspect-square overflow-hidden rounded-lg bg-section-bg">
-              <img
-                src={`/images/locations/gallery/${img}`}
-                alt={`${name} photoshoot`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
+  {
+    galleryImages.length > 0 && (
+      <section class="py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
+            Gallery
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {galleryImages.map((img) => (
+              <div class="aspect-square overflow-hidden rounded-lg bg-section-bg">
+                <img
+                  src={`/images/locations/gallery/${img}`}
+                  alt={`${name} photoshoot`}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 text-center">
+            <a
+              href="/portfolio"
+              class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors"
+            >
+              See full portfolio →
+            </a>
+          </div>
         </div>
-        <div class="mt-6 text-center">
-          <a href="/portfolio" class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors">
-            See full portfolio →
-          </a>
-        </div>
-      </div>
-    </section>
-  )}
+      </section>
+    )
+  }
 
   <section class="py-16 px-4 bg-section-bg">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
+      <h2
+        class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8"
+      >
         Frequently Asked Questions
       </h2>
       <dl class="space-y-6">
-        {faqs.map((faq) => (
-          <div class="border-b border-light-pink pb-6 last:border-0 last:pb-0">
-            <dt class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-2">{faq.q}</dt>
-            <dd class="text-secondary-text font-[family-name:var(--font-lora)] leading-relaxed">{faq.a}</dd>
-          </div>
-        ))}
+        {
+          faqs.map((faq) => (
+            <div class="border-b border-light-pink pb-6 last:border-0 last:pb-0">
+              <dt class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-2">
+                {faq.q}
+              </dt>
+              <dd class="text-secondary-text font-[family-name:var(--font-lora)] leading-relaxed">
+                {faq.a}
+              </dd>
+            </div>
+          ))
+        }
       </dl>
     </div>
   </section>
 
   <section class="py-20 px-4 text-center">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-4">
+      <h2
+        class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-4"
+      >
         Ready to shoot at {name}?
       </h2>
       <p class="text-secondary-text font-[family-name:var(--font-lora)] mb-8">
-        Book a free 15-minute consultation and we'll plan your perfect session together.
+        Book a free 15-minute consultation and we'll plan your perfect session
+        together.
       </p>
-      <Button href="/free-consultation" variant="primary">Book Free Consultation</Button>
+      <Button href="/free-consultation" variant="primary"
+        >Book Free Consultation</Button
+      >
     </div>
   </section>
 
   <section class="py-12 px-4 bg-section-bg">
     <div class="max-w-5xl mx-auto">
-      {nearby.length > 0 && (
-        <>
-          <h2 class="text-2xl font-[family-name:var(--font-cormorant)] text-primary-text mb-6">
-            Nearby Locations
-          </h2>
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-            {nearby.map((loc) => (
-              <a
-                href={`/locations/${loc.id}`}
-                class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow block"
-              >
-                <h3 class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-1">{loc.data.name}</h3>
-                <p class="text-sm text-secondary-text font-[family-name:var(--font-lora)] line-clamp-2">{loc.data.tagline}</p>
-              </a>
-            ))}
-          </div>
-        </>
-      )}
+      {
+        nearby.length > 0 && (
+          <>
+            <h2 class="text-2xl font-[family-name:var(--font-cormorant)] text-primary-text mb-6">
+              Nearby Locations
+            </h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              {nearby.map((loc) => (
+                <a
+                  href={`/locations/${loc.id}`}
+                  class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow block"
+                >
+                  <h3 class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-1">
+                    {loc.data.name}
+                  </h3>
+                  <p class="text-sm text-secondary-text font-[family-name:var(--font-lora)] line-clamp-2">
+                    {loc.data.tagline}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </>
+        )
+      }
       <div class="text-center">
-        <a href="/tools/location-finder" class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors">
+        <a
+          href="/tools/location-finder"
+          class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors"
+        >
           Explore all locations →
         </a>
       </div>
