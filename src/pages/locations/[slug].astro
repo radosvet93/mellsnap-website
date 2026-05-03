@@ -3,20 +3,22 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 
+const SITE_URL = import.meta.env.SITE ?? 'https://mellsnap.co.uk';
+
 export async function getStaticPaths() {
   const locations = await getCollection('locations');
   return locations.map((entry) => ({
     params: { slug: entry.id },
-    props: { entry },
+    props: {
+      entry,
+      nearby: locations.filter((loc) => entry.data.nearbyLocations.includes(loc.id)),
+    },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, nearby } = Astro.props;
 const { Content } = await render(entry);
-const { name, tagline, heroImage, practicalInfo, galleryImages, faqs, nearbyLocations } = entry.data;
-
-const allLocations = await getCollection('locations');
-const nearby = allLocations.filter((loc) => nearbyLocations.includes(loc.id));
+const { name, tagline, heroImage, practicalInfo, galleryImages, faqs } = entry.data;
 
 const pageDescription = `${name} is one of SW London's best photoshoot locations. Family, maternity and couples photography with MellSnap — book your free consultation today.`;
 
@@ -35,16 +37,16 @@ const placeSchema = {
   '@type': 'Place',
   name,
   description: pageDescription,
-  url: `https://mellsnap.co.uk/locations/${entry.id}`,
+  url: `${SITE_URL}/locations/${entry.id}`,
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mellsnap.co.uk' },
-    { '@type': 'ListItem', position: 2, name: 'Location Finder', item: 'https://mellsnap.co.uk/tools/location-finder' },
-    { '@type': 'ListItem', position: 3, name, item: `https://mellsnap.co.uk/locations/${entry.id}` },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Location Finder', item: `${SITE_URL}/tools/location-finder` },
+    { '@type': 'ListItem', position: 3, name, item: `${SITE_URL}/locations/${entry.id}` },
   ],
 };
 ---
@@ -60,7 +62,6 @@ const breadcrumbSchema = {
     <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   </Fragment>
 
-  <!-- Hero -->
   <section class="relative h-[60vh] min-h-[400px] bg-section-bg overflow-hidden">
     <img
       src={`/images/locations/${heroImage}`}
@@ -70,7 +71,7 @@ const breadcrumbSchema = {
     />
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-      <nav class="text-white/70 text-sm mb-4 font-[family-name:var(--font-raleway)]">
+      <nav aria-label="Breadcrumb" class="text-white/70 text-sm mb-4 font-[family-name:var(--font-raleway)]">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span class="mx-2">/</span>
         <a href="/tools/location-finder" class="hover:text-white transition-colors">Locations</a>
@@ -87,7 +88,6 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Why this location -->
   <section class="py-16 px-4">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
@@ -99,7 +99,6 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Practical info -->
   <section class="py-12 px-4 bg-section-bg">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
@@ -128,7 +127,6 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Gallery (only if images exist) -->
   {galleryImages.length > 0 && (
     <section class="py-16 px-4">
       <div class="max-w-5xl mx-auto">
@@ -156,7 +154,6 @@ const breadcrumbSchema = {
     </section>
   )}
 
-  <!-- FAQs -->
   <section class="py-16 px-4 bg-section-bg">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-[family-name:var(--font-cormorant)] text-primary-text mb-8">
@@ -173,7 +170,6 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Bottom CTA -->
   <section class="py-20 px-4 text-center">
     <div class="max-w-xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-[family-name:var(--font-cormorant)] text-primary-text mb-4">
@@ -186,30 +182,31 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Nearby locations -->
-  {nearby.length > 0 && (
-    <section class="py-12 px-4 bg-section-bg">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-[family-name:var(--font-cormorant)] text-primary-text mb-6">
-          Nearby Locations
-        </h2>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {nearby.map((loc) => (
-            <a
-              href={`/locations/${loc.id}`}
-              class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow block"
-            >
-              <h3 class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-1">{loc.data.name}</h3>
-              <p class="text-sm text-secondary-text font-[family-name:var(--font-lora)] line-clamp-2">{loc.data.tagline}</p>
-            </a>
-          ))}
-        </div>
-        <div class="mt-6 text-center">
-          <a href="/tools/location-finder" class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors">
-            Explore all locations →
-          </a>
-        </div>
+  <section class="py-12 px-4 bg-section-bg">
+    <div class="max-w-5xl mx-auto">
+      {nearby.length > 0 && (
+        <>
+          <h2 class="text-2xl font-[family-name:var(--font-cormorant)] text-primary-text mb-6">
+            Nearby Locations
+          </h2>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            {nearby.map((loc) => (
+              <a
+                href={`/locations/${loc.id}`}
+                class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow block"
+              >
+                <h3 class="font-semibold text-primary-text font-[family-name:var(--font-raleway)] mb-1">{loc.data.name}</h3>
+                <p class="text-sm text-secondary-text font-[family-name:var(--font-lora)] line-clamp-2">{loc.data.tagline}</p>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+      <div class="text-center">
+        <a href="/tools/location-finder" class="text-pink underline underline-offset-2 font-[family-name:var(--font-raleway)] hover:text-primary-text transition-colors">
+          Explore all locations →
+        </a>
       </div>
-    </section>
-  )}
+    </div>
+  </section>
 </BaseLayout>
