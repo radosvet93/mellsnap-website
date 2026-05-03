@@ -40,4 +40,25 @@ const reviews = defineCollection({
   }),
 });
 
-export const collections = { portfolio, blog, reviews };
+const locations = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/locations' }),
+  schema: z.object({
+    name: z.string(),
+    tagline: z.string(),
+    heroImage: z.string(),
+    shootTypes: z.array(z.string()),
+    seasons: z.array(z.string()),
+    vibes: z.array(z.string()),
+    practicalInfo: z.object({
+      parking: z.string(),
+      transport: z.string(),
+      bestTime: z.string(),
+      permits: z.string().optional(),
+    }),
+    galleryImages: z.array(z.string()),
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })),
+    nearbyLocations: z.array(z.string()),
+  }),
+});
+
+export const collections = { portfolio, blog, reviews, locations };

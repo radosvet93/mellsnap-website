@@ -1,0 +1,28 @@
+---
+name: "Kew Gardens"
+tagline: "World-famous botanical beauty in every season"
+heroImage: "kew-gardens.jpg"
+shootTypes: ["family", "maternity", "couples"]
+seasons: ["spring", "summer", "autumn"]
+vibes: ["formal-gardens", "woodland"]
+practicalInfo:
+  parking: "Kew Gardens car park off Kew Road. Paid parking."
+  transport: "Kew Gardens station (District line). Buses 65, 391."
+  bestTime: "Spring for cherry blossoms and bluebells. Autumn for golden woodland."
+  permits: "Entry fee required. Commercial photography permit needed — personal sessions are fine with standard entry."
+galleryImages: []
+faqs:
+  - q: "Do we need to pay entry to do a photoshoot at Kew?"
+    a: "Yes, standard entry fees apply for all visitors including photography sessions. We factor this into our planning and it's well worth it — Kew's botanical collections are simply unmatched. If you're a Kew member, you'll have free entry as usual."
+  - q: "What are the best spots in Kew for photos?"
+    a: "The Japanese cherry trees near the Brentford Gate entrance are iconic in spring. The bluebell wood is stunning in late April. The Rhododendron Dell offers gorgeous colour and shade in May. For autumn, the woodland paths near the lake offer incredible golden light and fallen leaf texture."
+  - q: "Is Kew suitable for maternity shoots?"
+    a: "It's one of our top picks for maternity photography. The formal gardens provide elegant, timeless backdrops, and the soft filtered light under the tree canopy is especially flattering. The gentle, unhurried atmosphere of Kew suits the mood of a maternity session beautifully."
+nearbyLocations: ["richmond-park", "isabella-plantation", "pembroke-lodge"]
+---
+
+Kew Gardens is one of the world's great botanical landscapes — and for photography, it's a location that delivers in every season. The sheer variety of environments within its 300 acres is remarkable: formal parterres and rose gardens, ancient woodland and wildflower meadows, lakeside paths and glasshouse vistas. Whatever mood or aesthetic you're looking for, Kew almost certainly has it.
+
+Spring is when Kew is at its most celebrated. The Japanese cherry blossom trees create clouds of pale pink against blue April skies, while the bluebell wood — tucked away from the main paths — offers a truly magical carpet of violet-blue beneath a young green canopy. These conditions are fleeting and absolutely worth planning around. Autumn brings its own drama, with the woodland section turning gold and amber, leaves drifting across the paths, and a warm, mellow light that suits family portraits and couples sessions perfectly.
+
+For maternity and couples photography in particular, Kew offers an elegance and variety that's hard to find anywhere else in SW London. The well-maintained grounds mean a polished look without feeling overly formal, and the size of the site means it rarely feels crowded in the early morning or on quieter weekdays.
