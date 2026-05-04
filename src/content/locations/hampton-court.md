@@ -18,7 +18,7 @@ faqs:
     a: "The Long Water canal with its formal tree lines is stunning for elegant couples portraits. The Privy Garden — the most formal of the palace gardens — offers incredible geometric structure and topiary. The riverside approach along the Thames is another favourite for a more relaxed, romantic feel."
   - q: "Is Hampton Court suitable for formal portrait events like anniversaries?"
     a: "Absolutely — the grandeur of the Tudor architecture and the precision of the formal gardens lend themselves beautifully to celebratory portrait sessions. Whether it's a milestone anniversary, an engagement, or a family reunion, the setting elevates every image and creates something genuinely timeless."
-nearbyLocations: ["bushy-park", "ham-house", "terrace-garden"]
+nearbyLocations: ["bushy-park", "york-house-garden", "terrace-garden"]
 ---
 
 Hampton Court Palace is one of England's most magnificent royal residences, and its gardens are among the finest formal landscapes in the country. For portrait photography, the combination of Tudor brickwork, geometric hedging, sculpted topiary, and the broad sweep of the Thames creates an almost unparalleled backdrop — rich in history, architecturally stunning, and endlessly varied.

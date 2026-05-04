@@ -17,7 +17,7 @@ faqs:
     a: "Canbury Gardens has gorgeous cherry trees and flowering shrubs that peak in April. The combination of blossom overhead and the Thames catching the afternoon light makes for incredibly pretty, soft images — it's one of our favourite spring spots in Kingston."
   - q: "Can we incorporate the riverside path into the shoot?"
     a: "Absolutely. The path along the Thames bank is one of the best spots — dappled shade from mature trees, the shimmer of the river, and a relaxed, walkable feel that suits natural lifestyle portraits perfectly. It's especially beautiful in the long light of a summer evening."
-nearbyLocations: ["terrace-garden", "ham-house", "richmond-park"]
+nearbyLocations: ["terrace-garden", "york-house-garden", "richmond-park"]
 ---
 
 Canbury Gardens sits right on the Thames in Kingston and has a wonderfully laid-back, neighbourhood feel that puts families and couples immediately at ease. The park stretches along the riverbank with mature trees, open lawns, and well-kept flowerbeds — the kind of green space that feels genuinely local rather than manicured and formal.

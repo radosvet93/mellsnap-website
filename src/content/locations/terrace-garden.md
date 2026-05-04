@@ -17,7 +17,7 @@ faqs:
     a: "Yes — the main terrace paths are well-maintained and accessible. The terraced layout means some steps between levels, but the principal garden areas are easily navigable. Children tend to love the views and the sense of being up above the river — it makes for naturally curious, engaged expressions."
   - q: "When is the wisteria at its best?"
     a: "The wisteria at Terrace Garden typically peaks in May, cascading over the pergolas and walls in great drapes of violet-blue. It's one of the most photogenic natural features in Richmond at that time of year, and we book up quickly for late April and May sessions — it's worth planning ahead if you want to include it."
-nearbyLocations: ["ham-house", "canbury-gardens", "richmond-park"]
+nearbyLocations: ["york-house-garden", "canbury-gardens", "richmond-park"]
 ---
 
 Terrace Garden is one of Richmond's hidden gems — a formally terraced hillside garden tucked below Richmond Hill that most people walk past without realising quite how beautiful it is. Carved into the slope above the Thames, it offers a series of descending terraced lawns and formal beds that frame extraordinary views over the river and the Petersham meadows beyond. On a clear summer afternoon with the sun lowering toward the west, this view is simply spectacular.
