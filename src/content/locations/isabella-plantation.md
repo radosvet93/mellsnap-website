@@ -18,6 +18,8 @@ faqs:
   - q: "What makes the woodland light here different?"
     a: "The plantation sits within a mature woodland, so even in bright sunshine the light is beautifully filtered and diffused through the tree canopy. This gives a soft, glowing quality to portraits — particularly flattering for skin tones and very gentle on young children's eyes. It's one of the most technically beautiful lighting environments in the whole of SW London."
 nearbyLocations: ["richmond-park", "kew-gardens", "woodland-gardens"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.3662567688093!2d-0.2817501079774279!3d51.43306729907608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760eab9f736893%3A0xb4ec694aa171be10!2sIsabella%20Plantation!5e0!3m2!1sen!2suk!4v1778349860564!5m2!1sen!2suk'
+
 ---
 
 Tucked within Richmond Park, the Isabella Plantation is one of SW London's best-kept photographic secrets. This enclosed woodland garden was created in the 1950s and is now home to an extraordinary collection of azaleas, rhododendrons, and camellias that, for a few magical weeks in late April and May, erupt into spectacular colour. Vivid pinks, deep purples, fiery oranges and soft whites reflect in the still waters of the streams and ponds — it's unlike anywhere else in London at that time of year.

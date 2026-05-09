@@ -18,6 +18,8 @@ faqs:
   - q: "Can we incorporate the riverside path into the shoot?"
     a: "Absolutely. The path along the Thames bank is one of the best spots — dappled shade from mature trees, the shimmer of the river, and a relaxed, walkable feel that suits natural lifestyle portraits perfectly. It's especially beautiful in the long light of a summer evening."
 nearbyLocations: ["terrace-garden", "york-house-garden", "richmond-park"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.4452427722927!2d-0.3083380738960258!3d51.41324724197187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760bfebc26e49b%3A0x22204dd58b41ffda!2sCanbury%20Gardens!5e0!3m2!1sen!2suk!4v1778349788914!5m2!1sen!2suk'
+
 ---
 
 Canbury Gardens sits right on the Thames in Kingston and has a wonderfully laid-back, neighbourhood feel that puts families and couples immediately at ease. The park stretches along the riverbank with mature trees, open lawns, and well-kept flowerbeds — the kind of green space that feels genuinely local rather than manicured and formal.

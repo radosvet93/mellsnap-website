@@ -19,6 +19,8 @@ faqs:
   - q: "Is Hampton Court suitable for formal portrait events like anniversaries?"
     a: "Absolutely — the grandeur of the Tudor architecture and the precision of the formal gardens lend themselves beautifully to celebratory portrait sessions. Whether it's a milestone anniversary, an engagement, or a family reunion, the setting elevates every image and creates something genuinely timeless."
 nearbyLocations: ["bushy-park", "york-house-garden", "terrace-garden"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.9696270777667!2d-0.340337223079547!3d51.40361277178988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760b0e0e308247%3A0xe51344c894b5a35!2sHampton%20Court%20Palace!5e0!3m2!1sen!2suk!4v1778349824804!5m2!1sen!2suk'
+
 ---
 
 Hampton Court Palace is one of England's most magnificent royal residences, and its gardens are among the finest formal landscapes in the country. For portrait photography, the combination of Tudor brickwork, geometric hedging, sculpted topiary, and the broad sweep of the Thames creates an almost unparalleled backdrop — rich in history, architecturally stunning, and endlessly varied.

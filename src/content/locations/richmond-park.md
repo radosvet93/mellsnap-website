@@ -21,6 +21,8 @@ faqs:
   - q: "What happens if the weather is bad on the day?"
     a: "We always keep a flexible approach to scheduling. Overcast skies actually give beautiful, even light that's often better than harsh sunshine. If the weather is truly terrible, we'll rearrange at no cost — your comfort and the quality of the images always come first."
 nearbyLocations: ["bushy-park", "pembroke-lodge", "isabella-plantation"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.924252073319!2d-0.27710692307756624!3d51.44118497179839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760ea56197d1fd%3A0x138cbe1a5a3a048d!2sRichmond%20Park!5e0!3m2!1sen!2suk!4v1778349955335!5m2!1sen!2suk'
+
 ---
 
 Richmond Park is one of London's great natural treasures — 2,500 acres of ancient parkland, woodland, and open meadow just a short drive from SW London. For photography, it offers an almost unmatched variety of backdrops across every season. In spring, fresh green bracken and wildflowers carpet the ground; summer brings long golden evenings and lush canopies; autumn transforms the park into a tapestry of amber, rust, and gold; and even winter has its own quiet magic, with low mist over the ponds and stark oak silhouettes against pale skies.

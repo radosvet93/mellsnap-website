@@ -18,6 +18,8 @@ faqs:
   - q: "Is it busy with café visitors during shoots?"
     a: "Pembroke Lodge café is popular, particularly at weekends. We typically schedule shoots either in the morning before the main café crowd arrives, or in the early evening when visitor numbers drop. The gardens are extensive enough that there's almost always a beautiful quiet corner to work in, whatever the time of day."
 nearbyLocations: ["richmond-park", "isabella-plantation", "terrace-garden"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.8546717224062!2d-0.29708392307748527!3d51.44246277179859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c106c9e5b5f%3A0xbb1666e13117cb1!2sPembroke%20Lodge!5e0!3m2!1sen!2suk!4v1778349926248!5m2!1sen!2suk'
+
 ---
 
 Pembroke Lodge occupies the highest point in Richmond Park, and the views from its terrace are simply breathtaking — a sweeping panorama across the Thames Valley that, on a clear day, reaches all the way to Windsor Castle. The Georgian house, now a popular café and wedding venue, is surrounded by beautifully maintained gardens: a formal rose garden, open lawns, herbaceous borders, and the dramatic elevated terrace overlooking the valley.

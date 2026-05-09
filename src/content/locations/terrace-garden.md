@@ -18,6 +18,8 @@ faqs:
   - q: "When is the wisteria at its best?"
     a: "The wisteria at Terrace Garden typically peaks in May, cascading over the pergolas and walls in great drapes of violet-blue. It's one of the most photogenic natural features in Richmond at that time of year, and we book up quickly for late April and May sessions — it's worth planning ahead if you want to include it."
 nearbyLocations: ["york-house-garden", "canbury-gardens", "richmond-park"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39780.203850878184!2d-0.376933551367206!3d51.45333229999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760d266d22d10d%3A0xc06666daf720773a!2sTerrace%20Gardens!5e0!3m2!1sen!2suk!4v1778349994150!5m2!1sen!2suk'
+
 ---
 
 Terrace Garden is one of Richmond's hidden gems — a formally terraced hillside garden tucked below Richmond Hill that most people walk past without realising quite how beautiful it is. Carved into the slope above the Thames, it offers a series of descending terraced lawns and formal beds that frame extraordinary views over the river and the Petersham meadows beyond. On a clear summer afternoon with the sun lowering toward the west, this view is simply spectacular.

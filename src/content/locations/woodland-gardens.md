@@ -18,6 +18,8 @@ faqs:
   - q: "What wildflowers can we expect in spring?"
     a: "From March onwards, wood anemones and bluebells begin to appear beneath the canopy in the quieter woodland corners of Richmond Park. By late April, bluebells can be found in patches across the wooded sections, and wild garlic adds a luminous white carpet in shadier areas. The exact timing shifts year to year — we'll always advise on the best week to visit."
 nearbyLocations: ["isabella-plantation", "richmond-park", "bushy-park"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4555.936762455485!2d-0.3481805342534857!3d51.41314685896019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760ba822c3c0bb%3A0x1b8c64644fc140fd!2sWaterhouse%20Woodland%20Gardens!5e0!3m2!1sen!2suk!4v1778350063534!5m2!1sen!2suk'
+
 ---
 
 The woodland sections of Richmond Park — away from the open meadow and the main deer grasslands — offer a very different photographic experience from the park's better-known vistas. Under the canopy of ancient oaks and sweet chestnuts, the world becomes quieter, greener, and more intimate. The light is softer and more complex, filtered through layers of leaf and branch into pools and streaks that create beautiful, painterly conditions for portrait photography.

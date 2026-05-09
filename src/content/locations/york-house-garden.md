@@ -19,6 +19,7 @@ faqs:
   - q: "Can York House Garden be used for couples or pre-wedding photography?"
     a: "It's one of our favourite locations for exactly that. The combination of the Italian statuary, the sunken garden, the wisteria-draped pergola, and the open riverside meadow gives a wide variety of moods and settings in a compact, peaceful space. It's particularly beautiful in late spring when the wisteria is in bloom."
 nearbyLocations: ["bushy-park", "terrace-garden", "richmond-park"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.5873165862204!2d-0.32588082338351915!3d51.447372371799744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c6136202dff%3A0x9b580bd98051eace!2sYork%20House%20Gardens!5e0!3m2!1sen!2suk!4v1778182149529!5m2!1sen!2suk'
 ---
 
 York House Garden is one of the hidden gems of the Richmond riverside — a beautifully maintained public park that packs an extraordinary amount of visual variety into a relatively small space. The centrepiece is the Italianate water garden: a cascade of weathered marble nymphs and sea creatures tumbling down stone steps, entirely unexpected in a quiet Twickenham park. It's a genuinely dramatic and romantic backdrop for portrait photography, with a sense of faded European grandeur that photographs beautifully in almost any light.

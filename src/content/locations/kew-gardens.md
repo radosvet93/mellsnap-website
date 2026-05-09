@@ -19,6 +19,8 @@ faqs:
   - q: "Is Kew suitable for maternity shoots?"
     a: "It's one of our top picks for maternity photography. The formal gardens provide elegant, timeless backdrops, and the soft filtered light under the tree canopy is especially flattering. The gentle, unhurried atmosphere of Kew suits the mood of a maternity session beautifully."
 nearbyLocations: ["richmond-park", "isabella-plantation", "pembroke-lodge"]
+map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.878537691513!2d-0.29814792307556093!3d51.478743771806855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760dc5605b3443%3A0xd16f914f6291fb7e!2sRoyal%20Botanic%20Gardens%2C%20Kew!5e0!3m2!1sen!2suk!4v1778349895434!5m2!1sen!2suk'
+
 ---
 
 Kew Gardens is one of the world's great botanical landscapes — and for photography, it's a location that delivers in every season. The sheer variety of environments within its 300 acres is remarkable: formal parterres and rose gardens, ancient woodland and wildflower meadows, lakeside paths and glasshouse vistas. Whatever mood or aesthetic you're looking for, Kew almost certainly has it.
