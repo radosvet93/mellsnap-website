@@ -59,6 +59,7 @@ const locations = defineCollection({
     galleryImages: z.array(z.string()),
     faqs: z.array(z.object({ q: z.string(), a: z.string() })),
     nearbyLocations: z.array(z.string()),
+    map: z.string().optional(),
   }),
 });
 
