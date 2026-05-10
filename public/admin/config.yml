@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: radosvet93/mellsnap-website
-  branch: main
+  # TODO: Change to main branch when ready
+  branch: feat-add-locations
   base_url: https://sveltia-cms-auth.it-ad8.workers.dev
 
 site_url: https://mellsnap.co.uk
