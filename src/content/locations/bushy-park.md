@@ -1,6 +1,6 @@
 ---
 name: Bushy Park
-shortDescription: Wide open vistas and tree-lined avenues perfect for all photo styles.
+shortDescription: Wide open vistas and tree-lined avenues perfect for all photo styles
 heroImage: bushy-park.jpg
 shootTypes:
   - family
