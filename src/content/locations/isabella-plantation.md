@@ -1,10 +1,11 @@
 ---
 name: "Isabella Plantation"
-tagline: "A secret garden of azaleas and ancient woodland"
+shortDescription: "Rhododendrons and azaleas create spectacular blooms in spring and autumn."
 heroImage: "isabella-plantation.jpg"
-shootTypes: ["family", "maternity", "couples"]
+shootTypes: ["family", "maternity", "couples", "children"]
 seasons: ["spring", "autumn"]
 vibes: ["woodland", "formal-gardens"]
+access: ["free-entry", "free-parking", "pram-friendly", "dog-friendly"]
 practicalInfo:
   parking: "Broomfield Hill and Pen Ponds car parks in Richmond Park. Free."
   transport: "Richmond station then bus or 20 min walk through Richmond Park."

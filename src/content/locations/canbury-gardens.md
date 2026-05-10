@@ -1,10 +1,11 @@
 ---
 name: "Canbury Gardens"
-tagline: "Riverside greenery and relaxed charm in Kingston"
+shortDescription: "Riverside setting with intimate corners and Victorian charm."
 heroImage: "canbury-gardens.jpg"
-shootTypes: ["family", "couples"]
-seasons: ["spring", "summer"]
+shootTypes: ["family", "couples", "children"]
+seasons: ["spring", "summer", "winter"]
 vibes: ["riverside"]
+access: ["free-entry", "pram-friendly", "dog-friendly", "public-transport"]
 practicalInfo:
   parking: "Canbury Gardens Car Park on Lower Ham Road. Paid parking nearby."
   transport: "Kingston station (National Rail) 10 min walk. Buses 65, 71, 281."

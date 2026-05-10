@@ -27,7 +27,7 @@ const { entry, nearby } = Astro.props;
 const { Content } = await render(entry);
 const {
   name,
-  tagline,
+  shortDescription,
   heroImage,
   practicalInfo,
   galleryImages,
@@ -154,7 +154,7 @@ const breadcrumbSchema = {
       <p
         class="text-white/85 text-lg md:text-xl font-lora italic mb-10 max-w-xl"
       >
-        {tagline}
+        {shortDescription}
       </p>
       <Button href="/free-consultation" variant="primary"
         >Book Free Consultation</Button
@@ -530,7 +530,7 @@ const breadcrumbSchema = {
                     {loc.data.name}
                   </h3>
                   <p class="text-sm text-secondary-text font-lora italic line-clamp-2">
-                    {loc.data.tagline}
+                    {loc.data.shortDescription}
                   </p>
                 </a>
               ))}

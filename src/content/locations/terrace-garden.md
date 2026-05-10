@@ -1,10 +1,11 @@
 ---
 name: "Terrace Garden"
-tagline: "Hidden riverside terraces with sweeping Thames views"
+shortDescription: "Riverside location with terraced levels and picturesque water views."
 heroImage: "terrace-garden.jpg"
-shootTypes: ["couples", "family"]
-seasons: ["spring", "summer", "autumn"]
-vibes: ["formal-gardens", "riverside"]
+shootTypes: ["couples", "family", "children"]
+seasons: ["spring", "summer", "autumn", "winter"]
+vibes: ["riverside"]
+access: ["free-entry", "pram-friendly", "public-transport"]
 practicalInfo:
   parking: "Petersham Road street parking. Richmond town centre car parks nearby."
   transport: "Richmond station (District line/National Rail) 10 min walk."

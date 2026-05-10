@@ -45,11 +45,12 @@ const locations = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/locations' }),
   schema: z.object({
     name: z.string(),
-    tagline: z.string(),
+    shortDescription: z.string(),
     heroImage: z.string(),
     shootTypes: z.array(z.string()),
     seasons: z.array(z.string()),
     vibes: z.array(z.string()),
+    access: z.array(z.string()),
     practicalInfo: z.object({
       parking: z.string(),
       transport: z.string(),

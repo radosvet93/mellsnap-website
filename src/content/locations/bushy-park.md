@@ -1,10 +1,11 @@
 ---
 name: "Bushy Park"
-tagline: "Open parkland and ancient chestnuts near Hampton"
+shortDescription: "Wide open vistas and tree-lined avenues perfect for all photo styles."
 heroImage: "bushy-park.jpg"
 shootTypes: ["family", "maternity", "couples", "children"]
-seasons: ["spring", "summer", "autumn", "winter"]
+seasons: ["spring", "summer", "autumn"]
 vibes: ["woodland", "open-park"]
+access: ["free-entry", "free-parking", "wheelchair-friendly", "pram-friendly", "dog-friendly", "public-transport"]
 practicalInfo:
   parking: "Multiple car parks — Diana Fountain, Teddington Gate, Hampton Gate. Free."
   transport: "Hampton Court or Teddington station (National Rail). Buses 111, 216, R68."

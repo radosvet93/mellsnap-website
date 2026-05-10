@@ -1,10 +1,11 @@
 ---
 name: "Kew Gardens"
-tagline: "World-famous botanical beauty in every season"
+shortDescription: "Stunning botanical collections and manicured landscapes inspire any season."
 heroImage: "kew-gardens.jpg"
-shootTypes: ["family", "maternity", "couples"]
+shootTypes: ["family", "maternity", "couples", "children"]
 seasons: ["spring", "summer", "autumn"]
 vibes: ["formal-gardens", "woodland"]
+access: ["wheelchair-friendly", "pram-friendly", "public-transport"]
 practicalInfo:
   parking: "Kew Gardens car park off Kew Road. Paid parking."
   transport: "Kew Gardens station (District line). Buses 65, 391."

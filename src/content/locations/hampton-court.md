@@ -1,10 +1,11 @@
 ---
 name: "Hampton Court"
-tagline: "Tudor grandeur and formal gardens for timeless portraits"
+shortDescription: "Historic palace and formal gardens provide timeless elegant backdrops."
 heroImage: "hampton-court.jpg"
-shootTypes: ["couples", "family", "events"]
+shootTypes: ["couples", "family", "events", "children"]
 seasons: ["spring", "summer", "autumn"]
 vibes: ["formal-gardens"]
+access: ["wheelchair-friendly", "pram-friendly", "public-transport"]
 practicalInfo:
   parking: "Hampton Court car park (East Molesey). Paid."
   transport: "Hampton Court station (National Rail) 5 min walk. Buses 111, 216, 411, R68."

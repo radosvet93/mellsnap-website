@@ -1,10 +1,11 @@
 ---
 name: "Woodland Gardens (Richmond Park)"
-tagline: "Dappled light and seasonal wildflowers in the heart of Richmond Park"
+shortDescription: "Peaceful woodland paths and natural light create intimate photo moments."
 heroImage: "woodland-gardens.jpg"
 shootTypes: ["family", "children", "maternity"]
-seasons: ["spring", "autumn"]
+seasons: ["spring", "autumn", "summer"]
 vibes: ["woodland"]
+access: ["free-entry", "free-parking", "pram-friendly", "dog-friendly"]
 practicalInfo:
   parking: "Isabella Plantation / Pen Ponds car parks in Richmond Park. Free."
   transport: "Richmond station then bus or walk through the park."

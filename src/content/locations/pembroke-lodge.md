@@ -1,10 +1,11 @@
 ---
 name: "Pembroke Lodge"
-tagline: "Hilltop café gardens with panoramic views over the Thames Valley"
+shortDescription: "Grand house and sweeping grounds offer versatile backdrops for all occasions."
 heroImage: "pembroke-lodge.jpg"
-shootTypes: ["family", "couples", "events"]
+shootTypes: ["family", "couples", "events", "children"]
 seasons: ["spring", "summer", "autumn"]
-vibes: ["formal-gardens", "open-park"]
+vibes: ["formal-gardens"]
+access: ["free-entry", "free-parking", "wheelchair-friendly", "pram-friendly", "dog-friendly", "public-transport"]
 practicalInfo:
   parking: "Pembroke Lodge car park in Richmond Park. Free."
   transport: "Richmond station then 10 min drive or 30 min walk through the park."

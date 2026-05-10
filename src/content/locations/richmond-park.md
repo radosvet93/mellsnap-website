@@ -1,10 +1,11 @@
 ---
 name: "Richmond Park"
-tagline: "Ancient woodland and golden meadows, all year round"
+shortDescription: "Ancient woodland and open meadows offer magical light year-round."
 heroImage: "richmond-park.jpg"
-shootTypes: ["family", "maternity", "couples"]
-seasons: ["spring", "summer", "autumn", "winter"]
+shootTypes: ["family", "maternity", "couples", "children"]
+seasons: ["spring", "summer", "autumn"]
 vibes: ["woodland", "open-park"]
+access: ["free-entry", "free-parking", "wheelchair-friendly", "pram-friendly", "dog-friendly", "public-transport"]
 practicalInfo:
   parking: "Large car parks at Pen Ponds, Robin Hood Gate, and Roehampton Gate. Free parking."
   transport: "Bus routes 371, 85. Richmond station (District line/National Rail) 1.5 miles."

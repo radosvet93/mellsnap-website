@@ -1,10 +1,11 @@
 ---
 name: "York House Garden"
-tagline: "Italian statuary and riverside gardens in Twickenham"
+shortDescription: "Ornate Italian-style gardens and riverside setting offer elegant, characterful backdrops."
 heroImage: "york-house-garden.jpeg"
-shootTypes: ["couples", "events"]
+shootTypes: ["couples", "events", "children", "family"]
 seasons: ["spring", "summer", "autumn"]
-vibes: ["formal-gardens"]
+vibes: ["formal-gardens", "riverside"]
+access: ["free-entry", "pram-friendly", "dog-friendly", "public-transport"]
 practicalInfo:
   parking: "Street parking on Richmond Road or nearby side streets. Free."
   transport: "Twickenham station is a short walk. Numerous buses along Richmond Road."
