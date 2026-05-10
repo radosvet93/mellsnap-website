@@ -2,15 +2,25 @@
 name: "Canbury Gardens"
 shortDescription: "Riverside setting with intimate corners and Victorian charm."
 heroImage: "canbury-gardens.jpg"
-shootTypes: ["family", "couples", "children"]
-seasons: ["spring", "summer", "winter"]
-vibes: ["riverside"]
-access: ["free-entry", "pram-friendly", "dog-friendly", "public-transport"]
+shootTypes: 
+  - family
+  - couples
+  - children
+seasons: 
+  - spring
+  - summer
+  - winter
+vibes: 
+  - riverside
+access: 
+  - free-entry
+  - pram-friendly
+  - dog-friendly
+  - public-transport
 practicalInfo:
   parking: "Canbury Gardens Car Park on Lower Ham Road. Paid parking nearby."
   transport: "Kingston station (National Rail) 10 min walk. Buses 65, 71, 281."
   bestTime: "Spring afternoons for blossoms. Summer evenings for soft riverside light."
-galleryImages: []
 faqs:
   - q: "Is the river a safe backdrop for shoots with young children?"
     a: "Yes — the riverside path at Canbury is wide and well-maintained, and we always position children safely away from the water's edge. The river appears beautifully in the background without needing to be right beside it. We're always mindful of safety throughout every session."
@@ -18,7 +28,10 @@ faqs:
     a: "Canbury Gardens has gorgeous cherry trees and flowering shrubs that peak in April. The combination of blossom overhead and the Thames catching the afternoon light makes for incredibly pretty, soft images — it's one of our favourite spring spots in Kingston."
   - q: "Can we incorporate the riverside path into the shoot?"
     a: "Absolutely. The path along the Thames bank is one of the best spots — dappled shade from mature trees, the shimmer of the river, and a relaxed, walkable feel that suits natural lifestyle portraits perfectly. It's especially beautiful in the long light of a summer evening."
-nearbyLocations: ["terrace-garden", "york-house-garden", "richmond-park"]
+nearbyLocations: 
+  - terrace-garden
+  - york-house-garden
+  - richmond-park
 map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.4452427722927!2d-0.3083380738960258!3d51.41324724197187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760bfebc26e49b%3A0x22204dd58b41ffda!2sCanbury%20Gardens!5e0!3m2!1sen!2suk!4v1778349788914!5m2!1sen!2suk'
 
 ---

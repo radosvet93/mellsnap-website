@@ -57,7 +57,7 @@ const locations = defineCollection({
       bestTime: z.string(),
       permits: z.string().optional(),
     }),
-    galleryImages: z.array(z.string()),
+    galleryImages: z.array(z.string()).optional(),
     faqs: z.array(z.object({ q: z.string(), a: z.string() })),
     nearbyLocations: z.array(z.string()),
     map: z.string().optional(),

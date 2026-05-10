@@ -2,16 +2,30 @@
 name: "Richmond Park"
 shortDescription: "Ancient woodland and open meadows offer magical light year-round."
 heroImage: "richmond-park.jpg"
-shootTypes: ["family", "maternity", "couples", "children"]
-seasons: ["spring", "summer", "autumn"]
-vibes: ["woodland", "open-park"]
-access: ["free-entry", "free-parking", "wheelchair-friendly", "pram-friendly", "dog-friendly", "public-transport"]
+shootTypes: 
+  - family
+  - maternity
+  - couples
+  - children
+seasons: 
+  - spring
+  - summer
+  - autumn
+vibes: 
+  - woodland
+  - open-park
+access: 
+  - free-entry
+  - free-parking
+  - wheelchair-friendly
+  - pram-friendly
+  - dog-friendly
+  - public-transport
 practicalInfo:
   parking: "Large car parks at Pen Ponds, Robin Hood Gate, and Roehampton Gate. Free parking."
   transport: "Bus routes 371, 85. Richmond station (District line/National Rail) 1.5 miles."
   bestTime: "Golden hour in autumn for warm light through the bracken. Early morning in summer to avoid deer crowds."
   permits: "No permit needed for personal photoshoots. Commercial shoots require a Richmond Park permit."
-galleryImages: []
 faqs:
   - q: "Will the deer be in our photos?"
     a: "Quite possibly — and it's magical when they are! The deer roam freely across the park, so encounters are common, especially at dawn and dusk. We always keep a safe distance and never approach the herds, but having them graze softly in the background adds something truly special to a shoot."
@@ -21,7 +35,10 @@ faqs:
     a: "Absolutely. The wide paths and open spaces mean plenty of room for kids to run freely, which makes for much more relaxed and natural-looking photos. Bring snacks and wellies if it's been wet — the paths can get muddy, but that's half the fun!"
   - q: "What happens if the weather is bad on the day?"
     a: "We always keep a flexible approach to scheduling. Overcast skies actually give beautiful, even light that's often better than harsh sunshine. If the weather is truly terrible, we'll rearrange at no cost — your comfort and the quality of the images always come first."
-nearbyLocations: ["bushy-park", "pembroke-lodge", "isabella-plantation"]
+nearbyLocations: 
+  - bushy-park
+  - pembroke-lodge
+  - isabella-plantation
 map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.924252073319!2d-0.27710692307756624!3d51.44118497179839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760ea56197d1fd%3A0x138cbe1a5a3a048d!2sRichmond%20Park!5e0!3m2!1sen!2suk!4v1778349955335!5m2!1sen!2suk'
 
 ---

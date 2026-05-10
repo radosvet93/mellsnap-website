@@ -3,30 +3,29 @@ name: Bushy Park
 shortDescription: Wide open vistas and tree-lined avenues perfect for all photo styles.
 heroImage: bushy-park.jpg
 shootTypes:
-  - - family
-    - maternity
-    - couples
-    - children
+  - family
+  - maternity
+  - couples
+  - children
 seasons:
-  - - spring
-    - summer
-    - autumn
+  - spring
+  - summer
+  - autumn
 vibes:
-  - - woodland
-    - open-park
+  - woodland
+  - open-park
 access:
-  - - free-entry
-    - free-parking
-    - wheelchair-friendly
-    - pram-friendly
-    - dog-friendly
-    - public-transport
+  - free-entry
+  - free-parking
+  - wheelchair-friendly
+  - pram-friendly
+  - dog-friendly
+  - public-transport
 practicalInfo:
   parking: Multiple car parks — Diana Fountain, Teddington Gate, Hampton Gate. Free.
   transport: Hampton Court or Teddington station (National Rail). Buses 111, 216, R68.
   bestTime: Diana Fountain area in spring. Chestnut Avenue in autumn. Early morning for deer sightings.
   permits: ''
-galleryImages: []
 faqs:
   - q: Are the deer as impressive here as in Richmond Park?
     a: Bushy Park actually has a wonderful deer population — both red and fallow deer — and in some ways they're easier to encounter here because the park is slightly less busy. Early morning walks along the main avenue often bring you very close to the herds, and they make for incredible photographic moments.
