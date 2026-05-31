@@ -14,7 +14,7 @@
     "@astrojs/check": "^0.9.9",
     "astro": "^6.2.1",
     "dotenv": "^17.4.2",
-    "swiper": "^12.1.4",
+    "swiper": "^12.2.0",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
