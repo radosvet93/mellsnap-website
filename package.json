@@ -23,6 +23,6 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.4",
     "tsx": "^4.21.0",
-    "wrangler": "^4.87.0"
+    "wrangler": "^4.95.0"
   }
 }
