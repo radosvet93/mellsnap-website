@@ -1,6 +1,7 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { fetchGoogleReviews } from './data/googleReviews';
+import { z } from 'astro/zod';
 
 const portfolio = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/portfolio' }),
@@ -40,4 +41,27 @@ const reviews = defineCollection({
   }),
 });
 
-export const collections = { portfolio, blog, reviews };
+const locations = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/locations' }),
+  schema: z.object({
+    name: z.string(),
+    shortDescription: z.string(),
+    heroImage: z.string(),
+    shootTypes: z.array(z.string()),
+    seasons: z.array(z.string()),
+    vibes: z.array(z.string()),
+    access: z.array(z.string()),
+    practicalInfo: z.object({
+      parking: z.string(),
+      transport: z.string(),
+      bestTime: z.string(),
+      permits: z.string().optional(),
+    }),
+    galleryImages: z.array(z.string()).optional(),
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })),
+    nearbyLocations: z.array(z.string()),
+    map: z.string().optional(),
+  }),
+});
+
+export const collections = { portfolio, blog, reviews, locations };

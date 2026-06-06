@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: radosvet93/mellsnap-website
-  branch: main
+  # TODO: Change to main branch when ready
+  branch: feat-add-locations
   base_url: https://sveltia-cms-auth.it-ad8.workers.dev
 
 site_url: https://mellsnap.co.uk
@@ -43,6 +44,117 @@ collections:
         widget: boolean
         default: true
         hint: "Uncheck to save as a draft (hidden from the site)"
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: locations
+    label: Locations
+    folder: src/content/locations
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Short Description
+        name: shortDescription
+        widget: text
+      - label: Hero Image URL
+        name: heroImage
+        widget: string
+        hint: "Backblaze image URL (e.g. https://images.mellsnap.co.uk/file/mellsnap-website/locations/richmond-park.jpg)"
+      - label: Shoot Types
+        name: shootTypes
+        widget: select
+        multiple: true
+        options:
+          - family
+          - maternity
+          - couples
+          - children
+          - events
+      - label: Seasons
+        name: seasons
+        widget: select
+        multiple: true
+        options:
+          - spring
+          - summer
+          - autumn
+          - winter
+      - label: Vibes
+        name: vibes
+        widget: select
+        multiple: true
+        options:
+          - woodland
+          - open-park
+          - formal-gardens
+          - riverside
+      - label: Access
+        name: access
+        widget: select
+        multiple: true
+        options:
+          - free-entry
+          - free-parking
+          - wheelchair-friendly
+          - pram-friendly
+          - dog-friendly
+          - public-transport
+      - label: Practical Info
+        name: practicalInfo
+        widget: object
+        fields:
+          - label: Parking
+            name: parking
+            widget: string
+          - label: Transport
+            name: transport
+            widget: string
+          - label: Best Time
+            name: bestTime
+            widget: string
+          - label: Permits
+            name: permits
+            widget: string
+            required: false
+      - label: Gallery Images
+        name: galleryImages
+        widget: list
+        field:
+          label: Image URL
+          name: url
+          widget: string
+        hint: "Backblaze image URLs"
+        required: false
+      - label: FAQs
+        name: faqs
+        widget: list
+        fields:
+          - label: Question
+            name: q
+            widget: string
+          - label: Answer
+            name: a
+            widget: text
+      - label: Nearby Locations
+        name: nearbyLocations
+        widget: list
+        field:
+          label: Location Slug
+          name: slug
+          widget: string
+        hint: "Slugs of nearby location pages (e.g. richmond-park)"
+      - label: Map Embed URL
+        name: map
+        widget: string
+        required: false
+        hint: "Google Maps embed iframe src URL"
       - label: Body
         name: body
         widget: markdown
