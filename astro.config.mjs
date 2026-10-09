@@ -11,17 +11,15 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [
     sitemap(),
+    // Source maps are uploaded by sentry-cli in CI; the Vite plugin upload doesn't work with Astro 6
     sentry({
-      org: 'radosvet',
-      project: 'mellsnap-website',
-      authToken: process.env.SENTRY_AUTH_TOKEN,
       enabled: { client: true, server: false },
       telemetry: false,
-      sourcemaps: { filesToDeleteAfterUpload: ['./dist/**/*.map'] },
+      sourcemaps: { disable: true },
     }),
   ],
   vite: {
-    build: { sourcemap: 'hidden' },
+    environments: { client: { build: { sourcemap: 'hidden' } } },
     plugins: [tailwindcss()],
   },
   image: {

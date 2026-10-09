@@ -28,7 +28,17 @@ jobs:
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
           GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+          PUBLIC_SENTRY_RELEASE: ${{ github.sha }}
+
+      - name: Upload source maps to Sentry
+        run: |
+          npx --yes @sentry/cli@3 sourcemaps inject dist
+          npx --yes @sentry/cli@3 sourcemaps upload --release "$GITHUB_SHA" dist
+          find dist -name '*.map' -delete
+        env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: radosvet
+          SENTRY_PROJECT: mellsnap-website
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
