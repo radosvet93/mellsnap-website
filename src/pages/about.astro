@@ -1,376 +1,423 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-import aboutImage from "../images/kite.JPEG";
-import GabyAndMeliImage from "../images/gaby-meli.png";
 import Button from "../components/Button.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import { Image } from "astro:assets";
+import { fetchGoogleReviews } from "../data/googleReviews";
+
+import kiteImage from "../images/kite.JPEG";
+import gabyImage from "../images/gaby-meli.png";
+import familyImage from "../images/family/parents-swinging-toddler.jpg";
+import maternityImage from "../images/maternity/couple-dog-willow.jpg";
+import coupleImage from "../images/couples/couple-pond-embrace.jpg";
+import childrenImage from "../images/children/siblings-bench-hug.jpg";
+import eventImage from "../images/events/birthday-cake.jpg";
+import familyServiceImage from "../images/family/three-generations-bench.jpg";
+import maternityServiceImage from "../images/maternity/mum-riverbank.jpg";
+import childrenServiceImage from "../images/children/curly-boy-tulips.jpg";
+import coupleServiceImage from "../images/couples/couple-meadow-dip.jpg";
+import eventServiceImage from "../images/events/dancing.jpg";
+import richmondImage from "../images/blog/couple-richmond-park-grass.jpg";
+
+const reviewStats = fetchGoogleReviews();
+
+// One photo from each type of session
+const strip = [
+  { src: familyImage, alt: "Parents swinging their toddler between them along a leafy garden path" },
+  { src: maternityImage, alt: "Expecting couple kissing by the river with their golden retriever" },
+  { src: coupleImage, alt: "Couple sharing a tender moment beside a pond surrounded by pink azaleas" },
+  { src: childrenImage, alt: "Brother and sister hugging and laughing on a garden bench" },
+  { src: eventImage, alt: "Birthday girl smiling at her rainbow birthday cake" },
+];
+
+const reasons = [
+  {
+    title: "Natural style",
+    text: "My sessions focus on candid moments, natural smiles and the joy of family life, with no stiff poses or forced grins.",
+    icon: "M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z",
+  },
+  {
+    title: "Outdoor expertise",
+    text: "I use the beauty of nature as your backdrop, from golden sunsets to vibrant greenery and riverside paths.",
+    icon: "M5 21c0-9 5-15 15-16-1 10-7 15-15 16zm0 0 7-7",
+  },
+  {
+    title: "Relaxed sessions",
+    text: "Every session is fun, relaxed and enjoyable for everyone, especially the kids, who are free to play and be themselves.",
+    icon: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5h.01M15 9.5h.01",
+  },
+  {
+    title: "Tailored to you",
+    text: "Whether it's a quiet stroll in Richmond Park or a lively birthday party, I'll plan a session that reflects your personality.",
+    icon: "M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z",
+  },
+];
+
+const services = [
+  {
+    title: "Family Photography",
+    text: "The love and connection of your family in a natural, outdoor setting, from playful sessions in Bushy Park to strolls along the River Thames.",
+    image: familyServiceImage,
+    alt: "Three generations of a family smiling together on a park bench",
+    href: "/portfolio/family/",
+  },
+  {
+    title: "Maternity Photography",
+    text: "A gentle, relaxed session to celebrate your bump among flowers, trees and soft riverside light.",
+    image: maternityServiceImage,
+    alt: "Pregnant mum in a blue floral dress sitting by the river holding her bump",
+    href: "/portfolio/maternity/",
+  },
+  {
+    title: "Children's Photography",
+    text: "Children grow up so quickly. I capture their giggles, curiosity and cheeky smiles in a relaxed, playful way.",
+    image: childrenServiceImage,
+    alt: "Surprised curly-haired little boy in front of red tulips",
+    href: "/portfolio/children/",
+  },
+  {
+    title: "Couples Photography",
+    text: "Celebrate your love with a romantic photoshoot in one of Kingston's scenic outdoor locations, by the water or at golden hour.",
+    image: coupleServiceImage,
+    alt: "Groom dipping his bride for a kiss in a field of tall golden grass",
+    href: "/portfolio/love/",
+  },
+  {
+    title: "Event Photography",
+    text: "From birthdays to milestones, I document your special day with candid, vibrant photos full of laughter and togetherness.",
+    image: eventServiceImage,
+    alt: "Children dancing with their arms in the air at a birthday party",
+    href: "/portfolio/events/",
+  },
+];
+
+const steps = [
+  {
+    title: "Free pre-shoot consultation",
+    text: "We start with a quick chat about your vision, location preferences, any moments you'd like captured and any questions you have.",
+  },
+  {
+    title: "Relaxed photoshoot",
+    text: "On the day, my approach is flexible and fun. I guide you gently so everyone feels comfortable, and the kids are free to play rather than pose.",
+  },
+  {
+    title: "Beautiful results",
+    text: "I carefully edit every photo to bring out its natural beauty, then deliver them in a secure online gallery, ready to download and share.",
+  },
+];
+
+const locations = [
+  { name: "Richmond Park", text: "open spaces, golden sunsets and woodland backdrops" },
+  { name: "Bushy Park", text: "wide open spaces, playful deer and seasonal colours" },
+  { name: "Twickenham Riverside", text: "romantic, timeless photos by the water" },
+  { name: "Canbury Gardens, Kingston", text: "lush greenery and riverside charm" },
+];
 ---
 
 <BaseLayout
   title="About Me"
-  description="Natural outdoor family photography in Kingston upon Thames. Capture candid moments with me Gaby, your local Kingston family photographer. Book now!"
+  ogImage={gabyImage}
+  description="Meet Gaby, family, maternity, couples and event photographer in Kingston upon Thames. Natural, candid outdoor photography across South West London."
 >
-  <!-- Header -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <!-- Hero -->
+  <section class="bg-linen py-16 md:py-24">
     <div class="container">
-      <div class="text-center mb-16">
-        <p class="label mb-4">About Me</p>
-        <h1 class="text-primary-text">Meet Your Photographer</h1>
+      <div
+        class="grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 items-center max-w-6xl mx-auto"
+      >
+        <div class="md:col-span-5 flex justify-center md:justify-start">
+          <Image
+            src={gabyImage}
+            widths={[480, 800]}
+            sizes="(min-width: 768px) 40vw, 90vw"
+            alt="Gaby, family photographer in Kingston upon Thames, laughing and hugging her daughter on an autumn walk"
+            class="w-full max-w-sm lg:max-w-md aspect-4/5 object-cover border-8 border-white shadow-xl object-[center_35%]"
+            loading="eager"
+          />
+        </div>
+
+        <div class="md:col-span-7 text-center md:text-left">
+          <p class="font-ephesis text-4xl md:text-5xl text-pink mb-3">
+            Hello, I'm Gaby
+          </p>
+          <h1
+            class="text-primary-text text-[2.25rem]! md:text-[2.75rem]! lg:text-[3.25rem]! leading-[1.08]! tracking-tight mb-8 max-w-[18ch] mx-auto md:mx-0"
+          >
+            Family, lifestyle and event photographer in Kingston upon Thames
+          </h1>
+          <div
+            class="space-y-4 text-secondary-text leading-relaxed max-w-[58ch] mx-auto md:mx-0 mb-10"
+          >
+            <p>
+              I'm a Kingston family photographer specialising in outdoor
+              photography. I capture natural, candid moments for families,
+              children, mums-to-be and couples across South West London,
+              including Richmond, Surbiton, Ham and nearby areas.
+            </p>
+            <p>
+              I've always loved taking photos, and I've always loved being in
+              front of the camera too. When my first child was born, that
+              lifelong passion became my professional photography business.
+            </p>
+            <p>
+              As a mum, I understand how important it is to keep those fleeting
+              moments with your loved ones, from the playful laughter of
+              children to the quiet closeness of a couple's embrace.
+            </p>
+          </div>
+          <Button href="/free-consultation/">Book a Free Consultation</Button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Intro -->
+  <!-- Photo strip -->
+  <section aria-label="A few of my favourite photos">
+    <div class="grid grid-cols-2 md:grid-cols-5">
+      {
+        strip.map((photo, i) => (
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            widths={[400, 700]}
+            sizes="(min-width: 768px) 20vw, 50vw"
+            class:list={[
+              "w-full aspect-4/5 object-cover",
+              { "hidden md:block": i === strip.length - 1 },
+            ]}
+            loading="lazy"
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Why choose me -->
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="label mb-4">Why choose me</p>
+        <h2 class="text-primary-text mb-6">
+          Why Choose Me as Your Family Photographer?
+        </h2>
+        <p class="text-secondary-text leading-relaxed">
+          I know choosing a photographer can feel overwhelming. You want
+          someone who understands your family, makes everyone feel at ease and
+          captures your story. Here's what sets me apart.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {
+          reasons.map((reason) => (
+            <div class="bg-linen p-8 text-center">
+              <span class="inline-grid place-items-center w-14 h-14 rounded-full bg-white text-pink mb-6">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d={reason.icon} />
+                </svg>
+              </span>
+              <h3 class="text-2xl! text-primary-text mb-3">{reason.title}</h3>
+              <p class="text-secondary-text leading-relaxed">{reason.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- How I can help -->
+  <section class="py-20 md:py-28 bg-linen">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="label mb-4">Services</p>
+        <h2 class="text-primary-text mb-6">How I Can Help</h2>
+        <p class="text-secondary-text leading-relaxed">
+          I offer a range of photography sessions across Kingston upon Thames,
+          Richmond and beyond.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+        {
+          services.map((service) => (
+            <a
+              href={service.href}
+              class="group flex flex-col bg-white shadow-sm w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            >
+              <div class="aspect-4/3 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  widths={[400, 800]}
+                  sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col flex-1 p-7">
+                <h3 class="text-2xl! text-primary-text mb-3">{service.title}</h3>
+                <p class="text-secondary-text leading-relaxed mb-5">
+                  {service.text}
+                </p>
+                <span class="mt-auto font-raleway text-sm text-pink underline underline-offset-4">
+                  View gallery
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- What to expect -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="label mb-4">Your session</p>
+        <h2 class="text-primary-text mb-6">What to Expect from Your Session</h2>
+        <p class="text-secondary-text leading-relaxed">
+          Life with kids can be a little hectic and unpredictable, so I keep
+          your photoshoot as simple and stress-free as possible. I love working
+          with children, and it's what I specialise in.
+        </p>
+      </div>
+
+      <ul class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {
+          steps.map((step) => (
+            <li class="bg-linen p-8 text-center">
+              <h3 class="text-2xl! text-primary-text mb-3">{step.title}</h3>
+              <p class="text-secondary-text leading-relaxed">{step.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="text-center text-secondary-text italic mt-14">
+        I take on a limited number of clients each month, so every family gets
+        the attention and care they deserve.
+      </p>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="py-20 md:py-28 bg-linen">
+    <div class="container">
+      <div
+        class="grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 items-center max-w-6xl mx-auto"
+      >
+        <div class="md:col-span-5 flex justify-center md:justify-start">
           <Image
-            src={GabyAndMeliImage}
-            alt="Mother and daughter smiling and hugging each other"
-            class="w-2/3 md:min-w-xs mx-auto h-auto pt-6 px-6 pb-16 shadow-lg overflow-hidden"
+            src={richmondImage}
+            widths={[480, 800]}
+            sizes="(min-width: 768px) 40vw, 90vw"
+            alt="Groom dipping his bride for a kiss in the tall golden grass of Richmond Park"
+            class="w-full max-w-sm lg:max-w-md aspect-4/5 object-cover border-8 border-white shadow-xl"
             loading="lazy"
           />
         </div>
-        <div class="md:text-left text-center">
-          <div class="mb-8">
-            <p class="label mb-4">About me</p>
-            <h2 class="text-4xl md:text-5xl text-primary-text mb-8">
-              Hello, I'm Gaby
-            </h2>
-          </div>
-          <div class="space-y-4 text-secondary-text leading-relaxed mb-10">
-            <p>
-              A professional <strong>Kingston family photographer</strong> specialising
-              in <strong>outdoor family photography</strong>. Based in the heart of
-              <strong>Kingston upon Thames</strong>, I capture natural, candid moments
-              for families, children, and couples across <strong>South West London</strong>,
-              including <strong>Richmond, Surbiton, Ham</strong>, and nearby areas.
-            </p>
-            <p>
-              As a mum, I understand how important it is to preserve those
-              fleeting moments with your loved ones. From the playful laughter of
-              children to the quiet intimacy of a couple's embrace, my passion
-              lies in capturing authentic connections in beautiful outdoor
-              settings.
-            </p>
-          </div>
-          <Button href="/free-consultation/">
-            Book a Free Consultation
-          </Button>
+
+        <div class="md:col-span-7">
+          <p class="label mb-4 text-center md:text-left">Where I work</p>
+          <h2 class="text-primary-text mb-6 text-center md:text-left">
+            Stunning Outdoor Locations in South West London
+          </h2>
+          <p class="text-secondary-text leading-relaxed mb-8">
+            I feel lucky to work in some of the most beautiful places in South
+            West London. Natural light, fresh air and lovely surroundings make
+            the perfect backdrop, and outdoor sessions let kids move freely,
+            explore and have fun. Here are a few of my favourites:
+          </p>
+
+          <ul class="space-y-4 mb-8">
+            {
+              locations.map((place) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 mt-1 text-pink shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z" />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </svg>
+                  <span class="text-secondary-text">
+                    <strong class="text-primary-text font-medium">{place.name}</strong>,
+                    {place.text}
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+
+          <p class="text-secondary-text leading-relaxed">
+            If you have a special location in mind, I'm always happy to explore
+            somewhere new. I often photograph families around Central London
+            too. There may be extra travel costs outside London, but I'm
+            flexible and we can talk it through on your free consultation.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Me -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          Why Choose Me as Your Family Photographer?
-        </h2>
-        <p class="text-secondary-text leading-relaxed mb-6">
-          I know choosing a photographer can feel overwhelming. You want someone
-          who understands your family, makes everyone feel at ease, and captures
-          your unique story. Here's what sets me apart:
-        </p>
-        <ul class="space-y-4 text-secondary-text leading-relaxed mb-12 ml-6 list-disc">
-          <li>
-            <strong>Natural Style</strong>: My sessions focus on candid moments,
-            natural smiles, and the joy of family life—no stiff poses or forced
-            grins.
-          </li>
-          <li>
-            <strong>Outdoor Expertise</strong>: As a photographer who
-            specialises in outdoor settings, I use the beauty of nature to
-            create stunning backdrops for your photos, from golden sunsets to
-            vibrant greenery.
-          </li>
-          <li>
-            <strong>Relaxed Sessions</strong>: I ensure your session is fun,
-            relaxed, and enjoyable for everyone—especially the kids!
-          </li>
-          <li>
-            <strong>Tailored Experience</strong>: Whether it's a quiet family
-            stroll in <strong>Richmond Park</strong> or a lively birthday celebration,
-            I'll work with you to create a session that reflects your family's personality.
-          </li>
-        </ul>
-        <p class="text-secondary-text leading-relaxed">
-          If you're looking for a South-West family photographer who values
-          authentic, heartfelt moments, I'd love to work with you.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How I Can Help -->
+  <!-- Testimonial -->
   <section class="py-20 md:py-28 bg-white">
     <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">How I Can Help</h2>
-        <p class="text-secondary-text leading-relaxed mb-8">
-          I offer a range of photography services tailored to families in <strong
-            >Kingston upon Thames</strong
-          >, <strong>Richmond</strong>, and beyond:
-        </p>
-
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-primary-text mb-3">
-              <strong>Family Photography</strong>
-            </h3>
-            <p class="text-secondary-text leading-relaxed">
-              Capture the love and connection of your family in a natural,
-              outdoor setting. Whether it's a playful session in Bushy Park or
-              along the River Thames, I'll help you create timeless memories
-              filled with joy and authenticity.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-3">
-              <strong>Children's Photography</strong>
-            </h3>
-            <p class="text-secondary-text leading-relaxed">
-              Children grow up so quickly—why not preserve their unique
-              personalities and precious moments with a relaxed, fun photoshoot?
-              I specialise in candid shots that highlight their giggles,
-              curiosity, and cheeky smiles.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-3">
-              <strong>Couples Photography</strong>
-            </h3>
-            <p class="text-secondary-text leading-relaxed">
-              Celebrate your love with a romantic photoshoot in one of <strong
-                >Kingston upon Thames'</strong
-              > scenic outdoor locations. Whether it's a golden-hour stroll or a quiet
-              moment by the water, I'll capture your connection beautifully.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-primary-text mb-3">
-              <strong>Event Photography</strong>
-            </h3>
-            <p class="text-secondary-text leading-relaxed">
-              From birthdays to milestones, I'll document your special day with
-              candid, vibrant photographs. Let me help you relive the laughter,
-              joy, and togetherness of your celebration.
-            </p>
-          </div>
+      <figure class="max-w-3xl mx-auto text-center">
+        <span
+          class="block font-cormorant text-8xl leading-none text-pink/40 h-12"
+          aria-hidden="true">&ldquo;</span
+        >
+        <div class="flex justify-center gap-1 text-pink mb-6" aria-hidden="true">
+          {
+            Array.from({ length: 5 }).map(() => (
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+              </svg>
+            ))
+          }
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What to Expect -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          What to Expect from Your Session
-        </h2>
-        <p class="text-secondary-text leading-relaxed mb-8">
-          As a <strong>family photographer</strong>, I understand that life with
-          kids can be a little hectic (and let's face it, unpredictable!).
-          That's why I aim to make your photoshoot as simple and stress-free as
-          possible. I love working with kids and this is what I'm specialising
-          in.
-        </p>
-
-        <ol class="space-y-4 text-secondary-text leading-relaxed mb-12 ml-6 list-decimal">
-          <li>
-            <strong>Free Pre-Shoot Consultation</strong>: We'll start with a
-            quick chat to discuss your vision, location preferences, and any
-            specific moments you'd like captured, or if you have any questions.
-          </li>
-          <li>
-            <strong>Relaxed Photoshoot</strong>: On the day, my approach is
-            flexible and fun. I'll guide you through the session while ensuring
-            everyone feels comfortable and natural. Kids love me because my
-            sessions are more about play than posing!
-          </li>
-          <li>
-            <strong>Beautiful Results</strong>: After the session, I'll
-            carefully edit each of your photos to enhance their natural beauty
-            while keeping them timeless and authentic. Your images will be
-            delivered in a secure online gallery, ready for downloading and
-            sharing.
-          </li>
-        </ol>
-
-        <p class="text-secondary-text leading-relaxed">
-          I take on a limited number of clients each month to ensure every
-          family gets the attention and care they deserve.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Where I Work -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          Stunning Outdoor Locations in South West London
-        </h2>
-        <p class="text-secondary-text leading-relaxed mb-6">
-          As a <strong>Kingston family photographer</strong>, I feel lucky to
-          work in some of the most beautiful locations in <strong
-            >South West London</strong
-          >. Here are just a few of my favourites:
-        </p>
-
-        <ul class="space-y-4 text-secondary-text leading-relaxed mb-8 ml-6 list-disc">
-          <li>
-            <strong>Richmond Park</strong>: Perfect for families who love open
-            spaces, golden sunsets, and scenic woodland backdrops.
-          </li>
-          <li>
-            <strong>Bushy Park</strong>: A favourite for kids' sessions, with
-            its wide open spaces, playful deer, and gorgeous seasonal colours.
-          </li>
-          <li>
-            <strong>Twickenham Riverside</strong>: Ideal for couples and
-            families who want romantic, timeless photos by the water.
-          </li>
-          <li>
-            <strong>Canbury Gardens, Kingston</strong>: A peaceful spot with
-            lush greenery and riverside charm—perfect for family strolls.
-          </li>
-        </ul>
-
-        <p class="text-secondary-text leading-relaxed">
-          If you have a special location in mind, I'm always happy to explore
-          new places to make your session truly unique. I often capture families
-          around Central London, there might be additional charges for the
-          travelling expenses outside London, but I'm pretty flexible and we can
-          discuss this on the initial call.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kind Words -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          Kind Words from Families Like Yours
-        </h2>
         <blockquote
-          class="border-l-4 border-pink pl-6 italic text-secondary-text leading-relaxed mb-4"
+          class="font-cormorant italic text-2xl md:text-3xl text-primary-text leading-snug mb-8"
         >
-          <p class="mb-4">
-            We cannot recommend Gabi enough! She was the photographer for our
-            wedding. Gabi captured every moment from entering the registry
-            office to the end of our reception. She is a very talented and work
-            driven young person with an eye for the details. Gabi, you were
-            amazing, and we can't thank you enough for the beautiful photos!
-          </p>
-          <p>
-            <a
-              href="https://www.google.com/search?q=mellsnap&rlz=1C1VDKB_enGB1074GB1074&oq=mellsnap&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPNIBCDQ4ODNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x48760b263781020f:0x86089f8eb819ad46,1,,,,"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-pink transition-colors underline underline-offset-2">P. Pencheva</a
-            >
-          </p>
+          We cannot recommend Gabi enough! She was the photographer for our
+          wedding and captured every moment, from entering the registry office
+          to the end of our reception. She has a real eye for the details.
         </blockquote>
-      </div>
+        <figcaption class="font-raleway text-sm text-secondary-text">
+          P. Pencheva
+          <span class="block mt-3">
+            <a
+              href="https://share.google/KYxFW8GJmiGjTPqWG"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-pink underline underline-offset-4 hover:text-primary-text transition-colors"
+              >{reviewStats.averageRating.toFixed(1)} from {reviewStats.totalReviews}
+              Google reviews</a
+            >
+          </span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- Why Outdoor Photography -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          Why Outdoor Photography is Special
-        </h2>
-        <p class="text-secondary-text leading-relaxed mb-6">
-          There's something magical about outdoor family photography. Natural
-          light, fresh air, and beautiful surroundings create the perfect
-          backdrop for genuine, heartfelt moments. Unlike studio photography,
-          outdoor sessions allow kids to move freely, explore, and have
-          fun—which means more authentic smiles and laughter.
-        </p>
-        <p class="text-secondary-text leading-relaxed">
-          As a <strong>Kingston family photographer</strong>, I know the best
-          spots in the area to capture these moments, from open parks to
-          riverside paths. Whether it's the vibrant colours of autumn leaves or
-          the golden light of summer evenings, outdoor photography brings a
-          unique charm to your family photos.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Get in Touch -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">Get in Touch</h2>
-        <p class="text-secondary-text leading-relaxed mb-6">
-          If you're looking for a <strong
-            >family photographer in Kingston upon Thames</strong
-          > or the surrounding areas, I'd love to hear from you. Whether you're planning
-          a relaxed family session, a special milestone shoot, or an event, let's
-          create beautiful memories together.
-        </p>
-        <p class="text-secondary-text leading-relaxed mb-6">
-          <strong
-            ><a href="/contact/" class="hover:text-pink transition-colors underline underline-offset-2"
-              >Contact me today to book your session</a
-            ></strong
-          > or learn more about how I can help:
-        </p>
-
-        <ul class="space-y-2 text-secondary-text leading-relaxed mb-12 ml-6 list-disc">
-          <li>Email: <strong>contact@mellsnap.co.uk</strong></li>
-          <li>Phone: <strong>07722 050 936</strong></li>
-        </ul>
-
-        <p class="text-secondary-text leading-relaxed">
-          Let's capture the joy and connection of your family in stunning
-          outdoor locations across <strong>South West London</strong>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="relative py-20 md:py-28 overflow-hidden">
-    <Image
-      inferSize
-      src={aboutImage}
-      alt="colourful kite on a blue sky"
-      class="absolute inset-0 w-full h-full object-cover"
-      loading="lazy"
-    />
-    <div class="absolute inset-0 bg-black/70"></div>
-    <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2
-          class="font-ephesis! text-3xl md:text-4xl lg:text-5xl text-white mb-6"
-        >
-          Ready to Book?
-        </h2>
-        <p class="text-white/90 mb-10">
-          Get in touch to check availability and book your session.
-        </p>
-        <a
-          class="btn bg-green text-white hover:bg-green-500"
-          href="/free-consultation/"
-        >
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaBanner
+    title="Ready to Book?"
+    text="If you're looking for a family photographer in Kingston upon Thames or the surrounding areas, I'd love to hear from you. Get in touch to check availability and book your session."
+    image={kiteImage}
+  />
 </BaseLayout>

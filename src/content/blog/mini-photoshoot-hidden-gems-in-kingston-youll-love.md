@@ -12,7 +12,7 @@ Here's why choosing a mini photoshoot in Kingston upon Thames is a great idea.
 
 ## What's a Mini Photoshoot?
 
-First things first, what exactly is a mini photoshoot? Essentially, it's a shorter version of a full photography session, lasting around 15–20 minutes. You still get professional, high-quality images, but without the time commitment or price tag of a full session. Mini shoots are perfect for families with young kids, couples, or anyone wanting some updated photos for a special occasion—or even just for fun!
+First things first, what exactly is a mini photoshoot? Essentially, it's a shorter version of a full photography session, lasting around 20 minutes. You still get professional, high-quality images, but without the time commitment or price tag of a full session. Mini shoots are perfect for families with young kids, couples, or anyone wanting some updated photos for a special occasion—or even just for fun!
 
 Plus, in a place like Kingston upon Thames, there are so many beautiful locations to choose from.
 
@@ -22,7 +22,7 @@ Kingston is home to some of the most picturesque locations, and its variety of l
 
 ### 1. Canbury Gardens
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/047-Web.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/047-Web.jpg" alt="Expecting couple cuddling and smiling under the trees during a relaxed mini photoshoot" />
 
 Canbury Gardens, located right by the River Thames, is a fantastic spot for a mini photoshoot. The river views give a gorgeous backdrop for any type of photo. It can be either a family photo session or a romantic photoshoot. The park itself has an authentic charm with old, majestic trees that provide natural shade, meaning you don't have to worry about harsh sunlight ruining the shot. The softer light filtering through the trees makes for beautiful, natural images. It's really great to do a sunset photoshoot when the sun is low and gives that gold feel to the shot.
 
@@ -32,7 +32,7 @@ After your mini photoshoot, you can relax at the park's [lovely coffee bar](http
 
 ### 2. Bushy Park's Woodland Gardens
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/010-Web.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/010-Web.jpg" alt="Parents kissing their toddler while sitting on a fallen tree during a family mini photoshoot" />
 
 For something a bit more creative, Bushy Park is an absolute gem. Its Woodland Gardens are full of hidden spots, perfect for a *romantic photoshoot* or family portraits. The wooden bridge over the ponds is a standout location, with its scenic backdrop providing a fairytale-like feel.
 
@@ -42,7 +42,7 @@ Bushy Park's *Woodland Gardens* is great for adventurous families who want somet
 
 ### 3. Hampton Wick Ponds
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/1-1.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/1-1.jpg" alt="Little girl handing her dad a bunch of wildflowers in the long summer grass" />
 
 For those who love the idea of a quiet, peaceful setting, *Hampton Wick Ponds* is the ideal location. This spot is known for its peaceful atmosphere, perfect for couples who want a more intimate, *romantic photoshoot*. With ponds, wide-open spaces, and a bit of wild nature, it's an adventure waiting to be captured on camera.
 
@@ -52,7 +52,7 @@ Hampton Wick Ponds is one of those great places near Kingston that's less crowde
 
 Now that you've got an idea of the best locations for your mini photo session in or around Kingston, let's talk about why mini shoots are so popular these days.
 
-1. **Quick and Convenient** - One of the biggest benefits of a mini session is that it's short and sweet. In just 15–20 minutes, you'll get a fantastic selection of photos without having to commit to a lengthy session. This is especially great for families with kids, as little ones often don't have the patience for longer photoshoots.
+1. **Quick and Convenient** - One of the biggest benefits of a mini session is that it's short and sweet. In just 20 minutes, you'll get a fantastic selection of photos without having to commit to a lengthy session. This is especially great for families with kids, as little ones often don't have the patience for longer photoshoots.
 
 2. **Affordable** - Mini photoshoots tend to be more budget-friendly than full-length sessions. You still get the same professional quality, but at a fraction of the cost, making it an excellent option for those who want beautiful photos without breaking the bank.
 
@@ -62,7 +62,7 @@ Now that you've got an idea of the best locations for your mini photo session in
 
 ## Why Book a Mini Photoshoot Today?
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/040-Web.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/mini-photoshoot-hidden-gems-in-kingston-youll-love/040-Web.jpg" alt="Parents holding their toddler's hands as he walks along a fallen tree in the park" />
 
 If you want beautiful, professional-quality photos in a short amount of time, a mini photoshoot is ideal. Whether it's for family photos or a romantic session, Kingston upon Thames has stunning locations to fit your needs.
 

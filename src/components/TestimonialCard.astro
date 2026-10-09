@@ -8,13 +8,13 @@ interface Props {
 const { quote, name, rating = 5 } = Astro.props;
 ---
 
-<div class="bg-white p-6 md:p-6 text-center">
+<div class="bg-linen p-6 md:p-6 text-center">
   <!-- Stars -->
   <div class="flex justify-center gap-1 mb-6">
     {
       Array.from({ length: 5 }).map((_, i) => (
         <svg
-          class:list={["w-5 h-5", i < rating ? "text-amber-500" : "text-beige"]}
+          class:list={["w-5 h-5", i < rating ? "text-amber-500" : "text-linen"]}
           fill="currentColor"
           viewBox="0 0 20 20"
         >

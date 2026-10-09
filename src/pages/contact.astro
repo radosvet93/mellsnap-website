@@ -1,114 +1,150 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
-import contactImage from "../images/021-Web.JPEG";
 import { Image } from "astro:assets";
+import contactImage from "../images/children/siblings-bench-hug.jpg";
+
+const socials = [
+  {
+    href: "https://instagram.com/mellsnap",
+    label: "Instagram",
+    path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z",
+  },
+  {
+    href: "https://facebook.com/mellphotosnap",
+    label: "Facebook",
+    path: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z",
+  },
+  {
+    href: "https://pinterest.com/mellsnap",
+    label: "Pinterest",
+    path: "M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z",
+  },
+];
 ---
 
 <BaseLayout
   title="Contact"
-  description="Get in touch to book your photography session. Email contact@mellsnap.co.uk"
+  description="Get in touch with Gaby, family photographer in Kingston upon Thames, to book your photo session. Email contact@mellsnap.co.uk or call 07722 050 936."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="text-center">
+  <section class="bg-linen py-16 md:py-24 overflow-hidden">
+    <div
+      class="container grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 items-center"
+    >
+      <div class="md:col-span-7 text-center md:text-left">
         <p class="label mb-4">Contact</p>
-        <h1 class="text-primary-text">Get in Touch</h1>
-        <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
-          Ready to book your session? Have questions? I'd love to hear from you.
+        <h1
+          class="text-primary-text text-[2.5rem]! md:text-[3rem]! lg:text-[3.75rem]! leading-[1.08]! tracking-tight mb-6"
+        >
+          Get in touch
+        </h1>
+        <p
+          class="text-secondary-text text-lg leading-relaxed max-w-[50ch] mx-auto md:mx-0 mb-10"
+        >
+          Ready to book your session, or just have a question? I'd love to hear
+          from you. Send me a message, email or call, and I'll get back to you as
+          soon as I can.
         </p>
+
+        <ul class="space-y-4 inline-block text-left">
+          <li>
+            <a
+              href="mailto:contact@mellsnap.co.uk"
+              class="group flex items-center gap-4 text-primary-text"
+            >
+              <span class="w-11 h-11 shrink-0 grid place-items-center bg-white text-pink">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="1" />
+                  <path d="M3 7l9 6 9-6" />
+                </svg>
+              </span>
+              <span class="group-hover:text-pink transition-colors">
+                contact@mellsnap.co.uk
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+447722050936"
+              class="group flex items-center gap-4 text-primary-text"
+            >
+              <span class="w-11 h-11 shrink-0 grid place-items-center bg-white text-pink">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1" />
+                </svg>
+              </span>
+              <span class="group-hover:text-pink transition-colors">
+                07722 050 936
+              </span>
+            </a>
+          </li>
+          <li class="flex items-center gap-4 text-primary-text">
+            <span class="w-11 h-11 shrink-0 grid place-items-center bg-white text-pink">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+                <circle cx="12" cy="9.5" r="2.5" />
+              </svg>
+            </span>
+            Kingston upon Thames &amp; London
+          </li>
+        </ul>
+
+        <div class="flex gap-5 mt-8 justify-center md:justify-start">
+          {
+            socials.map((social) => (
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary-text hover:text-pink transition-colors"
+                aria-label={social.label}
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d={social.path} />
+                </svg>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="md:col-span-5 flex justify-center md:justify-end">
+        <Image
+          src={contactImage}
+          widths={[480, 800]}
+          sizes="(min-width: 768px) 40vw, 90vw"
+          alt="Brother and sister hugging and laughing on a white garden bench"
+          class="w-full max-w-sm lg:max-w-md aspect-4/5 object-cover object-[54%_center] border-8 border-white shadow-xl"
+          loading="eager"
+        />
       </div>
     </div>
   </section>
 
-  <!-- Contact Content -->
-  <section class="py-20 bg-white">
+  <!-- Form -->
+  <section class="py-20 md:py-28 bg-white">
     <div class="container">
-      <div
-        class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-5xl mx-auto md:space-y-20 space-y-2 text-center md:text-left mb-12"
-      >
-        <!-- Contact Info -->
-        <div>
-          <h2 class="text-primary-text mb-8">
-            Let's Create Something Beautiful
-          </h2>
-          <p class="text-secondary-text leading-relaxed">
-            Feel free to send a message and I'll get back to you as soon as I
-            can.
+      <div class="grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 max-w-6xl mx-auto">
+        <div class="md:col-span-4 text-center md:text-left">
+          <h2 class="text-primary-text mb-6">Send me a message</h2>
+          <p class="text-secondary-text leading-relaxed mb-6">
+            Tell me a little about your family and the session you have in
+            mind, and I'll get back to you soon.
           </p>
-
-          <div class="space-y-8">
-            <div class="flex flex-col gap-4 items-center md:items-start mt-4">
-              <a
-                href="mailto:contact@mellsnap.co.uk"
-                class="hover:text-pink transition-colors underline underline-offset-2 w-fit"
-              >
-                contact@mellsnap.co.uk
-              </a>
-              <a
-                href="tel:+447722050936"
-                class="hover:text-pink transition-colors underline underline-offset-2 w-fit"
-              >
-                07722 050 936
-              </a>
-              <div class="flex gap-4">
-                <a
-                  href="https://instagram.com/mellsnap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-primary-text hover:text-pink transition-colors"
-                  aria-label="Instagram"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    ></path>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com/mellphotosnap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-primary-text hover:text-pink transition-colors"
-                  aria-label="Facebook"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    ></path>
-                  </svg>
-                </a>
-                <a
-                  href="https://pinterest.com/mellsnap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-primary-text hover:text-pink transition-colors"
-                  aria-label="Pinterest"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+          <p class="text-secondary-text leading-relaxed">
+            Prefer to talk it through? <a
+              href="/free-consultation/"
+              class="text-pink underline underline-offset-4 hover:text-primary-text transition-colors"
+              >Book a free <span class="whitespace-nowrap">10-minute</span> consultation</a
+            >.
+          </p>
         </div>
 
-        <div class="min-w-xs">
-          <Image
-            src={contactImage}
-            alt="Feet of a newborn child"
-            class="w-full h-auto object-cover shadow-lg"
-          />
+        <div class="md:col-span-8">
+          <ContactForm />
         </div>
       </div>
-      <!-- Contact Form -->
-      <section>
-        <ContactForm />
-      </section>
     </div>
   </section>
 </BaseLayout>

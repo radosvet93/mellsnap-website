@@ -3,6 +3,30 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
 import Lightbox from "../../components/Lightbox.astro";
+import threeGenerationsBench from "../../images/family/three-generations-bench.jpg";
+import parentsSwingingToddler from "../../images/family/parents-swinging-toddler.jpg";
+import mumLiftingToddler from "../../images/family/mum-lifting-toddler.jpg";
+import dadToddlerUpsideDown from "../../images/family/dad-toddler-upside-down.jpg";
+import mumBabyCheek from "../../images/family/mum-baby-cheek.jpg";
+import parentsKissingBaby from "../../images/family/parents-kissing-baby.jpg";
+import parentsWalkingToddler from "../../images/family/parents-walking-toddler.jpg";
+import parentsKissingToddler from "../../images/family/parents-kissing-toddler.jpg";
+import familyDucksPond from "../../images/blog/family-ducks-pond.jpg";
+
+const familyPhotos39 = [
+  { src: threeGenerationsBench, alt: "Three generations of a family smiling together on a park bench with the little ones" },
+  { src: parentsSwingingToddler, alt: "Parents swinging their toddler between them along a leafy garden path" },
+  { src: mumLiftingToddler, alt: "Mum lifting her laughing toddler up high among ferns and flowers" },
+  { src: dadToddlerUpsideDown, alt: "Dad holding his giggling toddler upside down in a garden" },
+  { src: parentsWalkingToddler, alt: "Parents walking hand in hand with their toddler along a garden path" },
+  { src: parentsKissingToddler, alt: "Parents kissing their toddler on both cheeks under a willow tree" },
+];
+
+const familyPhotos101 = [
+  { src: mumBabyCheek, alt: "Smiling mum cheek to cheek with her baby sticking out her tongue" },
+  { src: parentsKissingBaby, alt: "Parents kissing their baby daughter on both cheeks in a garden" },
+  { src: familyDucksPond, alt: "Parents smiling as their toddler meets the ducks by a pond", position: "object-[22%_center]" },
+];
 ---
 
 <BaseLayout
@@ -10,7 +34,7 @@ import Lightbox from "../../components/Lightbox.astro";
   description="Family photography portfolio by MellSnap. Capturing authentic family moments in London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
@@ -39,7 +63,7 @@ import Lightbox from "../../components/Lightbox.astro";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/125-Web.jpg"
-          alt="Family photo"
+          alt="Two mums lifting their babies into the air on a street lit with festoon lights"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -47,7 +71,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/111-Web-2.jpg"
-          alt="Family photo"
+          alt="Two mums laughing with their babies in winter hats under festoon lights"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -55,7 +79,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/052-Web.jpg"
-          alt="Family photo"
+          alt="Mum in a patterned jumper holding her baby in a knitted bobble hat by the city lights"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -63,25 +87,35 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/138-Web.jpg"
-          alt="Family photo"
+          alt="Two mums walking and chatting with their babies on a cobbled street"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/122-Web-2.jpg"
-          alt="Family photo"
+          alt="Two mums holding their babies and smiling at each other on a cobbled street"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/133-Web-1.jpg"
-          alt="Family photo"
+          alt="Two mums walking away down a cobbled street carrying their babies"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          familyPhotos39.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class:list={["aspect-square img-portfolio cursor-pointer w-full h-auto object-cover", photo.position]}
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -102,7 +136,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/058-Web.jpg"
-          alt="Family photo"
+          alt="Dad gently holding his curly-haired toddler among green trees"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -110,7 +144,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg"
-          alt="Family photo"
+          alt="Parents blowing bubbles with their toddler on the grass"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -118,7 +152,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/151-Web.jpg"
-          alt="Family photo"
+          alt="Mum holding her toddler on a wooden bridge surrounded by wisteria"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -126,7 +160,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/025-Web.jpg"
-          alt="Family photo"
+          alt="Parents smiling at their baby son in a walled garden"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -134,7 +168,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/068-Web.jpg"
-          alt="Family photo"
+          alt="Mum in a headscarf cuddling her baby son among purple flowers"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -142,11 +176,21 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/009-Web-1.jpg"
-          alt="Family photo"
+          alt="Dad carrying his toddler on his shoulders next to mum by a wisteria-covered wall"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          familyPhotos101.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class:list={["aspect-square img-portfolio cursor-pointer w-full h-auto object-cover", photo.position]}
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -167,7 +211,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/040-Web-e1731514657800.jpg"
-          alt="Family photo"
+          alt="Little boy walking along a woodland path holding a white umbrella"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -175,7 +219,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/033-Web-1.jpg"
-          alt="Family photo"
+          alt="Two little boys standing together under a white umbrella in the park"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -183,7 +227,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/069-Web-1-e1731531650668.jpg"
-          alt="Family photo"
+          alt="Two little boys running across the grass towards a big tree"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -191,7 +235,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/027-Web-e1731532892407.jpg"
-          alt="Family photo"
+          alt="Three little boys running across a sunny meadow"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -199,7 +243,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/035-Web.jpg"
-          alt="Family photo"
+          alt="Two little boys running towards the camera down a street with festoon lights"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -207,7 +251,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/375-Web-e1731532071572.jpg"
-          alt="Family photo"
+          alt="Children playing with hula hoops on the grass at a family gathering"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -239,7 +283,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1045.jpg"
-          alt="Family photo"
+          alt="Parents with their son and daughter by a twisted vine on a brick archway"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -247,7 +291,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0534-1.jpg"
-          alt="Family photo"
+          alt="Family sitting on the edge of a fountain in front of brick arches"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -255,7 +299,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0956.jpg"
-          alt="Family photo"
+          alt="Parents hugging their son and daughter on garden steps under pink blossom"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -263,7 +307,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF0807.jpg"
-          alt="Family photo"
+          alt="Mum cuddling her little daughter by a pond in a Japanese garden"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -271,7 +315,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1191.jpg"
-          alt="Family photo"
+          alt="Mum smiling at her daughter sitting in the branches of a tree"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -279,7 +323,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF1175.jpg"
-          alt="Family photo"
+          alt="Family of four smiling among the twisted branches of an old tree"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -303,7 +347,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/027-Web-e1731531695812.jpg"
-          alt="Family photo"
+          alt="Parents with their two young sons under a white umbrella"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -311,7 +355,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/046-Web-e1731532375942.jpg"
-          alt="Family photo"
+          alt="Family of four crouching together under a white umbrella in the park"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -319,7 +363,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/073-Web.jpg"
-          alt="Family photo"
+          alt="Two little boys splashing in a puddle on a park path"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -327,7 +371,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/062-Web-2.jpg"
-          alt="Family photo"
+          alt="Brother and sister sitting together on an ornate white garden bench"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -335,7 +379,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/052-Web-1.jpg"
-          alt="Family photo"
+          alt="Sister and brother running by the fountains on a sunny day"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -343,7 +387,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/042-Web-2.jpg"
-          alt="Family photo"
+          alt="Brother and sister holding hands in front of the fountains"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -368,7 +412,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6882.jpg"
-          alt="Family photo"
+          alt="Mum laughing with her toddler among yellow daffodils"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -376,7 +420,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6758.jpg"
-          alt="Family photo"
+          alt="Mum hugging her baby in a knitted hat by a park pond"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -384,7 +428,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF6916.jpg"
-          alt="Family photo"
+          alt="Mum walking hand in hand with her toddler across the grass"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -392,7 +436,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8840.jpg"
-          alt="Family photo"
+          alt="Parents laughing with their baby daughter among daffodils"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -400,7 +444,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8579.jpg"
-          alt="Family photo"
+          alt="Parents holding their baby under pink magnolia blossom"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -408,7 +452,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/DSCF8464.jpg"
-          alt="Family photo"
+          alt="Mum smiling at her laughing baby daughter in a yellow dress"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -430,7 +474,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/082-Web-1.jpg"
-          alt="Family photo"
+          alt="Family of four smiling by the river with the bridge behind them"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -438,7 +482,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/141-Web.jpg"
-          alt="Family photo"
+          alt="Family sitting on a bench next to red telephone boxes"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -446,7 +490,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/149-Web.jpg"
-          alt="Family photo"
+          alt="Family of four walking down a narrow lane lit with festoon lights"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -454,7 +498,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.webp"
-          alt="Family photo"
+          alt="Parents kissing their toddler while sitting on a fallen silver birch"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -462,7 +506,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/040-Web.jpg"
-          alt="Family photo"
+          alt="Parents holding their toddler's hands as he walks along a fallen tree"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -470,7 +514,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/073-Web-2.jpg"
-          alt="Family photo"
+          alt="Parents holding their toddler on a wooden bridge among the trees"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -492,7 +536,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/078-Web-e1731531916854.jpg"
-          alt="Family photo"
+          alt="Dad lifting his toddler into the air next to mum in a flower garden"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -500,7 +544,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/063-Web-1.jpg"
-          alt="Family photo"
+          alt="Mum cuddling her baby among bright red and pink flowers"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -508,7 +552,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/020-Web.jpg"
-          alt="Family photo"
+          alt="Dad lifting his laughing baby into the air under a garden pergola"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -516,7 +560,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/036-Web.jpg"
-          alt="Family photo"
+          alt="Dad swinging his son upside down next to his pregnant partner in a flower garden"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -524,7 +568,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/039-Web-1.jpg"
-          alt="Family photo"
+          alt="Pregnant mum kissing her son on dad's shoulders among flowers"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -532,7 +576,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/059-Web.jpg"
-          alt="Family photo"
+          alt="Expecting parents kissing with their son on a hilltop overlooking the city"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -540,7 +584,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/087-Web.jpg"
-          alt="Family photo"
+          alt="Parents and their little girl smiling among a display of orange pumpkins"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -548,7 +592,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/116-Web.jpg"
-          alt="Family photo"
+          alt="Mum holding her laughing daughter in front of shelves of pumpkins"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -556,7 +600,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/130-Web-1.jpg"
-          alt="Family photo"
+          alt="Parents and their little girl sitting among pumpkins at a pumpkin patch"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -564,7 +608,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/061-Web.jpg"
-          alt="Family photo"
+          alt="Family sitting by a fountain under Christmas lights in the city"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -572,7 +616,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/070-Web-1.jpg"
-          alt="Family photo"
+          alt="Grandparents with their grandchildren on a festive city street"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -580,7 +624,7 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           loading="lazy"
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/089-Web.jpg"
-          alt="Family photo"
+          alt="Parents carrying their children on their shoulders on a festive city street"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -596,7 +640,7 @@ import Lightbox from "../../components/Lightbox.astro";
   </section>
 
   <!-- Back Link -->
-  <section class="py-10 bg-section-bg">
+  <section class="py-10 bg-linen">
     <div class="container text-center">
       <a
         href="/portfolio/"

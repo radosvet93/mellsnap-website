@@ -218,26 +218,55 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/*
+  Metric-matched fallbacks: local fonts resized to the web fonts' proportions,
+  so text doesn't jump (layout shift) when the web fonts finish loading.
+*/
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Georgia');
+  size-adjust: 88.99%;
+  ascent-override: 103.83%;
+  descent-override: 32.25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Lora Fallback';
+  src: local('Georgia');
+  size-adjust: 104.94%;
+  ascent-override: 95.87%;
+  descent-override: 26.11%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Raleway Fallback';
+  src: local('Arial');
+  size-adjust: 105.68%;
+  ascent-override: 88.95%;
+  descent-override: 22.14%;
+  line-gap-override: 0%;
+}
+
 @import "tailwindcss";
 
 /* Design Tokens */
 @theme {
   /* Colors */
-  --color-beige: #e8f3e9;
   --color-light-pink: #cfa5b8;
+  --color-linen: #f8f4f1;
   --color-pink: #995d7c;
   --color-green: #44914b;
   --color-primary-text: #363636;
   --color-secondary-text: #5b5b5b;
-  --color-light-bg: #f8f8f8;
-  --color-section-bg: #f4f4f4;
   --color-white: #ffffff;
 
   /* Font Families */
-  --font-cormorant: 'Cormorant Garamond', serif;
-  --font-lora: 'Lora', serif;
+  --font-cormorant: 'Cormorant Garamond', 'Cormorant Garamond Fallback', serif;
+  --font-lora: 'Lora', 'Lora Fallback', serif;
   --font-ephesis: 'Ephesis', cursive;
-  --font-raleway: 'Raleway', sans-serif;
+  --font-raleway: 'Raleway', 'Raleway Fallback', sans-serif;
 
   --text-sm: 1rem;
   --text-base: 1.125rem;

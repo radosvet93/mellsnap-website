@@ -1,24 +1,74 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import { packageJsonLd } from "../utils/structuredData";
+import FaqSection from "../components/FaqSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 import { services } from "../data/services";
 import { Image } from "astro:assets";
+import familyParkImage from "../images/full-session-family-park.jpg";
+import sistersBenchImage from "../images/full-session-sisters-bench.jpg";
+import mumCradlingNewborn from "../images/newborn/mum-cradling-newborn.jpg";
+import bigSisterNewbornSofa from "../images/newborn/big-sister-newborn-sofa.jpg";
+import newbornFeetBw from "../images/newborn/newborn-feet-bw.jpg";
+import newbornTinyHand from "../images/newborn/newborn-tiny-hand.jpg";
+import siblingHandsBw from "../images/newborn/sibling-hands-bw.jpg";
+import dadSisterNewborn from "../images/newborn/dad-sister-newborn.jpg";
+
+const galleryPhotos = [
+  { src: mumCradlingNewborn, alt: "Mum gently cradling her sleeping newborn at home", position: "object-top" },
+  { src: bigSisterNewbornSofa, alt: "Big sister cuddling her newborn baby sibling on the sofa" },
+  { src: newbornFeetBw, alt: "Black and white close-up of a newborn baby's tiny feet on a knitted blanket" },
+  { src: newbornTinyHand, alt: "Newborn baby in a cream knit outfit holding a parent's finger" },
+  { src: siblingHandsBw, alt: "Black and white close-up of big sister holding her newborn sibling's hand" },
+  { src: dadSisterNewborn, alt: "Dad and big sister snuggling the newborn baby at home", position: "object-top" },
+];
 
 const fullService = services.find((service) => service.id === "full");
+
+const faqs = [
+  {
+    question: "Can we bring props or outfit changes?",
+    answer: "Of course! With an hour to work with, there's plenty of time for outfit changes or props to personalise your session.",
+  },
+  {
+    question: "What if it rains for an outdoor shoot?",
+    answer: "No need to worry, we can either reschedule or move the session to an indoor location like your home or a local café.",
+  },
+  {
+    question: "How will I receive my photos?",
+    answer: "Your images will be delivered in a secure online gallery, where you can easily download or share them. They will be stored for up to one month, so be sure to download them and keep them in a safe place.",
+  },
+  {
+    question: "What if we need more time?",
+    answer: "If you think an hour might not be enough, let's chat! I can recommend additional options to suit your needs.",
+  },
+];
+
+const jsonLd = fullService
+  ? packageJsonLd(fullService, "/full-photoshoot/", "Capture your story with a relaxed 1-hour photoshoot. Includes 80+ edited images, an online gallery, and fast delivery. Perfect for families and couples!", faqs)
+  : null;
 ---
 
 <BaseLayout
   title="Full Photoshoot"
   description="Capture your story with a relaxed 1-hour photoshoot. Includes 80+ edited images, an online gallery, and fast delivery. Perfect for families and couples!"
+  ogImage={fullService?.image.src}
 >
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd)}
+  />
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-section-bg">
+  <section class="relative overflow-hidden bg-linen">
     <div class="flex flex-col md:flex-row md:min-h-screen">
       <div
         class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
       >
         <div
-          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+          class="bg-white shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
         >
           <p class="font-raleway text-xs uppercase tracking-widest mb-5">
             Photography Package
@@ -100,13 +150,12 @@ const fullService = services.find((service) => service.id === "full");
   </section>
 
   <!-- Featured Image -->
-  <section class="bg-section-bg">
+  <section class="bg-linen">
     <div class="container py-10">
       <div class="max-w-4xl mx-auto">
         <Image
-          inferSize
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/088-Web.jpeg"
-          alt="Family of three on a picnic in a park, celebrating baby boy's first birthday"
+          src={familyParkImage}
+          alt="Smiling family of three holding hands with their son as he balances on a fallen log in a sunlit park"
           class="w-full aspect-3/2 object-cover"
           loading="lazy"
         />
@@ -136,7 +185,7 @@ const fullService = services.find((service) => service.id === "full");
             > – A full gallery of polished, high-quality photos to treasure forever.
           </li>
           <li class="list-disc ml-8">
-            <strong class="text-primary-text">5–7 day delivery</strong> – You won't
+            <strong class="text-primary-text">7–10 day delivery</strong> – You won't
             have to wait long to enjoy your photos.
           </li>
           <li class="list-disc ml-8">
@@ -156,7 +205,7 @@ const fullService = services.find((service) => service.id === "full");
   </section>
 
   <!-- Why Choose -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">
@@ -243,19 +292,26 @@ const fullService = services.find((service) => service.id === "full");
             you.
           </li>
         </ul>
-        <Image
-          inferSize
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/063-Web.jpeg"
-          alt="Mum with her son, looking at summer flowers, posing for a family photoshoot"
-          class="w-full aspect-[3/2] object-cover mt-8"
-          loading="lazy"
-        />
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-8">
+          {
+            galleryPhotos.map((photo) => (
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                widths={[400, 800]}
+                sizes="(min-width: 768px) 250px, 50vw"
+                class:list={["w-full aspect-4/5 object-cover", photo.position]}
+                loading="lazy"
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Where Can We Shoot? -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">Where Can We Shoot?</h2>
@@ -284,6 +340,12 @@ const fullService = services.find((service) => service.id === "full");
           Not sure where to shoot? – Let's chat, and I'll help you choose the
           perfect location.
         </p>
+        <Image
+          src={sistersBenchImage}
+          alt="Two sisters resting their heads together and smiling on a wooden garden bench"
+          class="w-full aspect-[3/2] object-cover"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -322,7 +384,7 @@ const fullService = services.find((service) => service.id === "full");
         </ul>
         <p class="text-secondary-text mt-8">
           After the shoot, I'll carefully edit your photos and deliver them in a
-          secure online gallery within 5–7 days. From there, you can download,
+          secure online gallery within 7–10 days. From there, you can download,
           share, and enjoy your beautiful images for years to come.
         </p>
         <p class="text-secondary-text mt-8">
@@ -333,63 +395,11 @@ const fullService = services.find((service) => service.id === "full");
     </div>
   </section>
 
-  <!-- FAQs -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">FAQs</h2>
-        <p class="text-secondary-text mb-8">
-          Here are some common questions about the Full Story Photo Package:
-        </p>
-        <ul class="space-y-4 text-secondary-text">
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Can we bring props or outfit changes?
-            </h3>
-            Of course! With an hour to work with, there's plenty of time for outfit
-            changes or props to personalise your session.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              What if it rains for an outdoor shoot?
-            </h3>
-            No need to worry – we can either reschedule or move the session to an
-            indoor location like your home or a local café.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              How will I receive my photos?
-            </h3>
-            Your images will be delivered in a secure online gallery, where you can
-            easily download or share them, they will be stored for up to one month,
-            so be sure to download them and keep them in a safe place.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              What if we need more time?
-            </h3>
-            If you think an hour might not be enough, let's chat! I can recommend
-            additional options to suit your needs.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <FaqSection title="Full Session FAQs" faqs={faqs} />
 
-  <!-- CTA -->
-  <section class="py-20 md:py-28 bg-beige">
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl text-primary-text mb-6">
-          Ready to Book Your Full Story Session?
-        </h2>
-        <p class="text-secondary-text mb-10">
-          Let's take our time and create something truly special together.
-        </p>
-        <Button href="/free-consultation/" variant="primary">
-          Book a Free Consultation
-        </Button>
-      </div>
-    </div>
-  </section>
+  <CtaBanner
+    title="Ready to Book Your Full Story Session?"
+    text={"Let's take our time and create something truly special together."}
+    buttonText="Book a Free Consultation"
+  />
 </BaseLayout>

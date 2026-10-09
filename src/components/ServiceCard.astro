@@ -1,11 +1,13 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
   price: string;
   duration: string;
   features: string[];
+  image: { src: string | ImageMetadata; alt: string };
   ctaText?: string;
   ctaLink?: string;
   featured?: boolean;
@@ -17,55 +19,77 @@ const {
   price,
   duration,
   features,
-  ctaText = "Select",
+  image,
+  ctaText = "View Package",
   ctaLink = "/free-consultation/",
   featured = false,
   isGrey = false,
 } = Astro.props;
 ---
 
-<div
+<article
   class:list={[
-    "p-8 md:p-10 text-center",
-    { "border-2 border-pink": featured },
-    { "bg-section-bg": isGrey },
-    { "bg-white": !isGrey },
+    "flex flex-col overflow-hidden",
+    isGrey ? "bg-linen" : "bg-white",
+    featured ? "shadow-xl md:-translate-y-4" : "shadow-sm",
   ]}
 >
-  <h3 class="font-ephesis text-pink mb-4">
-    {title}
-  </h3>
-  <p class="font-medium text-primary-text">
-    {price}
-  </p>
-  <p class="font-raleway text-sm italic text-secondary-text tracking-wide mb-8">
-    {duration}
-  </p>
-
-  <ul class="space-y-4 mb-10">
+  <div class="relative aspect-4/3 overflow-hidden">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      inferSize={typeof image.src === "string"}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
     {
-      features.map((feature) => (
-        <li class=" text-secondary-text flex items-center justify-center gap-2">
-          <svg
-            class="w-5 h-5 text-green shrink-0"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-          {feature}
-        </li>
-      ))
+      featured && (
+        <span class="absolute top-4 left-4 bg-pink text-white font-raleway text-xs tracking-wide px-3 py-1.5">
+          Most popular
+        </span>
+      )
     }
-  </ul>
+  </div>
 
-  <Button href={ctaLink} variant={featured ? "primary" : "secondary"}>
-    {ctaText}
-  </Button>
-</div>
+  <div class="flex flex-col flex-1 p-8">
+    <h3 class="text-3xl! text-primary-text mb-2">{title}</h3>
+    <p class="flex items-baseline gap-2">
+      <span class="font-cormorant text-5xl text-pink leading-none">{price}</span>
+      <span class="font-raleway text-sm text-secondary-text">/ {duration}</span>
+    </p>
+
+    <hr class="my-6 border-primary-text/10" />
+
+    <ul class="space-y-3 mb-8 text-base text-secondary-text">
+      {
+        features.map((feature) => (
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 mt-0.5 text-pink shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            {feature}
+          </li>
+        ))
+      }
+    </ul>
+
+    <Button
+      href={ctaLink}
+      variant={featured ? "primary" : "secondary"}
+      class="mt-auto w-full text-center"
+    >
+      {ctaText}
+    </Button>
+  </div>
+</article>

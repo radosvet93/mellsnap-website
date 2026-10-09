@@ -3,6 +3,37 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
 import Lightbox from "../../components/Lightbox.astro";
+import familyWalkPond from "../../images/maternity/family-walk-pond.jpg";
+import familyArches from "../../images/maternity/family-arches.jpg";
+import familyBumpKisses from "../../images/maternity/family-bump-kisses.jpg";
+import coupleJapaneseGarden from "../../images/maternity/couple-japanese-garden.jpg";
+import familyCamellias from "../../images/maternity/family-camellias.jpg";
+import mumToddlerCamellias from "../../images/maternity/mum-toddler-camellias.jpg";
+
+import coupleDogLogBw from "../../images/maternity/couple-dog-log-bw.jpg";
+import coupleDogWillow from "../../images/maternity/couple-dog-willow.jpg";
+import mumRiverbank from "../../images/maternity/mum-riverbank.jpg";
+import mumWillow from "../../images/maternity/mum-willow.jpg";
+import coupleRiverEmbrace from "../../images/maternity/couple-river-embrace.jpg";
+import coupleRiverKiss from "../../images/maternity/couple-river-kiss.jpg";
+
+const expectPhotos = [
+  { src: coupleDogLogBw, alt: "Black and white photo of an expecting couple sitting on a log with their golden retriever" },
+  { src: coupleDogWillow, alt: "Expecting couple kissing by a river under a willow tree with their golden retriever" },
+  { src: mumRiverbank, alt: "Pregnant mum in a blue floral dress sitting by the river holding her bump" },
+  { src: mumWillow, alt: "Pregnant mum sitting under a weeping willow cradling her bump", position: "object-bottom" },
+  { src: coupleRiverEmbrace, alt: "Expecting couple embracing by the river under the trees", position: "object-bottom" },
+  { src: coupleRiverKiss, alt: "Dad-to-be kissing his pregnant partner by the river", position: "object-bottom" },
+];
+
+const maternityPhotos = [
+  { src: familyWalkPond, alt: "Expecting parents walking hand in hand with their toddler by a garden pond" },
+  { src: familyArches, alt: "Pregnant mum and dad holding hands with their toddler under brick arches" },
+  { src: familyBumpKisses, alt: "Dad and toddler kissing mum's baby bump beside red tulips" },
+  { src: coupleJapaneseGarden, alt: "Pregnant mum and her husband holding hands in a Japanese garden" },
+  { src: familyCamellias, alt: "Expecting parents lifting their little boy to reach pink camellia blossoms" },
+  { src: mumToddlerCamellias, alt: "Pregnant mum smiling at her toddler among pink camellias" },
+];
 ---
 
 <BaseLayout
@@ -10,7 +41,7 @@ import Lightbox from "../../components/Lightbox.astro";
   description="Maternity photography portfolio by MellSnap. Beautiful pregnancy photos in London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
@@ -57,7 +88,7 @@ import Lightbox from "../../components/Lightbox.astro";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/063-Web.webp"
-          alt="Maternity photo"
+          alt="Pregnant mum in a blue floral dress smiling among purple azaleas"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -95,7 +126,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/034-Web.webp"
-          alt="Maternity photo"
+          alt="Expecting couple standing together by a woodland pond"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -143,6 +174,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          maternityPhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -299,25 +340,35 @@ import Lightbox from "../../components/Lightbox.astro";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1958.webp"
-          alt="Maternity photo"
+          alt="Dad lifting their toddler high in the air next to his pregnant partner under blossom"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1606-1.webp"
-          alt="Maternity photo"
+          alt="Expecting parents with their toddler in a bluebell wood"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/DSCF1633-1.webp"
-          alt="Maternity photo"
+          alt="Dad and toddler kissing mum's baby bump in a bluebell wood"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          expectPhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class:list={["aspect-square img-portfolio cursor-pointer w-full h-auto object-cover", photo.position]}
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -427,7 +478,7 @@ import Lightbox from "../../components/Lightbox.astro";
   </section>
 
   <!-- Back Link -->
-  <section class="py-10 bg-section-bg">
+  <section class="py-10 bg-linen">
     <div class="container text-center">
       <a
         href="/portfolio/"

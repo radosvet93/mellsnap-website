@@ -3,6 +3,36 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
 import Lightbox from "../../components/Lightbox.astro";
+import coupleMeadowDip from "../../images/couples/couple-meadow-dip.jpg";
+import coupleKissBw from "../../images/couples/couple-kiss-bw.jpg";
+import coupleBridgeHands from "../../images/couples/couple-bridge-hands.jpg";
+import coupleLakeLift from "../../images/couples/couple-lake-lift.jpg";
+import coupleLakeDip from "../../images/couples/couple-lake-dip.jpg";
+import couplePathTrees from "../../images/couples/couple-path-trees.jpg";
+import coupleAzaleaSmile from "../../images/couples/couple-azalea-smile.jpg";
+import coupleBridgeAzaleas from "../../images/couples/couple-bridge-azaleas.jpg";
+import coupleAzaleasForeheads from "../../images/couples/couple-azaleas-foreheads.jpg";
+import couplePondEmbrace from "../../images/couples/couple-pond-embrace.jpg";
+import coupleGardenPath from "../../images/couples/couple-garden-path.jpg";
+import coupleTreesEmbrace from "../../images/couples/couple-trees-embrace.jpg";
+
+const loveStoryPhotos = [
+  { src: coupleAzaleaSmile, alt: "Couple laughing together in front of pink azalea bushes" },
+  { src: coupleBridgeAzaleas, alt: "Couple embracing on a wooden bridge between bright pink azaleas" },
+  { src: coupleAzaleasForeheads, alt: "Couple touching foreheads in front of bright pink azaleas and white rhododendrons" },
+  { src: couplePondEmbrace, alt: "Couple sharing a tender moment beside a pond reflecting pink azaleas" },
+  { src: coupleGardenPath, alt: "Bride holding her bouquet and smiling at the groom on a garden path lined with flowers" },
+  { src: coupleTreesEmbrace, alt: "Couple embracing under tall green trees in a flower garden" },
+];
+
+const newCouplePhotos = [
+  { src: coupleBridgeHands, alt: "Couple holding hands and gazing at each other on a sunny bridge in front of historic buildings" },
+  { src: coupleKissBw, alt: "Black and white photo of a couple kissing on a bridge in front of historic buildings" },
+  { src: coupleMeadowDip, alt: "Groom dipping his bride for a kiss in a field of tall golden grass" },
+  { src: coupleLakeLift, alt: "Groom lifting his bride in a hug beside a lake under willow trees", position: "object-bottom" },
+  { src: coupleLakeDip, alt: "Groom dipping his bride by a lake in a sunlit garden", position: "object-bottom" },
+  { src: couplePathTrees, alt: "Groom lifting his bride on a country path under tall trees as she raises her bouquet", position: "object-bottom" },
+];
 ---
 
 <BaseLayout
@@ -10,7 +40,7 @@ import Lightbox from "../../components/Lightbox.astro";
   description="Couples photography portfolio by MellSnap. Romantic engagement and couples photos in London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
@@ -52,7 +82,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/39-DSCF2723-2.webp"
-          alt="Couple photo"
+          alt="Couple kissing on a stone balcony between grand columns"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -60,7 +90,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/1-DSCF2573.jpg"
-          alt="Couple photo"
+          alt="Couple walking hand in hand up grand stone steps"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           fetchpriority="high"
@@ -114,25 +144,35 @@ import Lightbox from "../../components/Lightbox.astro";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/115-DSCF2757.jpg"
-          alt="Couple photo"
+          alt="Black and white photo of a couple holding hands in front of a passing train"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/68-DSCF2816.jpg"
-          alt="Couple photo"
+          alt="Black and white photo of a couple at a bar"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/107-DSCF2709.jpg"
-          alt="Couple photo"
+          alt="Black and white photo of a couple kissing in a vintage lift"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          newCouplePhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class:list={["aspect-square img-portfolio cursor-pointer w-full h-auto object-cover", photo.position]}
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -284,14 +324,14 @@ import Lightbox from "../../components/Lightbox.astro";
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web86.jpg"
-          alt="Couple photo"
+          alt="Black and white photo of a couple kissing by the river"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/Web95.jpg"
-          alt="Couple photo"
+          alt="Black and white photo of a couple sharing a kiss on a riverside bench"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -305,7 +345,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/DSCF9849.webp"
-          alt="Couple photo"
+          alt="Man proposing on one knee under pink cherry blossom trees"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -430,7 +470,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/love/008-Web.jpg"
-          alt="Couple photo"
+          alt="Newly married couple walking down a grand staircase hand in hand"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -578,6 +618,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          loveStoryPhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <div class="text-center mt-16">
@@ -589,7 +639,7 @@ import Lightbox from "../../components/Lightbox.astro";
   </section>
 
   <!-- Back Link -->
-  <section class="py-10 bg-section-bg">
+  <section class="py-10 bg-linen">
     <div class="container text-center">
       <a
         href="/portfolio/"

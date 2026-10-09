@@ -1,12 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import HeroIntro from "../components/HeroIntro.astro";
 import ServiceCard from "../components/ServiceCard.astro";
-import PortfolioCarousel from "../components/PortfolioCarousel.astro";
+import PortfolioShowcase from "../components/PortfolioShowcase.astro";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import Button from "../components/Button.astro";
+import FaqSection from "../components/FaqSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 import { Image } from "astro:assets";
-import GabyAndMeliImage from "../images/gaby-meli.png";
+import whyChooseImage from "../images/couple-garden-embrace.jpg";
 import { getCollection } from "astro:content";
 import { fetchGoogleReviews } from "../data/googleReviews";
 import { services } from "../data/services";
@@ -67,7 +70,7 @@ const faqs = [
   {
     question: "How long does it take to receive my images?",
     answer:
-      "I try to retouch and process the images as soon as possible, normally it takes from 3 to 5 days for a mini session and from 5 to 10 days for a full session and events.",
+      "I try to retouch and process the images as soon as possible, normally it takes 3 to 5 days for a quick session and 7 to 10 days for a full session or event.",
   },
   {
     question: "Do you have a photo studio?",
@@ -115,8 +118,8 @@ const jsonLd = {
       "@id": "https://mellsnap.co.uk/#business",
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "34",
+        ratingValue: String(reviewStats.averageRating),
+        reviewCount: String(reviewStats.totalReviews),
       },
     },
     {
@@ -152,7 +155,10 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title="Home">
+<BaseLayout
+  title="Family Photographer Kingston upon Thames | MellSnap"
+  description="Natural, relaxed outdoor photos of families, mums-to-be, couples and events in Kingston upon Thames and London. 5-star rated. Book a free consultation."
+>
   <script
     is:inline
     slot="head"
@@ -160,24 +166,34 @@ const jsonLd = {
     set:html={JSON.stringify(jsonLd, null, 2)}
   />
   <!-- Hero Section -->
-  <Hero
-    title="Natural Outdoor Family Photography"
-    subtitle="Family Photographer in Kingston upon Thames & London"
-    ctaText="Book Your Session"
+  <Hero />
+
+  <!-- Intro Section -->
+  <HeroIntro
+    greeting="Hello, I'm Gaby"
+    title="Family Photographer in Kingston upon Thames & London"
+    intro="I take natural, candid photos of families, mums-to-be and couples, and I also photograph birthdays and special events across Kingston and London. Every photoshoot is unique, and I focus on capturing the love, connection and emotion between you, along with all the small details and in-between moments."
+    ctaText="Book a Free Consultation"
     ctaLink="/free-consultation/"
+    secondaryCtaText="View My Portfolio"
+    secondaryCtaLink="/portfolio/"
+    rating={reviewStats.averageRating}
+    reviewCount={reviewStats.totalReviews}
+    reviewsLink="https://share.google/KYxFW8GJmiGjTPqWG"
+    areas="I photograph families across Kingston, Richmond, Wimbledon, Twickenham, Teddington, Surbiton and Central London."
   />
 
   <!-- Portfolio Preview Section -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center mb-16">
-        <p class="label mb-4">Real moments, no posing required</p>
+        <p class="label mb-4">Explore and View my Photography Work</p>
         <h2 class="text-4xl md:text-5xl text-primary-text">
-          My Family & Lifestyle Photography Portfolio
+          Family & Lifestyle Photography Portfolio
         </h2>
       </div>
 
-      <PortfolioCarousel items={portfolioItems} />
+      <PortfolioShowcase items={portfolioItems} />
 
       <div class="text-center mt-12">
         <Button href="/portfolio/" variant="secondary">
@@ -222,37 +238,30 @@ const jsonLd = {
           </Button>
         </div>
 
-        <!-- Image collage -->
+        <!-- Image -->
         <div class="flex justify-center md:justify-end">
-          <div class="relative w-3/4">
-            <!-- Background decorative rectangle -->
-            <div
-              class="absolute -top-4 -left-4 w-full h-full border border-pink/30 rounded-sm"
-            >
-            </div>
-            <!-- Main image -->
-            <Image
-              inferSize
-              src="https://images.mellsnap.co.uk/file/mellsnap-website/075-Web.jpg"
-              alt="A family laughing together outdoors"
-              class="relative w-full h-auto object-fill border-white shadow-lg rounded-sm border-4"
-              loading="eager"
-            />
-          </div>
+          <Image
+            src={whyChooseImage}
+            widths={[480, 800]}
+            sizes="(min-width: 768px) 40vw, 90vw"
+            alt="Couple in a gentle embrace on a garden path surrounded by pink and white azaleas"
+            class="w-full max-w-sm lg:max-w-md aspect-4/5 object-cover border-8 border-white shadow-xl object-[center_65%]"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center mb-16">
         <p class="label mb-4">Services</p>
         <h2 class="text-primary-text">Photography Packages</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
         {
           services.map((service) => (
             <ServiceCard
@@ -260,6 +269,7 @@ const jsonLd = {
               price={service.price}
               duration={service.duration}
               features={service.features}
+              image={service.image}
               featured={service.featured}
               ctaLink={service.ctaLink}
             />
@@ -275,46 +285,8 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- About Preview Section -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="">
-          <Image
-            src={GabyAndMeliImage}
-            alt="Mother and daughter smiling and hugging each other"
-            class="w-2/3 md:min-w-xs mx-auto h-auto pt-6 px-6 pb-16 shadow-lg overflow-hidden"
-            loading="lazy"
-          />
-        </div>
-        <div class="md:text-left text-center">
-          <div class="mb-12">
-            <p class="label mb-4">About me</p>
-            <h2 class="text-4xl md:text-5xl text-primary-text mb-8">
-              Hello, I'm Gaby
-            </h2>
-          </div>
-          <p class="text-secondary-text leading-relaxed mb-10">
-            I'm a family, lifestyle, and event photographer based in Kingston
-            upon Thames, serving South West and Central London. I believe in
-            capturing authentic moments that tell your unique story. As a mother
-            of two I truly understand how busy family life can be, and how
-            important it is to have beautiful photos that capture the love and
-            connection between you and your family. My goal is to create a
-            relaxed and enjoyable experience for you, so we can capture moments
-            that reflect your family's personality and bond.
-          </p>
-
-          <Button href="/about/" variant="secondary">
-            Learn More About Me
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Testimonials Section -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-white">
     <div class="container">
       <div class="text-center mb-16">
         <p class="label mb-4">Testimonials</p>
@@ -345,67 +317,11 @@ const jsonLd = {
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="text-center mb-16">
-        <p class="label mb-4">FAQ</p>
-        <h2 class="text-4xl md:text-5xl text-primary-text">
-          Frequently Asked Questions
-        </h2>
-      </div>
-
-      <div class="max-w-3xl mx-auto divide-y divide-grey-200">
-        {
-          faqs.map((faq) => (
-            <details class="group py-4">
-              <summary class="flex justify-between items-center cursor-pointer list-none font-cormorant text-lg font-semibold text-primary-text">
-                {faq.question}
-                <svg
-                  class="w-4 h-4 shrink-0 transition-transform group-open:rotate-180"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
-                </svg>
-              </summary>
-              <p
-                class="mt-3 text-secondary-text"
-                set:html={faq.answerHtml ?? faq.answer}
-              />
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <FaqSection faqs={faqs} />
 
   <!-- CTA Section -->
-  <section class="relative py-20 md:py-28 overflow-hidden">
-    <Image
-      inferSize
-      src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-      loading="lazy"
-    />
-    <div class="absolute inset-0 bg-black/70"></div>
-    <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2
-          class="font-ephesis! text-3xl md:text-4xl lg:text-5xl text-white mb-6"
-        >
-          Ready to Capture Your Story?
-        </h2>
-        <p class="text-white/90 mb-10">
-          Let's create beautiful memories together. Book your session today.
-        </p>
-        <a
-          class="btn bg-green text-white hover:bg-green-500"
-          href="/free-consultation/"
-        >
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaBanner
+    title="Ready to Capture Your Story?"
+    text="Let's create beautiful memories together. Book your session today."
+  />
 </BaseLayout>

@@ -13,18 +13,18 @@ const sortedPosts = posts.sort(
 ---
 
 <BaseLayout
-  title="Blog"
-  description="Photography tips, session guides, and stories from MellSnap Photography."
+  title="Photoshoot Tips & Locations in London | MellSnap"
+  description="Family photoshoot tips, outfit ideas and my favourite parks and hidden spots in Kingston and London for natural, relaxed photos."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Blog</p>
-        <h1 class="text-primary-text">Stories & Tips</h1>
+        <h1 class="text-primary-text">Photoshoot Tips & Location Ideas</h1>
         <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
-          Photography advice, session inspiration, and behind-the-scenes
-          stories.
+          My tips for relaxed photoshoots, what to wear, and my favourite
+          parks and hidden spots around Kingston and London.
         </p>
       </div>
     </div>
@@ -40,7 +40,7 @@ const sortedPosts = posts.sort(
               <a href={`/blog/${post.id}/`} class="block">
                 <div class="img-hover aspect-3/2 mb-6">
                   <Image
-                    inferSize
+                    inferSize={typeof post.data.image === "string"}
                     src={post.data.image}
                     alt={post.data.title}
                     class="w-full h-full object-cover"

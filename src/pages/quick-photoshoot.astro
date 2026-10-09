@@ -1,24 +1,58 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import { packageJsonLd } from "../utils/structuredData";
+import FaqSection from "../components/FaqSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 import { services } from "../data/services";
 import { Image } from "astro:assets";
 
 const quickService = services.find((service) => service.id === "quick");
+
+const faqs = [
+  {
+    question: "Can I bring my pet along?",
+    answer: "Yes, please! Pets always add extra charm to a session, and I love capturing them.",
+  },
+  {
+    question: "What if it rains for an outdoor shoot?",
+    answer: "No worries, we can either reschedule or switch to an indoor option, like your home or a coffee shop.",
+  },
+  {
+    question: "How soon will I get my photos?",
+    answer: "I'll deliver all of your successful digital images in a secure gallery within 3 to 5 days of the shoot.",
+  },
+  {
+    question: "What if I want more time or photos?",
+    answer: "If you'd like a longer session or extra images, take a look at my Full Session Package, it might be exactly what you need!",
+    answerHtml: "If you'd like a longer session or extra images, take a look at my <a href=\"/full-photoshoot/\" class=\"hover:text-pink transition-colors underline underline-offset-2\">Full Session Package</a>, it might be exactly what you need!",
+  },
+];
+
+const jsonLd = quickService
+  ? packageJsonLd(quickService, "/quick-photoshoot/", "Enjoy 20 minutes of natural, candid photography in one of the best outdoor locations in London and receive 20+ professionally retouched digital images.", faqs)
+  : null;
 ---
 
 <BaseLayout
   title="Quick Photoshoot"
   description="Enjoy 20 minutes of natural, candid photography in one of the best outdoor locations in London and receive 20+ professionally retouched digital images."
+  ogImage={quickService?.image.src}
 >
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd)}
+  />
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-section-bg">
+  <section class="relative overflow-hidden bg-linen">
     <div class="flex flex-col md:flex-row md:min-h-screen">
       <div
         class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
       >
         <div
-          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+          class="bg-white shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
         >
           <p class="font-raleway text-xs uppercase tracking-widest mb-5">
             Photography Package
@@ -100,7 +134,7 @@ const quickService = services.find((service) => service.id === "quick");
   </section>
 
   <!-- Featured Image -->
-  <section class="bg-section-bg">
+  <section class="bg-linen">
     <div class="container py-10">
       <div class="max-w-4xl mx-auto">
         <Image
@@ -131,7 +165,7 @@ const quickService = services.find((service) => service.id === "quick");
           </li>
           <li class="list-disc ml-8">
             <strong class="text-primary-text"
-              >20 professionally edited digital images</strong
+              >20+ professionally edited digital images</strong
             > – You'll receive a gallery of polished, high-quality photos that you
             can print, share, or just treasure forever.
           </li>
@@ -152,7 +186,7 @@ const quickService = services.find((service) => service.id === "quick");
   </section>
 
   <!-- Why Choose -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">
@@ -249,7 +283,7 @@ const quickService = services.find((service) => service.id === "quick");
   </section>
 
   <!-- Locations -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">Where Can We Shoot?</h2>
@@ -314,73 +348,11 @@ const quickService = services.find((service) => service.id === "quick");
     </div>
   </section>
 
-  <!-- FAQs -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">FAQs</h2>
-        <p class="text-secondary-text mb-8">
-          Here are some common questions about the quick photoshoot package:
-        </p>
-        <ul class="space-y-4 text-secondary-text">
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Can I bring my pet along?
-            </h3>
-            Yes, please! Pets always add extra charm to a session, and I love capturing
-            them.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              What if it rains for an outdoor shoot?
-            </h3>
-            No worries – we can either reschedule or switch to an indoor option, like
-            your home or a coffee shop.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              How soon will I get my photos?
-            </h3>
-            I'll deliver all of your successful digital images in a secure gallery
-            within 2–3 days of the shoot.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              What if I want more time or photos?
-            </h3>
-            If you'd like a longer session or extra images, take a look at my <a
-              href="/full-photoshoot/"
-              class="hover:text-pink transition-colors underline underline-offset-2"
-              >Full Session Package</a
-            > – it might be exactly what you need!
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Let's Create Something Beautiful – Fast and Easy
-            </h3>
-            The quick photoshoot is perfect if you want gorgeous photos with no fuss.
-            Whether it's a family session, a couple's portrait, or just some fresh,
-            natural shots for yourself, I'll make sure it's a fun and effortless experience.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <FaqSection title="Quick Photoshoot FAQs" faqs={faqs} />
 
-  <!-- CTA -->
-  <section class="py-20 md:py-28 bg-beige">
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl text-primary-text mb-6">
-          Ready to Book Your Quick Photoshoot?
-        </h2>
-        <p class="text-secondary-text mb-10">
-          Let's create something beautiful together – in just 20 minutes.
-        </p>
-        <Button href="/free-consultation/" variant="primary">
-          Book a Free Consultation
-        </Button>
-      </div>
-    </div>
-  </section>
+  <CtaBanner
+    title="Ready to Book Your Quick Photoshoot?"
+    text={"The quick photoshoot is perfect if you want gorgeous photos with no fuss. Whether it's a family session, a couple's portrait, or just some fresh, natural shots for yourself, I'll make sure it's a fun and effortless experience."}
+    buttonText="Book a Free Consultation"
+  />
 </BaseLayout>

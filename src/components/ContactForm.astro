@@ -2,12 +2,11 @@
 import Button from "./Button.astro";
 ---
 
-<h2 class="text-primary-text mb-8 text-center">Send a message</h2>
 <form
   id="contact-form"
   action="https://api.web3forms.com/submit"
   method="POST"
-  class="max-w-xl mx-auto space-y-6 shadow-lg p-8 bg-section-bg"
+  class="space-y-6 p-6 md:p-10 bg-linen"
 >
   <!-- Web3Forms Access Key -->
   <input
@@ -19,42 +18,42 @@ import Button from "./Button.astro";
   <!-- Success/Error Messages -->
   <div id="form-message" class="hidden"></div>
 
-  <div class="flex justify-between gap-2 md:flex-row flex-col">
+  <div class="grid md:grid-cols-2 gap-6">
     <div>
-      <label for="name" class="label block mb-2">Name</label>
+      <label for="name" class="block mb-2 font-raleway text-sm text-primary-text">Name</label>
       <input
         type="text"
         id="name"
         name="name"
         required
         autocomplete="name"
-        class="w-full px-4 py-2 border bg-white focus:border-pink focus:outline-none transition-colors"
+        class="w-full px-4 py-3 border border-primary-text/15 bg-white text-base focus:border-pink focus:outline-2 focus:outline-pink/30 transition-colors"
         placeholder="Your name"
       />
     </div>
 
     <div>
-      <label for="email" class="label block mb-2">Email</label>
+      <label for="email" class="block mb-2 font-raleway text-sm text-primary-text">Email</label>
       <input
         type="email"
         id="email"
         name="email"
         required
         autocomplete="email"
-        class="w-full px-4 py-2 border bg-white focus:border-pink focus:outline-none transition-colors"
+        class="w-full px-4 py-3 border border-primary-text/15 bg-white text-base focus:border-pink focus:outline-2 focus:outline-pink/30 transition-colors"
         placeholder="your@email.com"
       />
     </div>
   </div>
 
-  <div class="flex justify-between gap-2 md:flex-row flex-col">
+  <div class="grid md:grid-cols-2 gap-6">
     <div>
-      <label for="service" class="label block mb-2">Service interested in</label
+      <label for="service" class="block mb-2 font-raleway text-sm text-primary-text">Service interested in</label
       >
       <select
         id="service"
         name="service"
-        class="w-full px-4 py-2 border bg-white focus:border-pink focus:outline-none transition-colors border-box"
+        class="w-full px-4 py-3 border border-primary-text/15 bg-white text-base focus:border-pink focus:outline-2 focus:outline-pink/30 transition-colors"
       >
         <option value="">Select a service</option>
         <option value="quick">Quick Session (20 min)</option>
@@ -64,34 +63,34 @@ import Button from "./Button.astro";
       </select>
     </div>
     <div>
-      <label for="phone" class="label block mb-2">Phone (optional)</label>
+      <label for="phone" class="block mb-2 font-raleway text-sm text-primary-text">Phone (optional)</label>
       <input
         type="tel"
         id="phone"
         name="phone"
         autocomplete="tel"
-        class="w-full px-4 py-2 border bg-white focus:border-pink focus:outline-none transition-colors"
+        class="w-full px-4 py-3 border border-primary-text/15 bg-white text-base focus:border-pink focus:outline-2 focus:outline-pink/30 transition-colors"
         placeholder="+44 7XXX XXX XXX"
       />
     </div>
   </div>
 
   <div>
-    <label for="message" class="label block mb-2">Message</label>
+    <label for="message" class="block mb-2 font-raleway text-sm text-primary-text">Message</label>
     <textarea
       id="message"
       name="message"
       rows="5"
       required
-      class="w-full px-4 py-2 border bg-white focus:border-pink focus:outline-none transition-colors resize-none"
+      class="w-full px-4 py-3 border border-primary-text/15 bg-white text-base focus:border-pink focus:outline-2 focus:outline-pink/30 transition-colors resize-none"
       placeholder="Tell me about your session..."></textarea>
   </div>
 
   <!-- hCaptcha -->
   <div class="h-captcha" data-captcha="true"></div>
 
-  <div class="pt-4 flex justify-end">
-    <Button type="submit" variant="primary"> Send Message </Button>
+  <div class="pt-2">
+    <Button type="submit" variant="primary" class="w-full sm:w-auto"> Send Message </Button>
   </div>
 </form>
 

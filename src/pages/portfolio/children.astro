@@ -3,6 +3,57 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
 import Lightbox from "../../components/Lightbox.astro";
+import toddlerLavender from "../../images/children/toddler-lavender.jpg";
+import toddlerYellowBench from "../../images/children/toddler-yellow-bench.jpg";
+import boyBalanceBike from "../../images/children/boy-balance-bike.jpg";
+import siblingsFountains from "../../images/children/siblings-fountains.jpg";
+import siblingsFountainsBw from "../../images/children/siblings-fountains-bw.jpg";
+import siblingsBenchHug from "../../images/children/siblings-bench-hug.jpg";
+import siblingsBenchCuddle from "../../images/children/siblings-bench-cuddle.jpg";
+import sistersBenchSurprised from "../../images/children/sisters-bench-surprised.jpg";
+import sistersBenchCheeks from "../../images/children/sisters-bench-cheeks.jpg";
+import siblingsItalianGardens from "../../images/children/siblings-italian-gardens.jpg";
+import girlPinkDressSmile from "../../images/children/girl-pink-dress-smile.jpg";
+import girlPinkDress from "../../images/children/girl-pink-dress.jpg";
+import curlyBoyArches from "../../images/children/curly-boy-arches.jpg";
+import curlyBoyTulips from "../../images/children/curly-boy-tulips.jpg";
+import curlyBoyLaughing from "../../images/children/curly-boy-laughing.jpg";
+import siblingsParkPath from "../../images/children/siblings-park-path.jpg";
+import sistersGardenBench from "../../images/children/sisters-garden-bench.jpg";
+import sistersHug from "../../images/children/sisters-hug.jpg";
+
+const childrenPhotos35 = [
+  { src: toddlerLavender, alt: "Toddler girl in a yellow floral dress touching lavender in a park" },
+  { src: toddlerYellowBench, alt: "Toddler girl peeking over a yellow bench among white roses" },
+  { src: boyBalanceBike, alt: "Little boy in a helmet riding his balance bike along a concrete walkway" },
+];
+
+const childrenPhotos75 = [
+  { src: siblingsFountains, alt: "Brother and sister holding hands in front of the fountains in Battersea Park" },
+  { src: siblingsFountainsBw, alt: "Black and white photo of a brother and sister running hand in hand by the fountains" },
+  { src: siblingsBenchHug, alt: "Brother and sister hugging and laughing on a garden bench" },
+  { src: siblingsBenchCuddle, alt: "Big sister cuddling her little brother on a garden bench" },
+  { src: sistersBenchSurprised, alt: "Two sisters pulling surprised faces on a wooden garden bench" },
+  { src: sistersBenchCheeks, alt: "Two sisters resting their heads together and smiling on a wooden garden bench" },
+];
+
+const childrenPhotos112 = [
+  { src: siblingsItalianGardens, alt: "Brother and sister dressed in white standing by the Italian Gardens fountains" },
+  { src: girlPinkDressSmile, alt: "Smiling little girl in a pink tulle dress by the water" },
+  { src: girlPinkDress, alt: "Little girl in a pink tulle dress with bows in her hair in the park" },
+];
+
+const childrenPhotos505 = [
+  { src: curlyBoyArches, alt: "Curly-haired little boy in a smart coat in front of garden arches" },
+  { src: curlyBoyTulips, alt: "Surprised curly-haired boy in front of red tulips" },
+  { src: curlyBoyLaughing, alt: "Curly-haired boy laughing on a park path" },
+];
+
+const childrenPhotos363 = [
+  { src: siblingsParkPath, alt: "Little sister and brother playing together on a sunny park path" },
+  { src: sistersGardenBench, alt: "Two sisters sitting together on a wooden bench in a walled garden" },
+  { src: sistersHug, alt: "Two sisters hugging and smiling under the trees" },
+];
 ---
 
 <BaseLayout
@@ -10,7 +61,7 @@ import Lightbox from "../../components/Lightbox.astro";
   description="Children photography portfolio by MellSnap. Natural and playful photos of children in London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
@@ -57,6 +108,16 @@ import Lightbox from "../../components/Lightbox.astro";
           fetchpriority="high"
           loading="eager"
         />
+        {
+          childrenPhotos35.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -94,6 +155,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          childrenPhotos75.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -131,6 +202,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          childrenPhotos112.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -138,27 +219,27 @@ import Lightbox from "../../components/Lightbox.astro";
       </h2>
 
       <p class="text-secondary-text mb-6">
-        <strong>Mini-session</strong>
+        <strong>Quick Session</strong>
       </p>
 
       <ul class="text-secondary-text mb-6 list-disc pl-6">
         <li>Perfect for a quick and fun photoshoot.</li>
-        <li>Up to 20 minutes per session.</li>
-        <li>Around 20 images.</li>
+        <li>A 20-minute session.</li>
+        <li>20+ edited images.</li>
         <li>
-          Child photography mini-sessions are available only in Kingston upon
+          Quick sessions for children are available only in Kingston upon
           Thames or nearby locations.
         </li>
       </ul>
 
       <p class="text-secondary-text mb-6">
-        <strong>Event Session</strong>
+        <strong>Event Coverage</strong>
       </p>
 
       <ul class="text-secondary-text mb-6 list-disc pl-6">
         <li>Ideal for birthdays and child milestones.</li>
-        <li>Over 80 images.</li>
-        <li>1-hour session (extendable if needed).</li>
+        <li>80+ edited images per hour.</li>
+        <li>The first hour included, then £100 for each additional hour.</li>
         <li>
           Location chosen by you in South-West or Central London. Additional
           charges may apply for other locations.
@@ -171,9 +252,9 @@ import Lightbox from "../../components/Lightbox.astro";
 
       <ul class="text-secondary-text mb-6 list-disc pl-6">
         <li>
-          Similar to the Event session, but limited to 1 hour, non-extendable.
+          A relaxed 1-hour session.
         </li>
-        <li>More than 80 images.</li>
+        <li>80+ edited images.</li>
         <li>
           A great option for capturing special moments in a relaxed, natural
           setting.
@@ -284,7 +365,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/children/042-Web.jpg"
-          alt="Children photo"
+          alt="Smiling boy holding a handrail by a set of city steps"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -424,6 +505,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          childrenPhotos363.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <h2 class="text-primary-text font-bold mb-6">
@@ -512,7 +603,7 @@ import Lightbox from "../../components/Lightbox.astro";
         />
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/children/096-Web.jpg"
-          alt="Children photo"
+          alt="Brother and sister sitting on a window ledge in front of a festive shop window"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -524,6 +615,16 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
+        {
+          childrenPhotos505.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
       </div>
 
       <div class="text-center mt-16">
@@ -535,7 +636,7 @@ import Lightbox from "../../components/Lightbox.astro";
   </section>
 
   <!-- Back Link -->
-  <section class="py-10 bg-section-bg">
+  <section class="py-10 bg-linen">
     <div class="container text-center">
       <a
         href="/portfolio/"

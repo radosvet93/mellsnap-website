@@ -3,6 +3,30 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import { Image } from "astro:assets";
 import Lightbox from "../../components/Lightbox.astro";
+import birthdayCake from "../../images/events/birthday-cake.jpg";
+import balloonHat from "../../images/events/balloon-hat.jpg";
+import dancing from "../../images/events/dancing.jpg";
+import partyGames from "../../images/events/party-games.jpg";
+import friendsTable from "../../images/events/friends-table.jpg";
+import birthdayLift from "../../images/events/birthday-lift.jpg";
+import gettingReady from "../../images/events/birthday-getting-ready.jpg";
+import girlVeil from "../../images/events/birthday-girl-veil.jpg";
+import cakeWindow from "../../images/events/birthday-cake-window.jpg";
+
+const partyPhotos = [
+  { src: birthdayCake, alt: "Birthday girl smiling at her rainbow birthday cake in front of a pink balloon arch" },
+  { src: balloonHat, alt: "Smiling little boy wearing a balloon hat at a birthday party" },
+  { src: dancing, alt: "Children dancing with their arms in the air at a birthday party" },
+  { src: partyGames, alt: "Children sitting in a circle playing a game with party entertainers" },
+  { src: friendsTable, alt: "Little boy with face paint laughing with a friend at the party table" },
+  { src: birthdayLift, alt: "Birthday girl being lifted into the air by laughing party guests" },
+];
+
+const memoryPhotos = [
+  { src: gettingReady, alt: "Black and white photo of a girl in an elegant black dress and gloves getting ready for her birthday party" },
+  { src: girlVeil, alt: "Black and white photo of a birthday girl twirling in a black tulle dress under a happy 10th birthday sign" },
+  { src: cakeWindow, alt: "Black and white photo of a birthday girl admiring her Chanel-themed birthday cake by the window" },
+];
 ---
 
 <BaseLayout
@@ -10,7 +34,7 @@ import Lightbox from "../../components/Lightbox.astro";
   description="Event photography portfolio by MellSnap. Birthday parties, celebrations and special events in London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="text-center">
         <p class="label mb-4">Portfolio</p>
@@ -270,27 +294,16 @@ import Lightbox from "../../components/Lightbox.astro";
       </p>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0616.jpg"
-          alt="Little boy in a blue costume"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0668.jpg"
-          alt="Little boy in a blue costume"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF0837.jpg"
-          alt="Two boys jumping on a trampoline"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
+        {
+          partyPhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1069.jpg"
           alt="Two little boys running around a balloon"
@@ -326,6 +339,16 @@ import Lightbox from "../../components/Lightbox.astro";
       </p>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        {
+          memoryPhotos.map((photo) => (
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
+              loading="lazy"
+            />
+          ))
+        }
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4550.jpg"
           alt="Two ladies on a event, event photography"
@@ -336,27 +359,6 @@ import Lightbox from "../../components/Lightbox.astro";
         <Image
           src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4481.jpg"
           alt="Two women talking and laughing on a beauty event"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4207.jpg"
-          alt="Three women making a toast"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4698.jpg"
-          alt="Blonde lady looking herself in the mirror"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF4092.jpg"
-          alt="Blonde woman in pink dress on a event"
           inferSize
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
@@ -410,48 +412,6 @@ import Lightbox from "../../components/Lightbox.astro";
           class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
           loading="lazy"
         />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1961.jpg"
-          alt="Christmas market in Kingston Upon Thames"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1897.jpg"
-          alt="A man who is performing and playing a guitar on a christmas market"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF1874.jpg"
-          alt="A man who is performing and playing a guitar on a christmas market"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/20231216-DSCF2754.jpg"
-          alt="A man who is performing and playing a guitar on a christmas market"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF2014.jpg"
-          alt="A man who is performing and playing a guitar on a christmas market"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
-        <Image
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/DSCF2022.jpg"
-          alt="A man who is performing and playing a guitar on a christmas market"
-          inferSize
-          class="aspect-square img-portfolio cursor-pointer w-full h-auto object-cover"
-          loading="lazy"
-        />
       </div>
 
       <div class="text-center mt-16">
@@ -463,7 +423,7 @@ import Lightbox from "../../components/Lightbox.astro";
   </section>
 
   <!-- Back Link -->
-  <section class="py-10 bg-section-bg">
+  <section class="py-10 bg-linen">
     <div class="container text-center">
       <a
         href="/portfolio/"

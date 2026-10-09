@@ -1,70 +1,191 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PortfolioCard from "../../components/PortfolioCard.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import coupleAzaleasImage from "../../images/couple-azaleas.jpg";
+import coupleWalkingImage from "../../images/couple-walking-bw.jpg";
+
+const base = "https://images.mellsnap.co.uk/file/mellsnap-website";
 
 const categories = [
   {
+    id: "family",
     title: "Family",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/138-Web.jpg",
     href: "/portfolio/family/",
+    description:
+      "Relaxed outdoor sessions in parks and hidden corners of London, where you can simply enjoy being together. I capture the laughter, cuddles and little in-between moments that make your family yours.",
+    images: [
+      { src: `${base}/portfolio/family/125-Web.jpg`, alt: "Two mums lifting their babies into the air on a street lit with festoon lights" },
+      { src: `${base}/portfolio/family/058-Web.jpg`, alt: "Dad and his toddler touching foreheads under green trees" },
+      { src: `${base}/portfolio/family/009-Web-1.jpg`, alt: "Family standing under wisteria with their little one on dad's shoulders" },
+    ],
   },
   {
+    id: "maternity",
     title: "Maternity",
-    image:
-      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/maternity/003-Web-e1731516397349.jpg",
     href: "/portfolio/maternity/",
+    description:
+      "Your bump, your glow and the excitement of what's coming. I plan gentle, flowing maternity sessions among flowers and greenery, so you feel beautiful and at ease in front of the camera.",
+    images: [
+      { src: `${base}/portfolio/maternity/003-Web-e1731516397349.jpg`, alt: "Pregnant woman holding her bump among pink azaleas" },
+      { src: `${base}/portfolio/maternity/018-Web-e1731531552915.jpg`, alt: "Mum-to-be sitting among white blossom in a flowing floral dress" },
+      { src: `${base}/portfolio/maternity/059-Web.jpg`, alt: "Expecting couple kissing above a view of London with their son" },
+    ],
   },
   {
+    id: "couples",
     title: "Couples",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/1021-Web.jpg",
     href: "/portfolio/love/",
+    description:
+      "Engagements, weddings and simply celebrating each other. I love finding elegant spots across London and letting your connection lead, so the photos feel like you, not a pose.",
+    images: [
+      { src: `${base}/portfolio/love/147-Web.jpg`, alt: "Bride and groom sharing a kiss in front of a red vintage London wedding bus" },
+      { src: coupleAzaleasImage, alt: "Couple touching foreheads in front of bright pink azaleas and white rhododendrons" },
+      { src: coupleWalkingImage, alt: "Black and white photo of a newly married couple laughing as they walk hand in hand across a street" },
+    ],
   },
   {
+    id: "children",
     title: "Children",
-    image: "https://images.mellsnap.co.uk/file/mellsnap-website/015-Web.jpg",
     href: "/portfolio/children/",
+    description:
+      "Curious, playful and full of life. I let children explore and be themselves, and capture their personalities at every age, from first birthdays to big-sister moments.",
+    images: [
+      { src: `${base}/015-Web.jpg`, alt: "Two sisters looking at each other in front of Tower Bridge in London" },
+      { src: `${base}/portfolio/children/027-Web.jpg`, alt: "Laughing toddler reaching out among spring blossom" },
+      { src: `${base}/portfolio/children/076-Web.jpg`, alt: "Little boy with curly hair smiling on the grass in a park" },
+    ],
   },
   {
+    id: "events",
     title: "Events",
-    image:
-      "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/events/115-Web.jpg",
     href: "/portfolio/events/",
+    description:
+      "Birthdays, milestones and celebrations of every size. I blend into the background and capture the details, the atmosphere and the people, so you can enjoy your day and relive it later.",
+    images: [
+      { src: `${base}/portfolio/events/115-Web.jpg`, alt: "Pink birthday cake in front of a let's party neon sign and balloons" },
+      { src: `${base}/portfolio/events/129-Web-1.jpg`, alt: "Couple celebrating a 30th birthday next to giant light-up numbers" },
+      { src: `${base}/portfolio/events/135-Web.jpg`, alt: "Friends taking a selfie together at a birthday party" },
+    ],
   },
 ];
 ---
 
 <BaseLayout
   title="Portfolio"
-  description="Browse MellSnap Photography portfolio. Family, maternity, couples, children and event photography."
+  description="Browse my family, maternity, couples, children and event photography across Kingston upon Thames and London."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="text-center">
-        <p class="label mb-4">Portfolio</p>
-        <h1 class="text-primary-text">My Work</h1>
-        <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
-          Explore a selection of my photography portfolio, showcasing family,
-          maternity, couples, children, and event photography.
-        </p>
-      </div>
+  <section class="bg-linen py-16 md:py-24">
+    <div class="container text-center">
+      <p class="label mb-4">Portfolio</p>
+      <h1
+        class="text-primary-text text-[2.5rem]! md:text-[3rem]! lg:text-[3.75rem]! leading-[1.08]! tracking-tight mb-6"
+      >
+        My photography work
+      </h1>
+      <p
+        class="text-secondary-text text-lg leading-relaxed max-w-[52ch] mx-auto mb-10"
+      >
+        A selection of my favourite moments from family, maternity, couples,
+        children and event sessions across Kingston upon Thames and London.
+      </p>
+      <nav aria-label="Portfolio categories">
+        <ul class="flex flex-wrap justify-center gap-3">
+          {
+            categories.map((cat) => (
+              <li>
+                <a
+                  href={`#${cat.id}`}
+                  class="block px-5 py-2 bg-white font-raleway text-sm text-primary-text hover:text-white hover:bg-pink transition-colors"
+                >
+                  {cat.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
     </div>
   </section>
 
   <!-- Categories -->
   <section class="py-20 md:py-28 bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {
-          categories.map((cat) => (
-            <PortfolioCard
-              title={cat.title}
-              image={cat.image}
+    <div class="container space-y-24 md:space-y-32 max-w-6xl mx-auto">
+      {
+        categories.map((cat, i) => (
+          <article
+            id={cat.id}
+            class="grid md:grid-cols-12 gap-10 md:gap-12 items-center scroll-mt-8"
+          >
+            <a
               href={cat.href}
-            />
-          ))
-        }
-      </div>
+              class:list={[
+                "md:col-span-7 grid grid-cols-5 grid-rows-2 gap-3 h-100 md:h-130",
+                { "md:order-2": i % 2 === 1 },
+              ]}
+              aria-label={`View the ${cat.title} gallery`}
+            >
+              <Image
+                src={cat.images[0].src}
+                alt={cat.images[0].alt}
+                inferSize
+                widths={[480, 800]}
+                sizes="(min-width: 768px) 35vw, 60vw"
+                class="col-span-3 row-span-2 w-full h-full object-cover"
+                loading={i === 0 ? "eager" : "lazy"}
+              />
+              <Image
+                src={cat.images[1].src}
+                alt={cat.images[1].alt}
+                inferSize={typeof cat.images[1].src === "string"}
+                widths={[320, 600]}
+                sizes="(min-width: 768px) 25vw, 40vw"
+                class="col-span-2 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <Image
+                src={cat.images[2].src}
+                alt={cat.images[2].alt}
+                inferSize={typeof cat.images[2].src === "string"}
+                widths={[320, 600]}
+                sizes="(min-width: 768px) 25vw, 40vw"
+                class="col-span-2 w-full h-full object-cover"
+                loading="lazy"
+              />
+            </a>
+
+            <div
+              class:list={[
+                "md:col-span-5 text-center md:text-left",
+                { "md:order-1": i % 2 === 1 },
+              ]}
+            >
+              <h2 class="text-primary-text mb-6">{cat.title}</h2>
+              <p class="text-secondary-text leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-8">
+                {cat.description}
+              </p>
+              <Button href={cat.href} variant="secondary">
+                View {cat.title} Gallery
+              </Button>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-linen py-20 md:py-24">
+    <div class="container text-center">
+      <h2 class="text-primary-text mb-6">Love what you see?</h2>
+      <p class="text-secondary-text max-w-[48ch] mx-auto mb-10">
+        Let's plan a relaxed session that feels just like your family. Book a
+        free 10-minute chat with me to get started.
+      </p>
+      <Button href="/free-consultation/" variant="primary">
+        Book a Free Consultation
+      </Button>
     </div>
   </section>
 </BaseLayout>

@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  text: string;
+  buttonText?: string;
+  href?: string;
+  image?: string | ImageMetadata;
+}
+
+const {
+  title,
+  text,
+  buttonText = "Get in Touch",
+  href = "/free-consultation/",
+  image = "https://images.mellsnap.co.uk/file/mellsnap-website/portfolio/family/010-Web.jpg",
+} = Astro.props;
+---
+
+<section class="relative py-20 md:py-28 overflow-hidden">
+  {
+    typeof image === "string" ? (
+      <Image
+        inferSize
+        src={image}
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <Image
+        src={image}
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+    )
+  }
+  <div class="absolute inset-0 bg-black/70"></div>
+  <div class="container relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-ephesis! text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+        {title}
+      </h2>
+      <p class="text-white/90 mb-10">{text}</p>
+      <a class="btn bg-green text-white hover:bg-green-500" href={href}>
+        {buttonText}
+      </a>
+    </div>
+  </div>
+</section>

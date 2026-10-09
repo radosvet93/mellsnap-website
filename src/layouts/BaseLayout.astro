@@ -6,23 +6,32 @@ import ScrollToTop from "../components/ScrollToTop.astro";
 
 import loraRegular from "../fonts/lora-v37-latin-regular.woff2";
 import ephesisRegular from "../fonts/ephesis-v11-latin-regular.woff2";
+import cormorant500 from "../fonts/cormorant-garamond-v21-latin-500.woff2";
+import raleway500 from "../fonts/raleway-v37-latin-500.woff2";
 
+
+import { shareImageUrl } from "../utils/shareImage";
+import defaultShareImage from "../images/hero-mums-babies.webp";
 
 interface Props {
   title: string;
   description?: string;
-  ogImage?: string;
+  // Photo shown when the page is shared on social media
+  ogImage?: string | ImageMetadata;
+  ogType?: "website" | "article";
 }
 
 const {
   title,
   description = "MellSnap Photography - Family & Event Photography in Kingston upon Thames and Central London",
-  ogImage = "/images/mellsnap-logo-trans.png",
+  ogImage = defaultShareImage,
+  ogType = "website",
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, "https://mellsnap.co.uk").href;
-const ogImageUrl = new URL(ogImage, "https://mellsnap.co.uk").href;
-const fullTitle = `${title} | MellSnap Photography`;
+const ogImageUrl = await shareImageUrl(ogImage);
+// Titles that already name the brand are used as-is
+const fullTitle = title.includes("MellSnap") ? title : `${title} | MellSnap Photography`;
 ---
 
 <!doctype html>
@@ -38,13 +47,15 @@ const fullTitle = `${title} | MellSnap Photography`;
     <!-- Font preloads -->
     <link rel="preload" href={loraRegular} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={ephesisRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={cormorant500} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={raleway500} as="font" type="font/woff2" crossorigin />
     <title>{fullTitle}</title>
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />

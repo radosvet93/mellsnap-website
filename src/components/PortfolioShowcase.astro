@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+
+interface PortfolioItem {
+  title: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  href: string;
+}
+
+interface Props {
+  items: PortfolioItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-2 gap-3 md:flex max-w-6xl mx-auto md:h-[70vh] md:max-h-160 md:min-h-120"
+>
+  {
+    items.map((item) => (
+      <a
+        href={item.href}
+        class="pf-panel group relative block overflow-hidden aspect-4/5 first:col-span-2 first:aspect-4/3 md:aspect-auto! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+      >
+        <Image
+          src={item.image.src}
+          alt={item.image.alt}
+          inferSize
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/5 to-transparent" />
+
+        <span class="absolute inset-x-0 bottom-0 p-4 md:p-6 flex items-end justify-between gap-4 text-white">
+          <span class="font-cormorant text-2xl lg:text-3xl leading-none">
+            {item.title}
+          </span>
+          <span class="pf-cta hidden md:inline font-raleway text-sm underline underline-offset-4 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:delay-200 group-focus-visible:opacity-100">
+            View gallery
+          </span>
+        </span>
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  @media (min-width: 768px) {
+    .pf-panel {
+      flex: 1 1 0;
+      transition: flex-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .pf-panel:hover,
+    .pf-panel:focus-visible {
+      flex-grow: 2.2;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pf-panel,
+    .pf-panel * {
+      transition: none !important;
+    }
+  }
+</style>

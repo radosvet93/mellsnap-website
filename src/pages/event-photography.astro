@@ -1,24 +1,77 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import { packageJsonLd } from "../utils/structuredData";
+import FaqSection from "../components/FaqSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 import { services } from "../data/services";
 import { Image } from "astro:assets";
+import birthdayCake from "../images/events/birthday-cake.jpg";
+import balloonHat from "../images/events/balloon-hat.jpg";
+import dancing from "../images/events/dancing.jpg";
+import partyGames from "../images/events/party-games.jpg";
+import friendsTable from "../images/events/friends-table.jpg";
+import birthdayLift from "../images/events/birthday-lift.jpg";
+
+// Ordered so each of the 3 columns pairs a portrait with a landscape photo
+const partyPhotos = [
+  { src: birthdayCake, alt: "Birthday girl smiling at her rainbow birthday cake in front of a pink balloon arch" },
+  { src: dancing, alt: "Children dancing with their arms in the air at a birthday party" },
+  { src: partyGames, alt: "Children sitting in a circle playing a game with party entertainers" },
+  { src: balloonHat, alt: "Smiling little boy wearing a balloon hat at a birthday party" },
+  { src: birthdayLift, alt: "Birthday girl being lifted into the air by laughing party guests" },
+  { src: friendsTable, alt: "Little boy with face paint laughing with a friend at the party table" },
+];
 
 const eventService = services.find((service) => service.id === "event");
+
+const faqs = [
+  {
+    question: "Can I book additional time?",
+    answer: "Yes! The package includes the first hour, and each additional hour is £100. Just let me know how long your event runs when booking, and we'll plan the coverage around your schedule.",
+  },
+  {
+    question: "Do you capture both posed and candid shots?",
+    answer: "Absolutely. I'll blend candid moments with any posed group photos you'd like, so you get a well-rounded gallery.",
+  },
+  {
+    question: "When will I receive my photos?",
+    answer: "You'll receive your professionally edited images within 7 to 10 days, delivered in a secure online gallery for easy sharing and downloading.",
+  },
+  {
+    question: "Do you offer prints?",
+    answer: "I don't offer prints, but all images are delivered in two formats: social media-ready (optimised for sharing online) and high-resolution for printing (ideal for framed photos or large canvases). This way, you have the flexibility to use your images however you like!",
+  },
+  {
+    question: "Do you offer video services?",
+    answer: "I focus solely on photography, so I don't offer video services. However, my photos are carefully crafted to tell the story of your event, capturing the emotions and key moments just as beautifully as a video would.",
+  },
+];
+
+const jsonLd = eventService
+  ? packageJsonLd(eventService, "/event-photography/", "Capture the fun and joy of indoor and outdoor events, from birthdays to family gatherings, with natural, candid event photography in London.", faqs)
+  : null;
 ---
 
 <BaseLayout
   title="Event Photography"
   description="Capture the fun and joy of indoor and outdoor events, from birthdays to family gatherings, with natural, candid event photography in London."
+  ogImage={eventService?.image.src}
 >
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd)}
+  />
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-section-bg">
+  <section class="relative overflow-hidden bg-linen">
     <div class="flex flex-col md:flex-row md:min-h-screen">
       <div
         class="flex-none md:w-1/2 flex items-center py-16 px-8 md:pl-8 lg:pl-8 xl:pl-8 md:pr-0 relative z-10"
       >
         <div
-          class="bg-beige shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
+          class="bg-white shadow-2xl p-8 md:p-10 lg:p-12 w-full md:translate-x-10"
         >
           <p class="font-raleway text-xs uppercase tracking-widest mb-5">
             Photography Package
@@ -100,7 +153,7 @@ const eventService = services.find((service) => service.id === "event");
   </section>
 
   <!-- Featured Image -->
-  <section class="bg-section-bg">
+  <section class="bg-linen">
     <div class="container py-10">
       <div class="max-w-4xl mx-auto">
         <Image
@@ -127,18 +180,18 @@ const eventService = services.find((service) => service.id === "event");
         <ul class="space-y-4 text-secondary-text">
           <li class="list-disc ml-8">
             <strong class="text-primary-text"
-              >Up to 4 hours capturing your event</strong
-            > – Flexible and adaptable to your event schedule. For additional hours
-            we can discuss further.
+              >The first hour of coverage, then £100 for each additional hour</strong
+            > – Flexible and adaptable to your event schedule, so you only book the
+            time you need.
           </li>
           <li class="list-disc ml-8">
             <strong class="text-primary-text"
-              >80+ professionally edited digital images</strong
+              >80+ professionally edited digital images per hour</strong
             > – A complete gallery of high-quality photos to capture the essence of
             your celebration.
           </li>
           <li class="list-disc ml-8">
-            <strong class="text-primary-text">5–7 day delivery</strong> – You won't
+            <strong class="text-primary-text">7–10 day delivery</strong> – You won't
             have to wait long to enjoy your photos.
           </li>
           <li class="list-disc ml-8">
@@ -158,7 +211,7 @@ const eventService = services.find((service) => service.id === "event");
   </section>
 
   <!-- Why Choose -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">
@@ -197,8 +250,8 @@ const eventService = services.find((service) => service.id === "event");
           <div>
             <h3 class="text-primary-text mb-3">3. Flexible Coverage</h3>
             <p class="text-secondary-text">
-              With up to 4 hours of photography included, I'm there for the
-              moments that matter most – whether that's the whole party or just
+              Book the first hour and add extra hours as you need, so I'm there
+              for the moments that matter most – whether that's the whole party or just
               the key highlights.
             </p>
           </div>
@@ -251,19 +304,26 @@ const eventService = services.find((service) => service.id === "event");
             > – Document these precious celebrations with beautiful, heartfelt images.
           </li>
         </ul>
-        <Image
-          inferSize
-          src="https://images.mellsnap.co.uk/file/mellsnap-website/services/141-Web.jpg"
-          alt="Couple getting married, wedding photoshoot, capturing wedding ceremony and wedding reception"
-          class="w-full aspect-[3/2] object-cover mt-8"
-          loading="lazy"
-        />
+        <div class="grid grid-cols-2 gap-3 md:block md:columns-3 mt-10">
+          {
+            partyPhotos.map((photo) => (
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                widths={[400, 800]}
+                sizes="(min-width: 768px) 320px, 50vw"
+                class="w-full aspect-4/5 object-cover md:aspect-auto md:h-auto md:mb-3 md:break-inside-avoid"
+                loading="lazy"
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
 
   <!-- What happens on the day -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="py-20 md:py-28 bg-linen">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="md:text-4xl text-primary-text mb-8">
@@ -317,73 +377,11 @@ const eventService = services.find((service) => service.id === "event");
     </div>
   </section>
 
-  <!-- Event Photography FAQs -->
-  <section class="py-20 md:py-28 bg-section-bg">
-    <div class="container">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="md:text-4xl text-primary-text mb-8">
-          Event Photography FAQs
-        </h2>
-        <p class="text-secondary-text mb-8">
-          Here are some common questions about the event photography package:
-        </p>
-        <ul class="space-y-4 text-secondary-text">
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Can I book additional time?
-            </h3>
-            Yes! If you need more than 4 hours, we can extend your session to fit
-            your event's schedule. Just let me know your requirements when booking.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Do you capture both posed and candid shots?
-            </h3>
-            Absolutely. I'll blend candid moments with any posed group photos you'd
-            like, so you get a well-rounded gallery.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              When will I receive my photos?
-            </h3>
-            You'll receive your professionally edited images within 5–7 days, delivered
-            in a secure online gallery for easy sharing and downloading.
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">Do you offer prints?</h3>
-            I don't offer prints, but all images are delivered in two formats: social
-            media-ready (optimised for sharing online) and high-resolution for printing
-            (ideal for framed photos or large canvases). This way, you have the flexibility
-            to use your images however you like!
-          </li>
-          <li>
-            <h3 class="text-pink font-bold! text-xl!">
-              Do you offer video services?
-            </h3>
-            I focus solely on photography, so I don't offer video services. However,
-            my photos are carefully crafted to tell the story of your event, capturing
-            the emotions and key moments just as beautifully as a video would.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <FaqSection title="Event Photography FAQs" faqs={faqs} />
 
-  <!-- CTA -->
-  <section class="py-20 md:py-28 bg-beige">
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl text-primary-text mb-6">
-          Ready to Capture Your Event?
-        </h2>
-        <p class="text-secondary-text mb-10">
-          Let's document your special occasion with beautiful, natural
-          photography.
-        </p>
-        <Button href="/free-consultation/" variant="primary">
-          Book a Free Consultation
-        </Button>
-      </div>
-    </div>
-  </section>
+  <CtaBanner
+    title="Ready to Capture Your Event?"
+    text={"Let's document your special occasion with beautiful, natural photography."}
+    buttonText="Book a Free Consultation"
+  />
 </BaseLayout>

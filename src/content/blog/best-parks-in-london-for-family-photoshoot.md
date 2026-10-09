@@ -16,7 +16,7 @@ Are you on the hunt for the best parks in London for your family photoshoot? As 
 
 ### Richmond Park
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/best-parks-in-london-for-family-photoshoot/034-Web.jpg" alt="Pregnant woman looking at her husband romantically, surrounded by serene lake and flowers" />
+![Couple sharing a gentle kiss among blooming azaleas under tall trees in Richmond Park](../../images/couples/couple-trees-embrace.jpg)
 
 [Richmond Park](https://www.royalparks.org.uk/visit/parks/richmond-park) is a favourite for many, and it's easy to see why. With its wide-open spaces, ancient trees, and friendly deer, it provides a serene and natural backdrop, which is perfect for families to enjoy. [The Isabella Plantation](https://www.royalparks.org.uk/visit/parks/richmond-park/isabella-plantation) is absolutely gorgeous in Spring with its vibrant flowers. Whether it's candid shots in the grassy fields or just having fun under a majestic oak, Richmond Park has it all.
 
@@ -52,7 +52,7 @@ Are you on the hunt for the best parks in London for your family photoshoot? As 
 
 ### Battersea Park
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2024/best-parks-in-london-for-family-photoshoot/072-Web.webp" alt="Mother and her son looking at each other in Battersea park by a lake" />
+![Brother and sister running and playing by the fountains in Battersea Park on a sunny day](../../images/blog/battersea-park-fountains.jpg)
 
 [Battersea Park](https://www.wandsworth.gov.uk/batterseapark), located along the River Thames, features beautiful gardens, a boating lake, and even a charming children's zoo. The park's varied landscapes, from open fields to wooded areas, offer a versatile backdrop for family photos. The iconic Peace Pagoda is a must-visit spot for a distinctive and serene setting.
 

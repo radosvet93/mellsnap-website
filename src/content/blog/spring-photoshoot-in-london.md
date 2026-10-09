@@ -28,7 +28,7 @@ For couples, magnolia trees create a romantic setting that feels effortless and 
 
 Because magnolia blooms don't last very long, they also make spring photos feel a little more special. You're capturing a moment that only appears for a short time each year.
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-1-magnolia.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-1-magnolia.jpg" alt="Couple embracing under a blooming pink magnolia tree in spring" />
 
 ## Daffodils in Hyde Park
 
@@ -42,7 +42,7 @@ The bright yellow tones also symbolise joy and new beginnings, which makes them 
 
 Hyde Park also has wide open areas, tree-lined paths and beautiful views, giving lots of variety for a relaxed outdoor photoshoot.
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-2-daffodil.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-2-daffodil.jpg" alt="Two young children sitting among yellow daffodils in Hyde Park" />
 
 ## Tulips in Holland Park
 
@@ -56,7 +56,7 @@ Holland Park is also great because it offers several different settings within o
 
 This variety allows a photoshoot to feel relaxed and spontaneous, with lots of beautiful corners to explore during the session.
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-3-tulips.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-3-tulips.jpg" alt="Mum and daughter cuddling among white and dark purple tulips in Holland Park" />
 
 ## Cherry Blossoms at Kew Gardens
 
@@ -81,7 +81,7 @@ The gardens have a slightly wild, natural look that works beautifully for relaxe
 
 Because the area is quieter than some of the central parks, it's also ideal for couples who want a calm and intimate photoshoot surrounded by nature.
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-4-bushy-park.jpg" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-4-bushy-park.jpg" alt="Family standing among bluebells under a tree in the Woodland Gardens, Bushy Park" />
 
 ## Isabella Plantation in Richmond Park
 
@@ -95,7 +95,7 @@ It's one of the most photogenic places in South West London during spring and pe
 
 For couples, the quiet pathways and vibrant flowers create an incredibly romantic environment.
 
-<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-5-isabella.JPEG" />
+<img src="https://images.mellsnap.co.uk/file/mellsnap-website/blog/2026/spring-5-isabella.JPEG" alt="Pink and red azaleas reflected in the pond at the Isabella Plantation, Richmond Park" />
 
 ## Why Spring is Perfect for Family Photos
 

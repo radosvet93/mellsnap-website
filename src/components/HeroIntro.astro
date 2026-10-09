@@ -1,0 +1,129 @@
+---
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import introImage from "../images/DSC_04191.webp";
+
+interface Props {
+  title: string;
+  greeting?: string;
+  intro?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  rating?: number;
+  reviewCount?: number;
+  reviewsLink?: string;
+  areas?: string;
+}
+
+const {
+  title,
+  greeting,
+  intro,
+  ctaText,
+  ctaLink,
+  secondaryCtaText,
+  secondaryCtaLink,
+  rating,
+  reviewCount,
+  reviewsLink,
+  areas,
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
+  <div
+    class="container grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 items-center"
+  >
+    <!-- Text -->
+    <div class="md:col-span-7 text-center md:text-left">
+      {
+        greeting && (
+          <p class="font-ephesis text-4xl md:text-5xl text-pink mb-3">
+            {greeting}
+          </p>
+        )
+      }
+      <h1
+        class="text-primary-text text-[2.75rem]! md:text-[3.25rem]! lg:text-[4rem]! xl:text-[4.5rem]! leading-[1.05]! tracking-tight mb-6 max-w-[18ch] mx-auto md:mx-0"
+      >
+        {title}
+      </h1>
+      {
+        intro && (
+          <p class="text-secondary-text text-lg leading-relaxed max-w-[52ch] mx-auto md:mx-0 mb-10">
+            {intro}
+          </p>
+        )
+      }
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10"
+      >
+        {
+          ctaText && ctaLink && (
+            <Button href={ctaLink} variant="primary">
+              {ctaText}
+            </Button>
+          )
+        }
+        {
+          secondaryCtaText && secondaryCtaLink && (
+            <Button href={secondaryCtaLink} variant="secondary">
+              {secondaryCtaText}
+            </Button>
+          )
+        }
+      </div>
+
+      {
+        areas && (
+          <p class="text-sm text-secondary-text max-w-[60ch] mx-auto md:mx-0">
+            {areas}
+          </p>
+        )
+      }
+    </div>
+
+    <!-- Image -->
+    <div class="md:col-span-5 flex justify-center md:justify-end">
+      <figure class="relative w-full max-w-sm lg:max-w-md">
+        <div
+          class="aspect-4/5 overflow-hidden border-8 border-white shadow-xl"
+        >
+          <Image
+            src={introImage}
+            widths={[480, 800]}
+            sizes="(min-width: 768px) 40vw, 90vw"
+            alt="Mum laughing with her toddler daughter on an autumn walk in the park"
+            class="w-full h-full object-cover object-[45%_center]"
+            loading="lazy"
+          />
+        </div>
+
+        {
+          rating && reviewCount && (
+            <a
+              href={reviewsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="absolute -bottom-5 left-1/2 -translate-x-1/2 md:translate-x-0 md:-left-10 bg-white px-5 py-3 shadow-lg flex items-center gap-3 whitespace-nowrap hover:text-pink transition-colors focus-visible:outline-2 focus-visible:outline-pink"
+            >
+              <span class="flex text-pink" aria-hidden="true">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+                  </svg>
+                ))}
+              </span>
+              <span class="font-raleway text-sm">
+                {rating.toFixed(1)} from {reviewCount} Google reviews
+              </span>
+            </a>
+          )
+        }
+      </figure>
+    </div>
+  </div>
+</section>

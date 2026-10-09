@@ -2,167 +2,125 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import { Image } from "astro:assets";
-import consultationImage from "../images/consultation.webp";
+import consultationImage from "../images/couple-bridge-azaleas.jpg";
+
+const topics = [
+  "Your vision for the session",
+  "The best package for your needs",
+  "Location recommendations",
+  "Styling and outfit guidance",
+  "Any questions you have",
+];
+
+const steps = [
+  "Pick a day and time in the calendar above",
+  "Receive a confirmation email and calendar invite",
+  "I'll be in touch with you at your chosen time",
+];
 ---
 
 <BaseLayout
   title="Free Consultation"
-  description="Book a free consultation to discuss your photography session with MellSnap."
+  description="Book a free 10-minute consultation with Gaby, photographer in Kingston upon Thames, to plan your family, maternity, couple or event photoshoot. No booking fee."
 >
   <!-- Hero -->
-  <section class="py-20 md:py-28 bg-section-bg">
+  <section class="bg-linen py-12 md:py-16">
     <div class="container">
-      <div class="text-center">
-        <p class="label mb-4">Let's Chat</p>
-        <h1 class="text-primary-text">Free Consultation</h1>
-        <p class="text-secondary-text mt-6 max-w-2xl mx-auto">
-          Not sure which package is right for you? Let's have a chat to discuss
-          your needs and create the perfect session.
+      <div
+        class="grid md:grid-cols-12 gap-10 md:gap-8 lg:gap-16 items-center max-w-5xl mx-auto"
+      >
+      <div class="md:col-span-7 text-center md:text-left">
+        <p class="label mb-4">Book me</p>
+        <h1
+          class="text-primary-text text-[2.25rem]! md:text-[2.75rem]! lg:text-[3.25rem]! leading-[1.08]! tracking-tight mb-6 max-w-[13em] mx-auto md:mx-0 [font-variant-numeric:lining-nums]"
+        >
+          Book your free <span class="whitespace-nowrap">10-minute</span> consultation
+        </h1>
+        <p
+          class="text-secondary-text text-lg leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-6"
+        >
+          Not sure which package is right for you? Pick a time below for a
+          quick, relaxed chat and I'll help you plan the perfect session.
         </p>
+        <p class="font-raleway text-sm text-pink">Free, with no booking fee</p>
+      </div>
+
+      <!-- Hidden on phones so the calendar stays close to the top -->
+      <div class="hidden md:flex md:col-span-5 justify-end">
+        <Image
+          src={consultationImage}
+          widths={[400, 800]}
+          sizes="(min-width: 768px) 320px, 0px"
+          alt="Couple embracing on a wooden bridge between bright pink azaleas in a garden"
+          class="w-full max-w-xs aspect-4/5 object-cover border-8 border-white shadow-xl"
+          loading="eager"
+        />
+      </div>
       </div>
     </div>
   </section>
 
-  <!-- Content -->
-  <section class="pb-20 bg-white">
+  <!-- Calendly -->
+  <section id="book" class="bg-white pt-4 pb-10 md:pt-6 md:pb-12">
     <div class="container">
-      <div class="mx-auto">
-        <!-- Info -->
-        <div class="py-20 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div>
-            <h2 class="text-primary-text mb-6">What We'll Discuss</h2>
-
-            <ul class="mb-6">
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Your vision for the session
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Best package for your needs
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Location recommendations
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Styling and outfit guidance
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Any questions you have
-              </li>
-            </ul>
-
-            <h2 class="text-primary-text mb-6">
-              How to schedule a free photography consultation
-            </h2>
-
-            <ul>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Select a day and time
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>Receive a confirmation email and calendar invite
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>I'll be in touch with you on the scheduled day
-              </li>
-              <li class="flex items-start gap-3">
-                <svg
-                  class="w-5 h-5 text-green mt-1 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"
-                  ></path>
-                </svg>No booking fee is required when scheduling the photo
-                session
-              </li>
-            </ul>
-          </div>
-          <Image
-            src={consultationImage}
-            alt="Free consultation MellSnap Photography"
-            class="shadow-lg w-full"
-          />
+      <div>
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/mellsnap/free-consultation"
+          style="min-width:320px;height:700px;"
+        >
         </div>
-        <!-- Calendly Widget -->
+        <script
+          is:inline
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="py-20 md:py-28 bg-linen">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-16 md:gap-12 lg:gap-24 max-w-5xl mx-auto">
         <div>
-          <!-- Calendly inline widget begin -->
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/mellsnap/free-consultation"
-            style="min-width:320px;height:700px;"
+          <h2 class="text-3xl! text-primary-text mb-6">What we'll chat about</h2>
+          <ul class="space-y-3 text-secondary-text">
+            {
+              topics.map((topic) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 mt-1 text-pink shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {topic}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-3xl! text-primary-text mb-6">How booking a free consultation works</h2>
+          <ul class="space-y-3 text-secondary-text">
+            {steps.map((step) => <li>{step}</li>)}
+          </ul>
+          <p
+            class="mt-8 pl-5 border-l-2 border-pink text-primary-text leading-relaxed"
           >
-          </div>
-          <script
-            is:inline
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-            async></script>
-          <!-- Calendly inline widget end -->
+            There's no booking fee when you reserve your photo session, so
+            there's nothing to pay upfront.
+          </p>
         </div>
       </div>
     </div>

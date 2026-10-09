@@ -16,13 +16,15 @@ const portfolio = defineCollection({
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
-  schema: z.object({
-    title: z.string(),
-    date: z.date(),
-    excerpt: z.string(),
-    image: z.string(),
-    published: z.boolean().default(true),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.date(),
+      excerpt: z.string(),
+      // Remote URL, or a path relative to the post for a local image
+      image: z.union([z.string().url(), image()]),
+      published: z.boolean().default(true),
+    }),
 });
 
 const reviews = defineCollection({

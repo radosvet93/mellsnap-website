@@ -1,55 +1,83 @@
 ---
-import Button from "./Button.astro";
-
-interface Props {
-  title: string;
-  subtitle?: string;
-  image?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  overlay?: boolean;
-}
-
-const { title, subtitle, ctaText, ctaLink, overlay = true } = Astro.props;
-
 import { Image } from "astro:assets";
-import heroImage from "../images/hero-home-page.webp";
+import mumsBabies from "../images/hero-mums-babies.webp";
+import couplePond from "../images/couples/couple-pond-embrace.jpg";
+import siblingsFountains from "../images/blog/battersea-park-fountains.jpg";
+
+// Landscape photos only. position keeps the people in frame on wide desktop and tall mobile crops.
+const slides = [
+  { src: mumsBabies, position: "50% 50%", alt: "Two mums laughing with their babies under festoon lights on a London street" },
+  { src: couplePond, position: "48% 45%", alt: "Couple sharing a tender moment beside a pond surrounded by pink azaleas" },
+  { src: siblingsFountains, position: "63% 65%", alt: "Brother and sister running and playing by the fountains in Battersea Park" },
+];
 ---
 
 <section
-  class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center"
+  class="hero relative w-full h-[60svh] md:h-[80svh] min-h-100 overflow-hidden"
+  aria-label="Photo slideshow"
 >
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <Image
-      src={heroImage}
-      alt="Mother holding her child in a park and posing for a family photo"
-      class="w-full h-full object-cover"
-      loading="eager"
-      fetchpriority="high"
-    />
-
-    {overlay && <div class="absolute inset-0 bg-black/50" />}
-  </div>
-
-  <!-- Content -->
-  <div class="relative z-10 text-center px-6 py-20 max-w-4xl">
-    <h1 class="text-white leading-tight mb-6">
-      {title}
-    </h1>
-    {
-      subtitle && (
-        <p class="font-ephesis text-3xl md:text-4xl lg:text-5xl text-white/90 mb-10">
-          {subtitle}
-        </p>
-      )
-    }
-    {
-      ctaText && ctaLink && (
-        <Button href={ctaLink} variant="primary">
-          {ctaText}
-        </Button>
-      )
-    }
-  </div>
+  {
+    slides.map((slide, i) => (
+      <div
+        class:list={["hero-slide absolute inset-0", { "is-active": i === 0 }]}
+      >
+        <Image
+          src={slide.src}
+          widths={[640, 1024, 1600, 2048]}
+          sizes="100vw"
+          alt={slide.alt}
+          class="absolute inset-0 w-full h-full object-cover"
+          style={`object-position: ${slide.position};`}
+          loading={i === 0 ? "eager" : "lazy"}
+          fetchpriority={i === 0 ? "high" : "auto"}
+        />
+      </div>
+    ))
+  }
 </section>
+
+<style>
+  /*
+    The incoming slide (is-active) fades in on top of the outgoing one
+    (is-prev), which stays fully visible underneath so there is no flash.
+  */
+  .hero-slide {
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1.2s ease;
+  }
+  .hero-slide.is-prev {
+    opacity: 1;
+    z-index: 1;
+    transition: none;
+  }
+  .hero-slide.is-active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const INTERVAL = 5000;
+
+  const hero = document.querySelector<HTMLElement>(".hero");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (hero && !reducedMotion) {
+    const slides = [...hero.querySelectorAll<HTMLElement>(".hero-slide")];
+    let current = 0;
+
+    window.setInterval(() => {
+      const next = (current + 1) % slides.length;
+      slides.forEach((s) => s.classList.remove("is-prev"));
+      slides[current].classList.replace("is-active", "is-prev");
+      slides[next].classList.add("is-active");
+      current = next;
+    }, INTERVAL);
+  }
+</script>

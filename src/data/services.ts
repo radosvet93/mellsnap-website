@@ -1,6 +1,12 @@
+import fullSessionImage from "../images/blog/family-ducks-pond.jpg";
+
 export const services = [
   {
     id: "quick",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/services/046-Web.jpg",
+      alt: "Toddler sitting in autumn leaves during a quick family photoshoot in a London park",
+    },
     title: "Quick Session",
     price: "£180",
     duration: "20 minutes",
@@ -15,6 +21,10 @@ export const services = [
   },
   {
     id: "full",
+    image: {
+      src: fullSessionImage,
+      alt: "Parents smiling as their toddler meets the ducks by a pond in the park",
+    },
     title: "Full Session",
     price: "£300",
     duration: "1 hour",
@@ -30,6 +40,10 @@ export const services = [
   },
   {
     id: "event",
+    image: {
+      src: "https://images.mellsnap.co.uk/file/mellsnap-website/services/238-Web.jpg",
+      alt: "Birthday girl having fun with her friends at a children's party",
+    },
     title: "Event Coverage",
     price: "£300",
     duration: "first hour",
