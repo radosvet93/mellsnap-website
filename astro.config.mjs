@@ -17,9 +17,11 @@ export default defineConfig({
       authToken: process.env.SENTRY_AUTH_TOKEN,
       enabled: { client: true, server: false },
       telemetry: false,
+      sourcemaps: { filesToDeleteAfterUpload: ['./dist/**/*.map'] },
     }),
   ],
   vite: {
+    build: { sourcemap: 'hidden' },
     plugins: [tailwindcss()],
   },
   image: {
